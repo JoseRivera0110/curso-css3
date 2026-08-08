@@ -1,4 +1,5 @@
 /* ¿COMO FUNCIONA CSS?
+/* ----------------------------------------------------------------------------------
 Especificidad -> establece como de especifico es un selector para saber que estilos aplicar. El calculo se realiza de la siguiente forma:
         etiquetas y psudoelementos 001
         Clases, atributos y pseudoclases 010
@@ -17,9 +18,9 @@ Especificidad -> establece como de especifico es un selector para saber que esti
 
 /* Se recomienda usar solo clases para añadir estilos. */
 
-.title{
+/* .title{
     background-color: blue;
-}
+} */
 
 /* Lo ID no son recomendables en CSS
 #title{
@@ -39,8 +40,40 @@ h1#title.title{
 
 
 /* Este elemento sera el que va a sobreponerse en el estilo, debido a que posee la misma especificidad y por cascada tiene prioridad. */
-.title{
+/* .title{
     background-color: brown;
-}
+} */
 
 /* En una herramienta donde se observa la generacion de la especificidad de css, debe mantenerse lo mas lineal posible, esto se logra con lo mencionado anteriormente que es usar clases principalmente*/ 
+
+
+/* ---------------------------------------------------------------------------------- */
+
+/* HERENCIA: es la capacidad que tienen algunos elementos de heredar algunas propiedades de sus elementos contenedores (padres,abuelos,etc) */
+
+/* los demas elementos van a heredar los valores del body, quien es el de mayor jerarquia de los elementos presentes */
+body{
+    background-color: #333;
+}
+.title{
+    color: steelblue;
+    font-size: 26px;
+}
+.text{
+    color: red;
+}
+
+/* con el inherit podemos forzar la herencia de elementos como en este caso el ancla, que no hereda valores de su padre (p) */
+.link{
+    color: inherit;
+}
+
+.list{
+    color: indianred;
+}
+
+/* la propiedad "initial" devuelve un valor a su posicion inicial, ignorando cualquier cambio anterior */
+
+.list-item-extra{
+    color: initial;
+}
