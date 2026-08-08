@@ -1,0 +1,46 @@
+/* ¿COMO FUNCIONA CSS?
+Especificidad -> establece como de especifico es un selector para saber que estilos aplicar. El calculo se realiza de la siguiente forma:
+        etiquetas y psudoelementos 001
+        Clases, atributos y pseudoclases 010
+        ids 100
+        estilos en linea 1000
+        important GANA A TODO (no recomendado)
+
+    *Cascada --> Funciona siempre que la especificidad sobre el lemento sea la misma
+    *Herencia 
+    */
+
+/* h1{
+    background-color: red;
+} */
+
+
+/* Se recomienda usar solo clases para añadir estilos. */
+
+.title{
+    background-color: blue;
+}
+
+/* Lo ID no son recomendables en CSS
+#title{
+    background-color: green;
+}
+
+h1.title{
+    background-color: yellow;
+}
+h1#title{
+    background-color: teal;
+}
+
+h1#title.title{
+    background-color: tomato;
+} */
+
+
+/* Este elemento sera el que va a sobreponerse en el estilo, debido a que posee la misma especificidad y por cascada tiene prioridad. */
+.title{
+    background-color: brown;
+}
+
+/* En una herramienta donde se observa la generacion de la especificidad de css, debe mantenerse lo mas lineal posible, esto se logra con lo mencionado anteriormente que es usar clases principalmente*/ 
