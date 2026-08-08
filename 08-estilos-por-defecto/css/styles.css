@@ -1,0 +1,11 @@
+*{
+    background-color: #333;
+    color: white;
+}
+.title{
+    font-size: 2em;
+}
+.list{
+    font-size: 1.2em;
+}
+/* No todos los navegadores se manejan de igual forma, entre esos los estilos pueden llegar a variar. Los estilos por defecto son uno de esos y entre las razones, puede ser por estar desactualizado. Para esto es necesario normalizarlo. */
