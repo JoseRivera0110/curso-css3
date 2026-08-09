@@ -1,3 +1,12 @@
+                            /* BOX MODEL/MODELO DE CAJA
+Elementos de bloque: son aquellos elementos a los cuales ocupan todo el ancho de la pantalla (viewport). Pueden contener varios elementos de linea o de bloque.
+Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su contenido. 
+
+    DIMENSIONES: Medidas de la caja, su unidad puede ser el pixel (px), centimentro (cm) y muchas más.
+    Width: Ancho de la caja
+    Height: Alto de la caja.
+    */
+
 body{
     background-color: #333;
     color: #fff;
@@ -13,5 +22,5 @@ body{
     color: inherit;
     width: 200px;
     height: 200px;
-    /* elementos de linea no pueden tener dimensiones, su tamaño estara condicionado por el contenido */
+    /* elementos de linea no pueden tener dimensiones, al estar condicionado al contenido que tenga */
 }
