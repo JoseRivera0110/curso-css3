@@ -31,7 +31,7 @@ Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su 
 
 /* ----------------------------------------------------------------------------------
 
-    Margin:
+    MARGIN:
             Es la propiedad que nos permite generar espacio entre elementos.
             Es un shorthand (propiedad abreviada) que controla los 4 lados posibles a los que dar márgenes.
             margin-top: Margen superior
@@ -45,16 +45,16 @@ Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su 
             2 valores -> margin: top/bottom left/right;
             1 valor -> margin: top/right/bottom/left
 
- */
+ 
 
- /* 
+  
         Los elementos de bloque pueden movilizarse con los margenes (siempre y cuando tengas dimensiones declaradas width y height) en cualquier posicion. 
         
         Con un valor de auto el navegador calculara el espaciado de forma automatica, es de decir, si manejamos margin-right:auto el contenedor se movera totalmente a la izquierda y margin-left:auto todo lo contrario y pr ultimo si podemos auto tanto en right como left, el contenedor se centrara automaticamente, ya que pone el mismo margen tanto en la derecha como a la izquierda
- */
-/* 
-        los h1 por ejemplo son elementos de bloque, en en caso el contenedor se centra en relacion a el viewport o todo lo que vemos en la pantalla, sin embargo, el contenido que es el texto que esta adentro, no, y esto es porque ese contenido debe centrarse de acuerdo a su propio contenedor y esto se logra con otra propiedad que se vera mas adelante 
- */
+ 
+
+        *los h1 por ejemplo son elementos de bloque, en en caso el contenedor se centra en relacion a el viewport o todo lo que vemos en la pantalla, sin embargo, el contenido que es el texto que esta adentro, no, y esto es porque ese contenido debe centrarse de acuerdo a su propio contenedor y esto se logra con otra propiedad que se vera mas adelante 
+
 .title{
     background-color: lightcoral;
     margin-left: auto;
@@ -62,14 +62,16 @@ Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su 
     width: 1000px;
 }
 
-    /* con esto se da diseño a todas las cajas que tengan esta clase */
+    * con esto se da diseño a todas las cajas que tengan esta clase 
+
 .block{
     background-color: purple;
     width: 160px;
     height: 160px;
     margin-bottom: 20px;
 }
-    /* Con esto se prueban las formas de usar el margin en cada elemento de bloque y cada contenedor */
+    * Con esto se prueban las formas de usar el margin en cada elemento de bloque y cada contenedor
+
 .box1{
     margin-right: auto;
 }
@@ -80,9 +82,9 @@ Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su 
     margin-left: auto;
     margin-right: auto;
 }
-/* 
-        Los elementos de linea, SOLO puede trabajar de forma horizontal, es decir, si ponemos un margen left o right funcionara con normalidad, pero no funcionara con top o bottom. 
-*/
+
+    * Los elementos de linea, SOLO puede trabajar de forma horizontal, es decir, si ponemos un margen left o right funcionara con normalidad, pero no funcionara con top o bottom. 
+
 
 .inline{
     margin-top: 50px;
@@ -90,4 +92,56 @@ Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su 
     margin-left: 40px;
 }
 
-    /* Como se puede observar, por mas que se puede insertar un valor en margin-top, este no funcionara cuando se observar en el servidor. */
+    * Como se puede observar, por mas que se puede insertar un valor en margin-top, este no funcionara cuando se observar en el servidor.
+*/
+
+/* ----------------------------------------------------------------------------------
+                                       ERRORES MARGIN
+
+    *Cuanto se esta tocando temas de diseño, hay algunos errores frecuentes que se realizan como puede ser: 
+*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+/*   
+    Suele ser considerada una mala practica, ya que se pierden todos los valores por defecto de todos los margenes, y se recurriria a sobreescribir los margenes de cada contenedor, elemento o clase que se tenga.
+
+    *Otro problema podria ser utilizar margin: 0 auto (0 para top y bottom, auto para left y right) debido a que sobreescribe por cascada cualquier valor anterior que se tenga sobre top y bottom, por lo tanto es innecesario, y es mejor recurrir al margin-right:auto y margin-left:auto.
+
+*/
+    /*
+    *Lo que si se puede realizar es agregar un margin: 0 en el body, debido a que este por defecto trae un margen de 8px, lo que puede ocasionar que el contenedor no este completamente posicionado en el borde superior. 
+    
+    body{
+        margin:0
+    }
+    */
+
+    .header{
+        background-color: tomato;
+    }
+    .title{
+        background-color:darkorange;
+    }
+    .box{
+        width: 500px;
+        height: 200px;
+        margin-top: 100px;
+        margin: 0 auto;
+        /* el valor 0 en el margin sobreescribe el valor de margin-top incluido arriba de el por cascada, por lo cual no tiene ningun sentido ponerlo de esta forma */
+
+        /* esta siempre sera la forma recomendada de centrar un elemento */
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-top: 100px;
+        background-color: purple;
+    }
+
+    ul{
+        margin-left: 40px;
+    }
+    
+
+
