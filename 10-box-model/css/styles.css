@@ -1,26 +1,93 @@
-                            /* BOX MODEL/MODELO DE CAJA
+body{
+    background-color: #333;
+    color: #fff;
+}   
+                           
+                           /* BOX MODEL/MODELO DE CAJA
 Elementos de bloque: son aquellos elementos a los cuales ocupan todo el ancho de la pantalla (viewport). Pueden contener varios elementos de linea o de bloque.
 Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su contenido. 
 
     DIMENSIONES: Medidas de la caja, su unidad puede ser el pixel (px), centimentro (cm) y muchas más.
     Width: Ancho de la caja
     Height: Alto de la caja.
-    */
 
-body{
-    background-color: #333;
-    color: #fff;
-}
+
 .block{
     background-color: purple;
     width: 200px;
     height: 200px;
-    /* elementos de bloque puede tener dimensiones de alto y ancho (width y height)  */
+    
+    *elementos de bloque puede tener dimensiones de alto y ancho (width y height)*
 }
 .inline{
     background-color: lightcoral;
     color: inherit;
     width: 200px;
     height: 200px;
-    /* elementos de linea no pueden tener dimensiones, al estar condicionado al contenido que tenga */
+
+    * elementos de linea no pueden tener dimensiones, al estar condicionado al contenido que tenga *
+} */
+
+
+/* ----------------------------------------------------------------------------------
+
+    Margin:
+            Es la propiedad que nos permite generar espacio entre elementos.
+            Es un shorthand (propiedad abreviada) que controla los 4 lados posibles a los que dar márgenes.
+            margin-top: Margen superior
+            margin-right: Margen derecho
+            margin-bottom: Margen inferior
+            margin-left: Margen izquierdo
+
+            Admite hasta 4 valores que van en el orden de las agujas del reloj.
+            4 valores -> margin:top right bottom left;
+            3 valores -> margin: top left/right bottom;
+            2 valores -> margin: top/bottom left/right;
+            1 valor -> margin: top/right/bottom/left
+
+ */
+
+ /* 
+        Los elementos de bloque pueden movilizarse con los margenes (siempre y cuando tengas dimensiones declaradas width y height) en cualquier posicion. 
+        
+        Con un valor de auto el navegador calculara el espaciado de forma automatica, es de decir, si manejamos margin-right:auto el contenedor se movera totalmente a la izquierda y margin-left:auto todo lo contrario y pr ultimo si podemos auto tanto en right como left, el contenedor se centrara automaticamente, ya que pone el mismo margen tanto en la derecha como a la izquierda
+ */
+/* 
+        los h1 por ejemplo son elementos de bloque, en en caso el contenedor se centra en relacion a el viewport o todo lo que vemos en la pantalla, sin embargo, el contenido que es el texto que esta adentro, no, y esto es porque ese contenido debe centrarse de acuerdo a su propio contenedor y esto se logra con otra propiedad que se vera mas adelante 
+ */
+.title{
+    background-color: lightcoral;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
 }
+
+    /* con esto se da diseño a todas las cajas que tengan esta clase */
+.block{
+    background-color: purple;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 20px;
+}
+    /* Con esto se prueban las formas de usar el margin en cada elemento de bloque y cada contenedor */
+.box1{
+    margin-right: auto;
+}
+.box2{
+    margin-left: auto;
+}
+.box3{
+    margin-left: auto;
+    margin-right: auto;
+}
+/* 
+        Los elementos de linea, SOLO puede trabajar de forma horizontal, es decir, si ponemos un margen left o right funcionara con normalidad, pero no funcionara con top o bottom. 
+*/
+
+.inline{
+    margin-top: 50px;
+    background-color: lightcoral;
+    margin-left: 40px;
+}
+
+    /* Como se puede observar, por mas que se puede insertar un valor en margin-top, este no funcionara cuando se observar en el servidor. */
