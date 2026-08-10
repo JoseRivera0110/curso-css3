@@ -99,24 +99,24 @@ Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su 
                                        ERRORES MARGIN
 
     *Cuanto se esta tocando temas de diseño, hay algunos errores frecuentes que se realizan como puede ser: 
-*/
+
         *{
             margin: 0;
             padding: 0;
         }
-/*   
+   
     Suele ser considerada una mala practica, ya que se pierden todos los valores por defecto de todos los margenes, y se recurriria a sobreescribir los margenes de cada contenedor, elemento o clase que se tenga.
 
     *Otro problema podria ser utilizar margin: 0 auto (0 para top y bottom, auto para left y right) debido a que sobreescribe por cascada cualquier valor anterior que se tenga sobre top y bottom, por lo tanto es innecesario, y es mejor recurrir al margin-right:auto y margin-left:auto.
 
-*/
-    /*
+
+    
     *Lo que si se puede realizar es agregar un margin: 0 en el body, debido a que este por defecto trae un margen de 8px, lo que puede ocasionar que el contenedor no este completamente posicionado en el borde superior. 
     
     body{
         margin:0
     }
-    */
+
 
     .header{
         background-color: tomato;
@@ -129,9 +129,11 @@ Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su 
         height: 200px;
         margin-top: 100px;
         margin: 0 auto;
-        /* el valor 0 en el margin sobreescribe el valor de margin-top incluido arriba de el por cascada, por lo cual no tiene ningun sentido ponerlo de esta forma */
 
-        /* esta siempre sera la forma recomendada de centrar un elemento */
+        * el valor 0 en el margin sobreescribe el valor de margin-top incluido arriba de el por cascada, por lo cual no tiene ningun sentido ponerlo de esta forma
+
+        * esta siempre sera la forma recomendada de centrar un elemento 
+
         margin-left: auto;
         margin-right: auto;
 
@@ -142,6 +144,61 @@ Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su 
     ul{
         margin-left: 40px;
     }
+*/
+
+/* ----------------------------------------------------------------------------------
+                                        PADDING
+
+    Es la propiedad que nos permite generar espacio interno entre el borde y la caja
+    Es un shorthand (propiedad abreviada) que controla los 4 lados posibles a los que dar padding.
+
+    padding-top: padding superior
+    padding-right padding derecho
+    padding-bottom: padding inferior
+    padding-left: padding izquierdo
+
+    Admite hasta 4 valores que van en el orden de las agujas del reloj
+    4 valores --> padding: top rigth bottom left
+    3 valores --> padding: top right/left bottom
+    2 valores --> padding top/bottom rigth/left
+    1 valor --> padding top/right/bottom/left
+
+*/
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: chocolate;
+    margin-bottom: 15px;
+}
+
+.box-1{
+    padding-top: 40px;
+}
+.box-2{
+    padding-right: 40px;
+}
+.box-3{
+    padding-bottom: 40px;
+}
+.box-4{
+    padding-left: 40px;
+}
+
+/* Todas van a medir lo mismo */
+.box-5{
+    padding: 40px 40px 40px 40px;
+}
+.box-6{
+    padding: 40px 40px 40px;
+}
+.box-7{
+    padding: 40px 40px;
+}
+.box-8{
+    padding: 40px;
+}
+
     
 
 
