@@ -231,7 +231,7 @@ Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su 
                 °border-right-color
                 °border-bottom-color
                 °border-left-color
-*/
+
 
 .button{
     padding: 20px;
@@ -242,10 +242,11 @@ Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su 
     border-width: 10px;
     border-style: solid;
     border-color:deeppink;
-    /* esta es una forma de simpiflicar los 3 valores anteriores, y el resultado es el mismo */
+    
+    * esta es una forma de simpiflicar los 3 valores anteriores, y el resultado es el mismo
 }
 
-        /* Las combinaciones de los border pueden ser muy variadas, y se pueden ir combinando tal como se puede ver: */
+        * Las combinaciones de los border pueden ser muy variadas, y se pueden ir combinando tal como se puede ver: 
 
 .border-2{
     border-top-width: 10px;
@@ -267,6 +268,46 @@ Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su 
     border-bottom-color: red;
     border-left-color: orange;
 }
+
+/* ----------------------------------------------------------------------------------
+                                        BOX SIZING
+        Es la propiedad que nos permite controlar el calculo que hace el navegador a la hora de modificar las propiedades content, padding y border.
+        Los 2 valores que podemos darle son
+            *Content-box -> Valor por defecto
+            *border-box -> Calculo de tamaño del elemento
+            incluyendo el padding y el border
+*/
+
+.box{
+    width: 150px;
+    height: 150px;
+    border: 5px solid red;
+    background-color: steelblue;
+    margin-bottom: 15px;
+}
+
+    /* content-box (por defecto): Aqui los valores no se modifican bajo ningun aspecto, es decir, como ejemplo este caso, donde el contenedor tiene unas dimensiones 150x150 y al haber un padding de 20px en todos sus lados, estos se le suman al valor inicial.
+
+    Por lo cual las medidas terminarian siendo: width: 150px + 40px padding top y bottom + 10px border top y bottom= 200px/ height: 150px + 40px padding right y left + 10px border right y left = 200px. Por lo que cambiaria a 200 x 200. */
+
+.box-1{
+    padding: 20px;
+}
+
+    /* border-box: Aqui los valores si se veran afectados dependiendo de los cambios que se hagan, el navegador recalculara de modo que se mantengan los valores iniciales, es decir, en este caso el contenedor tiene unas dimensiones de 150x150, y que por mas que se agregue padding o border, lo que agranda el tamaño del contenedor, siempre se mantendra en 150x150. */
+
+.box-2{
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* como solucion se recomienda usar la propiedad border-box, con el selector universal, para aplicar en todo el diseño.
+
+    *{
+        box-sizing: border-box;
+    } */
+
+
 
 
 
