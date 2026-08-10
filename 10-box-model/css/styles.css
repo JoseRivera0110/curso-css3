@@ -163,7 +163,7 @@ Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su 
     2 valores --> padding top/bottom rigth/left
     1 valor --> padding top/right/bottom/left
 
-*/
+
 
 .box{
     width: 100px;
@@ -185,7 +185,7 @@ Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su 
     padding-left: 40px;
 }
 
-/* Todas van a medir lo mismo */
+   *Todas van a medir lo mismo
 .box-5{
     padding: 40px 40px 40px 40px;
 }
@@ -198,6 +198,82 @@ Elementos de linea: son aquellos elementos que ocupan unicamente el ancho de su 
 .box-8{
     padding: 40px;
 }
+
+*/
+
+/* ----------------------------------------------------------------------------------
+                                        BORDER
+        Es la propiedad que nos permite modificar el borde de la caja.
+        Es una shorthand (propiedad abreviada) que agrupa 3 propiedades
+            *border-width: ancho del borde
+                °border-top-width
+                °border-right-width
+                °border-bottom-width
+                °border-left-width
+            border-style: estilo del borde
+                °border-top-style
+                °border-right-style
+                °border-bottom-style
+                °border-left-style
+                    Listado de valores para style:
+                        none
+                        hidden
+                        dotted
+                        dashed
+                        solid
+                        double
+                        groove
+                        rigde
+                        inset
+                        outset
+            border-color: color del borde
+                °border-top-color
+                °border-right-color
+                °border-bottom-color
+                °border-left-color
+*/
+
+.button{
+    padding: 20px;
+    border: 15px solid black;
+    margin-bottom: 30px;
+}
+.border{
+    border-width: 10px;
+    border-style: solid;
+    border-color:deeppink;
+    /* esta es una forma de simpiflicar los 3 valores anteriores, y el resultado es el mismo */
+}
+
+        /* Las combinaciones de los border pueden ser muy variadas, y se pueden ir combinando tal como se puede ver: */
+
+.border-2{
+    border-top-width: 10px;
+    border-right-width: 20px;
+    border-bottom-width: 30px;
+    border-left-width: 40px;
+}
+
+.border-3{
+    border-top-style: solid;
+    border-right-style: dotted;
+    border-bottom-style: groove;
+    border-left-style: outset;
+}
+
+.border-4{
+    border-top-color: green;
+    border-right-color: blue;
+    border-bottom-color: red;
+    border-left-color: orange;
+}
+
+
+
+
+
+
+
 
     
 
