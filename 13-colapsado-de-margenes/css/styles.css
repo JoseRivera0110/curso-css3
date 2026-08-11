@@ -1,0 +1,47 @@
+/*
+LOS MARGENES VERTICALES COLAPSAN
+
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+}
+
+.header{
+    background-color: lightcoral;
+    height: 100px;
+    margin-bottom: 20px;
+    /* el problema que existe sobre el colapso de margenes, en este caso el header, se puede solucionar de 3 maneras distintas, como puede ser:  
+    con overflow hidden, el cual omite el espacio y el contenedor vuelve a la esquina superior, mismo caso usando el
+    *padding-top, con cualquier valor que se le ponga puede funcionar*/
+
+    /* overflow:hidden; */
+    /* padding-top: 0.1px; */
+
+    /* ademas de el caso de border-top donde al estar con el mismo color, llega a solucionar el problema */
+    border-top: 0.1px solid lightcoral;
+}
+
+.title{
+    margin: 0;
+    margin-top: 30px;
+}
+
+.box-1, .box-2{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightcyan;
+    width: 300px;
+    height: 300px;
+}
+
+/* Es recomendable separar contenedores usando margin-bottom, ya que pueden haber conflictos si se junta con margin-top de forma accidental, esto solo ocurre con margenes verticales, con margenes horizontales no existe dicho problema. */
+.box-1{
+    margin-bottom: 30px;
+}
