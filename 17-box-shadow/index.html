@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles-dist.css">
+    <title>Box shadow</title>
+</head>
+<body>
+    <h1 class="title">Box Shadow</h1>
+        <h2 class="title">Valores del Box-shadow</h2>
+            <h3 class="title">Con 2 valores (En X y en Y)</h3>
+                <p>Se dibuja una caja igual del lado derecho debido a que, es la sombra de la caja inicial solo que ubicada a 200px de distancia</p>
+                <div class="box shadow"></div>
+            <h3 class="title">Con 3 valores (se añade desenfoque)</h3>
+                <p>Se observa como se difumina la sombra, de acuerdo a la cantidad de px que se agreguen</p>
+                <div class="box shadow-2"></div>
+            <h3 class="title">Con 4 valores (se añade expansión de la sombra)</h3>
+                <p>Con este valor de agranda el tamaño de la sombra, como si de una padding se tratase</p>
+                <div class="box shadow-3"></div>
+            <h3 class="title">Con 5 valores (se añade el color de la sombra)</h3>
+                <p>Con este valor se agrega el color de la sombra, el cual si no se agrega, este hereda por defecto el valor que tenga el color de la fuente</p>
+                <div class="box shadow-4"></div>
+            <h3 class="title">Propiedad Inset</h3>
+                <p>Esta propiedad como se observa agrega la sombra de forma interior en el contenedor.</p>
+                <div class="box inset"></div>
+        <h2 class="title">Representación de como se suele usar box-shadow</h2>
+            <p>Se puede agregar varias sombras en un mismo contenedor, separadas por ",". Estas no afectan a los demas contenedores</p>
+            <div class="box shadow-5"></div>
+            <p>Se puede utilizar numeros negativos para modificar la ubicacion de la sombra en el contenedor</p>
+            <div class="box inset-2">Con inset</div>
+</body>
+</html>
