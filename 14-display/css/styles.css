@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #333;
+    color: #fff;
+}
+
+/* 
+                                                DISPLAY
+    La propiedad display nos sirve paara cambiar el contexto de los elementos dentro del navegador
+
+    Admite varios valores
+        none -> Hace que el elemento no se muestre, pero sigue cargandose.
+        block -> Hace que el elemento sea de bloque 
+        inline -> Hace que el elemento sea de linea.
+        inline-block -> Hace que el elemento sea de linea pero permite medidas y margenes verticales. 
+*/
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: crimson;
+    padding: 20px;
+}
+.inline{
+    display: inline;
+    background-color: crimson;
+}
+.block{
+    display: block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: inherit
+}
+
+    /* Las dos propiedad inline-block, se diferencian en que, una se configura con el padding, mientras la otra se usa el overflow para solucionar la diferencia de tamaña por el contenido/texto que hay dentro de una contenedor.
+
+    *Esta son las dos primeras cajas, donde ambas tienen la propiedad inline-block, y tienen las mismas dimensiones, pero que en vista de el contenido dentro es mas extenso en la primero caja, hace mas grande su tamaño, para solucionar esto se uso un padding mas pequeño en la primera, y uno mas grande en la segunda caja. */
+
+.inline-block{
+    display: inline-block;
+    /* padding: 50px; */
+    /* overflow: hidden; */
+    padding: 15px;
+}
+
+.inline-block-1{
+    display: inline-block;
+    /* padding: 50px; */
+    /* overflow: hidden; */
+    padding: 51px;
+}
+
+    /* Ahora en esta segunda comparacion entre dos cajas inline-block, sucede otra solucion y es emplear overflow:hidden, para ajustar el texto que se desborda en la primera caja, para equipararlo con la segunda caja y que queden del mismo tamaño */
+    
+.inline-block-2{
+    display: inline-block;
+    background-color: darkblue;
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    margin-right: 15px;
+
+    overflow: hidden;
+}
