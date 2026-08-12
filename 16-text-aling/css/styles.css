@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #333;
+    color: #fff;
+}
+
+/* -----------------------------------------------------------------------------------------
+                                            TEXT ALIGN
+    es la propiedad que nos permite alinear horizontalmente el contenido de un elemento de bloque siempre que el contenido NO TENGA ANCHO DECLARADO
+
+    Acepta 4 posibles valores
+        text-align:left; -> Alinea el contenido a la izquierda
+        text-align:right; -> Alinea el contenido a la derecha
+        text-align:center; -> Alinea el contenido al centro
+        text-align:justify; -> Alinea el contenido de forma justificada. No es recomendable usarlo. 
+*/
+
+/* Justificando titulo y agregando diseño */
+.title{
+    /* text-align: center; */
+    border: 5px solid black;
+}
+h1.title{
+    background-color: brown;
+}
+h2.title{
+    background-color: lightcoral;
+}
+h3.title{
+    background-color: lightslategray;
+}
+/* Aplicando la propiedad Text-Align en texto */
+.text{
+    text-align: center;
+}
+.text-1{
+    text-align: justify;
+}
+
+/* Aplicando la propiedad en elementos de bloque */
+
+.box{
+    height: 100px;
+    background-color: darkkhaki;
+    outline: 3px solid brown;
+    color: brown;
+    text-align: center;
+    padding: 20px;
+}
+ /* Agregando ancho, se centrara el contenido, en este caso el texto, pero no el contenedor */ 
+.box-1{
+    width: 100px;
+}
+/* En los elementos de linea, no funciona la propiedad text-align ya que su contenido son sus dimensiones por lo tanto no habria nada que centrar. En este caso se usa la propiedad display, y convertirlo en un elemento de bloque.  */
+.link{
+    background-color: green;
+    color: inherit;
+    text-align: center;
+}
+.link-1{
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-2{
+    background-color: lightsteelblue;
+    color: initial;
+}
+/* Caso de imagenes */
+.images{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+/* Al estar dentro de un contenedor si funciona el text-align */
+.images-2{
+    text-align: center;
+}
+
+
+
