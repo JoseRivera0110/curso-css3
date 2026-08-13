@@ -47,6 +47,9 @@ body{
 
     z-index: Es la propiedad que nos permite ordenar los elementos superpuestos para controlar cual se coloca por delante y cual por detrás.
 */
+/* -----------------------------------------------------------------------------------------------------------------------
+                                                          RELATIVE */
+
 /* Diseño en los titulos */
 h1.title{
     text-align: center;
@@ -67,6 +70,7 @@ h2.title{
 }
 .box-1{
     background-color:coral;
+    color: initial
 }
 .box-2{
     background-color: lightgreen;
@@ -92,3 +96,19 @@ h2.title{
     bottom: 100px;
     left: 100px;
 }
+/* -----------------------------------------------------------------------------------------------------------------------
+                                                          ABSOLUTE */
+.absolute{
+    position: absolute;
+    color: initial;
+}
+
+.box2{
+    width: 100px;
+    height: 100px;
+
+}
+
+/* .box-3{
+
+} */
