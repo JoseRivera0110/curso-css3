@@ -51,18 +51,19 @@ body{
                                                           RELATIVE */
 
 /* Diseño en los titulos */
-.title{
-    display: inline-block;
-}
+
 h1.title{
-    width: 100%;
     text-align: center;
     border: 3px solid red;
 }
 h2.title{
+    width: 7.5%;
     border: 3px solid yellow;
 }
-
+h3.title{
+    width: 20%;
+    border: 3px solid lightsalmon;
+}     
 /* diseño de las cajas */
 .box{
     width: 100px;
@@ -101,10 +102,7 @@ h2.title{
 }
 /* -----------------------------------------------------------------------------------------------------------------------
                                                           ABSOLUTE */
-
-h3.title{
-    border: 3px solid lightsalmon;
-}                                                          
+                                                     
 .container{
     width: auto;
     height: 37px;
@@ -145,3 +143,13 @@ h3 ~ .container{
     margin-right: 20px;
 }
 
+/* -----------------------------------------------------------------------------------------------------------------------
+                                                                FIXED */
+
+.images{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
