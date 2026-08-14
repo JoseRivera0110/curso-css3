@@ -21,10 +21,18 @@
                 <div class="box circle"></div> -->
         <h2 class="title">Absolute</h2>
             <p>En el posicionamiento absoluto, uno de sus puntos a destacar es como los elementos pierden sus valores</p>
+            <div class="container">
                 <div class="box-1">Caja sin dimensiones</div>
                 <div class="box-2 absolute">Caja sin dimesiones con position absolute</div>
-            <h3>Espacio reservado</h3>
-                <p>El espacio reservado con absolute desaparece, por lo que otra caja puede ocupar su posicion automaticamente</p>
-                <div class=""></div>
+            </div>
+            <h3 class="title">Espacio reservado</h3>
+                <p>El espacio reservado con absolute desaparece, por lo que si dos cajas estan con un posicion absolute, estan se solapan y queda una debajo de la otra, la prevalencia dependera de otra propiedad que se vera más adelante.</p>
+                <div class="container">
+                    <div class="box2 absolute">Caja de 150px con posicion absoluta</div>
+                    <div class="box2 absolute left">Caja de 150px con posicion absoluta posicionada a 100px de la izquierda</div>
+                </div>
+                
+                <p>Como se observa la caja posicionada a 100px de la izquierda, se encuentra por encima de la otra caja, por lo que no deja ver la mayoria de sus dimensiones. </p>
+
 </body>
 </html>

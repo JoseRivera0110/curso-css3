@@ -98,17 +98,37 @@ h2.title{
 }
 /* -----------------------------------------------------------------------------------------------------------------------
                                                           ABSOLUTE */
+
+.container{
+    width: auto;
+    height: 37px;
+    background-color: grey;
+    position: relative;
+}                 
+h3 ~ .container{
+    height: 150px;
+}                                     
+.box2{
+    width: 150px;
+    height: 150px;
+    background-color: lightgreen;
+    padding: 10px 60px 0 7px;
+}
+/* esta caja pierde sus valores, por lo que puede ubicarse encima de otra, como el caso del h3 presente. Los titulos H tienen un margen por defecto, 18px margen vertical, por lo que al quitarle dicho margen, se ubica detras de la caja con posicion absoluta. */
 .absolute{
     position: absolute;
     color: initial;
 }
 
-.box2{
+/*.box2{
     width: 100px;
     height: 100px;
-
 }
-
-/* .box-3{
+.box-3{
 
 } */
+
+.left{
+    background-color: coral;
+    left: 80px;
+}
