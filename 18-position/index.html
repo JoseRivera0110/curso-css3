@@ -11,24 +11,30 @@
     <h1 class="title">Position</h1>
         <!-- <h2 class="title">Relative</h2>
             <h3 class="title">Posicion inicial</h3>
-                <div class="box box-1">Caja de 100px</div>
-                <div class="box box-2">Otra caja de 100px</div>
+                <div class="container">
+                    <div class="box box-1">Caja de 100px</div>
+                    <div class="box box-2">Otra caja de 100px</div>
+                </div>
             <h3 class="title">Position final</h3>
-                <div class="box relative">Caja de 100px, posicionada a 100px desde arriba</div>
-                <div class="box relative-1">Caja de 100px, posicionada a 100px desde abajo</div>
+                <div class="container">
+                    <div class="box relative">Caja de 100px, posicionada a 100px desde arriba</div>
+                    <div class="box relative-1">Caja de 100px, posicionada a 100px desde abajo</div>
+                </div>
             <h3 class="title">En caso de elementos diferentes a un cuadrado</h3>
                 <p>De igual forma, internamente seguira comportandose como un bloque, por lo que el funcionamiento es el mismo.</p>
-                <div class="box box-1"></div>
-                <div class="box circle"></div>
+                <div class="container">
+                    <div class="box box-1"></div>
+                    <div class="box circle"></div>
+                </div>
         <h2 class="title">Absolute</h2>
             <p>En el posicionamiento absoluto, uno de sus puntos a destacar es como los elementos pierden sus valores</p>
-            <div class="container">
+            <div class="container container-absolute n1">
                 <div class="box-1">Caja sin dimensiones</div>
-                <div class="box-2 absolute">Caja sin dimesiones con position absolute</div>
+                <div class="box-2 absolute">Caja sin dimensiones con position absolute</div>
             </div>
             <h3 class="title">Espacio reservado</h3>
                 <p>El espacio reservado con absolute desaparece, por lo que si dos cajas estan con un posicion absolute, estan se solapan y queda una debajo de la otra, la prevalencia dependera de otra propiedad que se vera más adelante.</p>
-                <div class="container">
+                <div class="container container-absolute n2">
                     <div class="box2 absolute">Caja de 150px con posicion absoluta</div>
                     <div class="box2 absolute left">Caja de 150px con posicion absoluta posicionada a 100px de la izquierda</div>
                 </div>
@@ -36,14 +42,27 @@
                 <p>Como se observa la caja posicionada a 100px de la izquierda, se encuentra por encima de la otra caja, por lo que no deja ver la mayoria de sus dimensiones. </p>
             <h3 class="title">Comportamiento en elementos de linea</h3>
                 <p>Cuando es aplicado un un elemento de linea, sucede algo particular y es que permite cambiar sus dimensiones, sin necesidad de usar la propiedad display.</p>
-                <div class="container2">
+                <div class="container container-absolute n3">
                     <a href="#" class="link">Enlace sin absolute</a>
                     <a href="#" class="link absolute">Enlace con absolute</a>
-                </div> -->
+                </div>
         <h2 class="title">Fixed</h2>
-            <p>Como se puede observar la cara feliz ubicada al lado inferior derecho de la pantalla, usa position fixed, ya que se mantiene estatico en su lugar, indiferntemente si se realiza scroll o no</p>
-            <img src="assets/images/cara-feliz.png" alt="cara feliz" class="images">
-                
+            <p>Como se puede observar la cara feliz ubicada al lado inferior derecho de la pantalla, usa position fixed, ya que se mantiene estatico en su lugar, indiferentemente si se realiza scroll o no</p>
+            <img src="assets/images/cara-feliz.png" alt="cara feliz" class="images"> -->
+        <h2 class="title">Z-index</h2>
+            <p>Con esta propiedad se puede modificar como se superpone un elemento en relacion a otro, donde el valor inicial esta relacionado con el HTML.</p>
+            <h3 class="title">Antes del ejemplo de Z-index</h3>
+            <p>Se observan dos cajas que se solapan, en donde la primera caja se superpone a la segunda por los valores por defecto en el HTML al carecer de un valor declarado en el Z-index</p>
+                <div class="container">
+                    <div class="box box-1">Primera caja en HTML</div>
+                    <div class="box box-2">Segunda caja en HTML</div>
+                </div>        
+            <h3 class="title">Despues de aplicar el Z-index</h3>
+                <div class="container">
+                    <div class="box box-1 z-index">Primera caja en HTML</div>
+                    <div class="box box-2 z-index-1">Segunda caja en HTML</div>
+                </div>  
+            
 
 </body>
 </html>

@@ -57,24 +57,27 @@ h1.title{
     border: 3px solid red;
 }
 h2.title{
-    width: 7.5%;
     border: 3px solid yellow;
 }
 h3.title{
     width: 20%;
     border: 3px solid lightsalmon;
-}     
+}
+/* añadiendo color de contenedores*/
+.container{
+    background-color: grey;
+}
 /* diseño de las cajas */
 .box{
     width: 100px;
     height: 100px;
     color: initial;
     text-align: center;
-    border: 3px solid blue;
+    border: 3px solid black;
 }
 .box-1{
     background-color:coral;
-    color: initial
+    color: initial;
 }
 .box-2{
     background-color: lightgreen;
@@ -103,20 +106,26 @@ h3.title{
 /* -----------------------------------------------------------------------------------------------------------------------
                                                           ABSOLUTE */
                                                      
-.container{
-    width: auto;
-    height: 37px;
-    background-color: grey;
+/* configurando contenedores */
+.container-absolute{
     position: relative;
-}                 
-h3 ~ .container{
+}
+.n1{
+    height: 37px;
+}
+.n2{
     height: 150px;
-}                                     
+}
+.n3{
+    height: 100px;
+}
+/* configurando nueva caja */
 .box2{
     width: 150px;
     height: 150px;
     background-color: lightgreen;
     padding: 10px 60px 0 7px;
+    border: 3px solid black;
 }
 /* esta caja pierde sus valores, por lo que puede ubicarse encima de otra, como el caso del h3 presente. Los titulos H tienen un margen por defecto, 18px margen vertical, por lo que al quitarle dicho margen, se ubica detras de la caja con posicion absoluta. */
 .absolute{
@@ -124,16 +133,12 @@ h3 ~ .container{
     color: initial;
 }
 
+/* mover caja de ejemplo a la izquierda */
 .left{
     background-color: coral;
     left: 80px;
 }
-
-.container2{
-    background-color: grey;
-    height: 100px;
-}
-
+/* diseño a enlaces de ejemplo */
 .link{
     width: 100px;
     height: inherit;
@@ -141,11 +146,13 @@ h3 ~ .container{
     background-color: hotpink;
     color: initial;
     margin-right: 20px;
+    border: 3px solid darkmagenta;
 }
 
 /* -----------------------------------------------------------------------------------------------------------------------
                                                                 FIXED */
 
+/* diseño a imagen con position fixed                                                             */
 .images{
     width: 60px;
     height: 60px;
@@ -153,3 +160,6 @@ h3 ~ .container{
     bottom: 0;
     right: 0;
 }
+/* -----------------------------------------------------------------------------------------------------------------------
+                                                                Z-INDEX*/
+                                                                       
