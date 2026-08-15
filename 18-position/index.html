@@ -51,18 +51,41 @@
             <img src="assets/images/cara-feliz.png" alt="cara feliz" class="images"> -->
         <h2 class="title">Z-index</h2>
             <p>Con esta propiedad se puede modificar como se superpone un elemento en relacion a otro, donde el valor inicial esta relacionado con el HTML.</p>
-            <h3 class="title">Antes del ejemplo de Z-index</h3>
-            <p>Se observan dos cajas que se solapan, en donde la primera caja se superpone a la segunda por los valores por defecto en el HTML al carecer de un valor declarado en el Z-index</p>
+            <h3 class="title">Ejemplo de z-index</h3>
+                <h4 class="title">Antes del ejemplo de Z-index</h4>
+                <p>Se observan dos cajas que se solapan, la primera se encuentra desplazada a 40px desde arriba y en donde la segunda caja se superpone a la primera por los valores por defecto en el HTML al carecer de un valor declarado en el Z-index. </p>
+                    <div class="container">
+                        <div class="box box-1 position-relative">Primera caja</div>
+                        <div class="box box-2 position-relative">Segunda caja</div>
+                    </div>        
+                <h4 class="title">Despues de aplicar el Z-index</h4>
+                <p>Al aplicar un valor en z-index a la primera caja, esta se superpone a la segunda caja, y seguira de dicha forma a menos que se cambie el valor z-index de la segunda caja.</p>
+                    <div class="container">
+                        <div class="box box-1 position-relative z-index">Primera caja con z-index: 1</div>
+                        <div class="box box-2 position-relative">Segunda caja</div>
+                    </div>  
+            <h3 class="title">Padre e hijo en Z-index</h3>
+                <p>Cuando se habla de z-index entre padre e hijo, hay que destacar algunos detalles como son los siguientes:</p>
+                <ul class="list">
+                    <li>No se puede superponer al padre sobre el hijo</li>
+                    <li>Si se puede ubicar al hijo debajo del padre con numeros negativos</li>
+                    <li>Si al padre se le declara la propiedad z-index, se perdera el paso anterior</li>
+                </ul>
+                <h4 class="title">Hijo por debajo del padre</h4>
+                <p>Con un valor negativo en el z-index de la caja hijo, valdra para que se posicione por debajo del padre, como se ve acontinuación.</p>
                 <div class="container">
-                    <div class="box box-1">Primera caja en HTML</div>
-                    <div class="box box-2">Segunda caja en HTML</div>
-                </div>        
-            <h3 class="title">Despues de aplicar el Z-index</h3>
+                    <div class="container-z-index">Padre
+                        <div class="box box-1">Hijo</div>
+                    </div>
+                </div>
+                <h4 class="title">Si se le agrega un valor z-index al padre</h4>
+                <p>Ahora bien, si se le agrega un valor z-index diferente diferente a "auto" al padre, todo lo hecho anteriormente dejara de funcionar.</p>
                 <div class="container">
-                    <div class="box box-1 z-index">Primera caja en HTML</div>
-                    <div class="box box-2 z-index-1">Segunda caja en HTML</div>
-                </div>  
-            
+                    <div class="container-z-index z-index">Padre
+                        <div class="box box-1">Hijo</div>
+                    </div>
+                </div>
+                
 
 </body>
 </html>
