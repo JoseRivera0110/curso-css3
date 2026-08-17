@@ -18,23 +18,25 @@
         <h1 class="title">STACKING CONTEXT</h1>
         <p class="text">El Stacking Context (Contexto de Apilamiento) es el concepto de CSS que determina el orden en el que los elementos HTML se dibujan en la pantalla sobre el eje Z (profundidad: qué elemento queda al frente y cuál detrás).</p>
         <p class="text">El orden por defecto dibuja los elementos de fondo hacia adelante (fondo del cuerpo → bloques normales → elementos flotantes → elementos posicionados). Sin embargo, cuando se crea un stacking context, ese elemento se convierte en la "raíz" de un nuevo grupo aislado de capas para todos sus hijos.</p>
-        <h2 class="title">Ejemplo de apilamiento</h2>
-        <h3 class="title">Como se encuentra originalmente</h3>
-        <p class="text">Como se es sabido, el posicionamiento de los elementos que no tienen ninguna propiedad declara, va deacuerdo al documento HTML, por lo que en este caso, la caja 4 será la que se posicione por encima de las demás, debido a que se encuentra de última, pero primera en el efecto cascada.</p>
-        <div class="container container-1">
-            <div class="box box-1">Caja 1</div>
-            <div class="box box-2">Caja 2</div>
-            <div class="box box-3">Caja 3</div>
-            <div class="box box-4">Caja 4</div>
-        </div>
-        <h3 class="title">Demostrando propiedades del apilamiento</h3>
-        <p class="text">Al insertar propiedades como position o z-index en las cajas anteriores, se modifica el contexto de apilamiento entre estos elementos, por lo que la caja que se muestra por encima variara.</p>
-        <div class="container container-2">
-            <div class="box box-1">Caja 1 posicionada y z-index alto</div>
-            <div class="box box-2">Caja 2 posicionada, sin z-index</div>
-            <div class="box box-3">Caja 3 no posicionada</div>
-            <div class="box box-4">Caja 4 con z-index negativo</div>
-        </div>
+            <h2 class="title">Ejemplo de apilamiento</h2>
+                <h3 class="title">Como se encuentra originalmente</h3>
+                <p class="text">Como se es sabido, el posicionamiento de los elementos que no tienen ninguna propiedad declara, va de acuerdo al documento HTML, por lo que en este caso, la caja 4 será la que se posicione por encima de las demás, debido a que se encuentra de última, pero primera en el efecto cascada.</p>
+                <p class="text">En el siguiente ejemplo caja caja tienen un margen-top: -160px, con la finalidad de que se mueven hacia arriba, en su defecto un margin-left de modo de que se note una encima de la otra.</p>
+                <div class="container">
+                    <div class="box box-1">Caja 1</div>
+                    <div class="box box-2">Caja 2 con margin-left: 20px</div>
+                    <div class="box box-3">Caja 3 con margin-left: 40px</div>
+                    <div class="box box-4">Caja 4 con margin-left: 60px</div>
+                </div>
+                <h3 class="title">Demostrando propiedades del apilamiento</h3>
+                <p class="text">Al insertar propiedades como position o z-index en las cajas anteriores, se modifica el contexto de apilamiento entre estos elementos, por lo que la caja que se muestra por encima variara.</p>
+                <div class="container container-2">
+                    <div class="box box-1">Caja 1 posicionada y z-index declarado</div>
+                    <div class="box box-2">Caja 2 posicionada, sin z-index</div>
+                    <div class="box box-3">Caja 3 no posicionada</div>
+                    <div class="box box-4">Caja 4 posicionada con z-index negativo</div>
+                </div>
+            <h2 class="title"></h2>   
     </main>
     <footer>© Jose Rivera 2026</footer>
 </body>

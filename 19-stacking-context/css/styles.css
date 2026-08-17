@@ -51,6 +51,8 @@ h4.title{
 .box{
     width: 200px;
     height: 200px;
+    text-align: center;
+
 }
 .box-1{
     background-color: steelblue;
@@ -71,21 +73,29 @@ h4.title{
     margin-left: 60px;
 }
 .container{
+    position: relative;
+    padding-left: 534px;
+    z-index: -10;
     background-color:darkgray;
 }
-
-.container-2 .box-1{
-    position: relative;
-    z-index: 2;
+.container-2 .box{
+    padding-top: 160px;
 }
-.container-2 .box-2{
+.container-2 .box-1{
     position: relative;
     z-index: 1;
 }
-.container-2 .box-3{
+.container-2 .box-2{
     position: relative;
 }
+.container-2 .box-3{
+    /* la caja no esta posicionada o en su defecto tiene el valor: */
+    position: static;
+    /* Ni tampoco tiene un valor de z-index, o en su defecto: */
+    z-index: auto;
+}
 .container-2 .box-4{
-    z-index: -10;
+    position: relative;
+    z-index: -1;
 }
 
