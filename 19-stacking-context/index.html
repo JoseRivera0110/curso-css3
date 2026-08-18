@@ -18,7 +18,7 @@
         <h1 class="title">STACKING CONTEXT</h1>
         <p class="text">El Stacking Context (Contexto de Apilamiento) es el concepto de CSS que determina el orden en el que los elementos HTML se dibujan en la pantalla sobre el eje Z (profundidad: qué elemento queda al frente y cuál detrás).</p>
         <p class="text">El orden por defecto dibuja los elementos de fondo hacia adelante (fondo del cuerpo → bloques normales → elementos flotantes → elementos posicionados). Sin embargo, cuando se crea un stacking context, ese elemento se convierte en la "raíz" de un nuevo grupo aislado de capas para todos sus hijos.</p>
-            <h2 class="title">Ejemplo de apilamiento</h2>
+            <h2 class="title">Ejemplo del contexto de apilamiento</h2>
                 <h3 class="title">Como se encuentra originalmente</h3>
                 <p class="text">Como se es sabido, el posicionamiento de los elementos que no tienen ninguna propiedad declara, va de acuerdo al documento HTML, por lo que en este caso, la caja 4 será la que se posicione por encima de las demás, debido a que se encuentra de última, pero primera en el efecto cascada.</p>
                 <p class="text">En el siguiente ejemplo caja caja tienen un margen-top: -160px, con la finalidad de que se mueven hacia arriba, en su defecto un margin-left de modo de que se note una encima de la otra.</p>
@@ -36,7 +36,17 @@
                     <div class="box box-3">Caja 3 no posicionada</div>
                     <div class="box box-4">Caja 4 posicionada con z-index negativo</div>
                 </div>
-            <h2 class="title"></h2>   
+            <h2 class="title">Casos en los contextos de apilamiento</h2>
+                <p class="text">Cuando se crea un elementos y estos tienen un contexto de apilamiento, puede pasar que por algunas propiedades, estos tengan otros contextos de apilamiento en su interior, y cambie el orden que se lleva.</p>
+                    <h3 class="title">Caso por la opacidad</h3>
+                    <p class="text">Al usar una opacidad menor a 1, en el contenedor sucede algo y es que se crea un nuevo contexto de apilamiento, aparte de el que ya se habia creado.</p>
+                    <div class="container container-3">
+                        <div class="box box-1">Caja 1 posicionada y z-index declarado</div>
+                        <div class="container__padre">
+                            <h4 class="title__hijo">Contenedor con opacidad</h4>
+                            <p class="text__hijo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat neque harum possimus quidem, at non voluptas sequi natus ab aliquid doloremque perferendis quaerat consectetur recusandae in fuga. Nemo, eveniet?</p>
+                        </div>
+                    </div>    
     </main>
     <footer>© Jose Rivera 2026</footer>
 </body>
