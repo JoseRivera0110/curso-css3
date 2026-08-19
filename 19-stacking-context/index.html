@@ -39,14 +39,48 @@
             <h2 class="title">Casos en los contextos de apilamiento</h2>
                 <p class="text">Cuando se crea un elementos y estos tienen un contexto de apilamiento, puede pasar que por algunas propiedades, estos tengan otros contextos de apilamiento en su interior, y cambie el orden que se lleva.</p>
                     <h3 class="title">Caso por la opacidad</h3>
-                    <p class="text">Al usar una opacidad menor a 1, en el contenedor sucede algo y es que se crea un nuevo contexto de apilamiento, aparte de el que ya se habia creado.</p>
+                    <p class="text">En la siguiente secuencia se observa algunos detalles en los contextos de apilamiento, como el uso de la opacidad en un elemento puede modificar el orden que se llevaba por el mismo apilamiento presente.</p>
+                    <h4 class="title">Estado original</h4>
+                    <p class="text">Los elementos no estan posicionados, ni colisionan por lo tanto no existen tal apilamiento</p>
                     <div class="container container-3">
-                        <div class="box box-1">Caja 1 posicionada y z-index declarado</div>
+                        <div class="box box-1">Caja 1</div>
                         <div class="container__padre">
                             <h4 class="title__hijo">Contenedor con opacidad</h4>
                             <p class="text__hijo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat neque harum possimus quidem, at non voluptas sequi natus ab aliquid doloremque perferendis quaerat consectetur recusandae in fuga. Nemo, eveniet?</p>
                         </div>
-                    </div>    
+                        <div class="box box-2">Caja 2</div>
+                    </div>
+                    <h4 class="title">Desplazando para demostrar el apilamiento</h4>
+                    <p class="text">En este caso, los elementos presentes por el desplazamiento, colisionan, y al no tener declarada ninguna prioridad y al no estar posicionados, el orden lo dicta el HTML.</p>
+                    <p class="text">En este caso solo se desplazo la caja 1 y caja 2 mediante el uso de margin-top negativo, para evitar recurrir al posicionamiento. A su vez se observa algo importante y es que el texto del contenedor padre rebasa a la caja 2, por mas que esta ultima se posicione por encima del contenedor padre de ese texto.</p>
+                    <div class="container container-3">
+                        <div class="box box-1 box__box-1--moved">Caja 1 no posicionada, desplazada 50px hacia abajo</div>
+                        <div class="container__padre">
+                            <h4 class="title__hijo">Contenedor con opacidad</h4>
+                            <p class="text__hijo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat neque harum possimus quidem, at non voluptas sequi natus ab aliquid doloremque perferendis quaerat consectetur recusandae in fuga. Nemo, eveniet?</p>
+                        </div>
+                        <div class="box box-2 box__box-2--moved">Caja 2 no posicionada, desplazada 50px hacia arriba</div>
+                    </div>
+                    <h4 class="title">Modificando propiedades</h4>
+                    <p class="text">Ya habiendo posicionado y aplicando algunos z-index, se inserta una nueva propiedad la cual es la opacidad sobre el contenedor padre, y se requiere llevar el titulo por encima del contenedor y la caja 1 usando un z-index mayor. Pero aqui sucede algo llamativo y es que, agregando una opacidad del 0.99 o menor al contenedor en este crea un nuevo contexto de apilamiento en donde, el posicionamiento queda afectado por lo cual el titulo es imposible que quede en una posicion superior tanto a su mismos contenedor padre, como a la caja 1. </p>
+                    <div class="container container-3">
+                        <div class="box box-1 box__box-1--moved box__box-1--modify">Caja 1 posicionada y con un z-index:1</div>
+                        <div class="container__padre container__padre--modify">
+                            <h4 class="title__hijo title__hijo--modify">Contenedor con opacidad</h4>
+                            <p class="text__hijo text__hijo--modify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat neque harum possimus quidem, at non voluptas sequi natus ab aliquid doloremque perferendis quaerat consectetur recusandae in fuga. Nemo, eveniet?</p>
+                        </div>
+                        <div class="box box-2 box__box-2--moved box__box-2--modify">Caja 2 posicionada y con un z-index:-2</div>
+                    </div>
+                    <h4 class="title">Como se debe organizar en esos casos</h4>
+                    <p class="text">La solucion en este caso a ese problema a parte de poner la opacidad de 1 en adelante, es insertar esta propiedad directamente sobre el elemento que se quiere opacar, en este caso el titulo, por lo que al agregarlo, se soluciona este problema que puede generar problemas en diversos casos.</p>
+                    <div class="container container-3">
+                        <div class="box box-1 box__box-1--moved box__box-1--modify">Caja 1 posicionada y con un z-index:1</div>
+                        <div class="container__padre container__padre--modify--2">
+                            <h4 class="title__hijo title__hijo--modify--2">Titulo con opacidad .99</h4>
+                            <p class="text__hijo text__hijo--modify--2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum placeat neque harum possimus quidem, at non voluptas sequi natus ab aliquid doloremque perferendis quaerat consectetur recusandae in fuga. Nemo, eveniet?</p>
+                        </div>
+                        <div class="box box-2 box__box-2--moved box__box-2--modify--2">Caja 2 Caja 2 posicionada y con un z-index: 3</div>
+                    </div>       
     </main>
     <footer>© Jose Rivera 2026</footer>
 </body>

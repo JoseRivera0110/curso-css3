@@ -36,7 +36,8 @@ h3.title{
 }
 h4.title{
     width: 15%;
-    border: 3px groove #fff;
+    border: 3px groove darkorange;
+    color: darkorange;
 }
 /* diseño de los parrafos */
 .text{
@@ -53,6 +54,9 @@ h4.title{
     height: 200px;
     text-align: center;
 }
+
+/* EJEMPLO 1------------------------------------------------------------------------ */
+
 .box-1{
     background-color: steelblue;
     margin-left: 534px;
@@ -77,7 +81,6 @@ h4.title{
     z-index: -10;
     background-color:darkgray;
 }
-
 /* aplicando contexto de apilamiento en las cajas de ejemplo */
 .container-2 .box{
     padding-top: 160px;
@@ -104,18 +107,88 @@ h4.title{
     z-index: -1;
 }
 
+/* EJEMPLO 2------------------------------------------------------------------------ */ 
+/* Casos de contextos de apilamiento con propiedades que modifican el contexto de apilamiento de una caja */
+/* diseño sobre la caja contenedora de titulo y texto */
 .container__padre{
     background-color: olive;
     width: 300px;
     margin-left: auto;
     margin-right: auto;
 }
+/* diseño del titulo */
 .title__hijo{
     background-color: burlywood;
     color: initial;
     text-align: center;
     margin: 0;
 }
+/* diseño del texto */
 .text__hijo{
     margin: 0;
+}
+
+/* centrar elementos en el container */
+.container-3 .box{
+    margin-left: auto;
+    margin-right: auto;
+}
+/* eliminar el margin-top que traia por defecto la caja 2 */
+.container-3 .box-2{
+    margin-top: 0;
+}
+/* mover caja 1 de ejemplo 50px hacia abajo sin posicionarla */
+.box__box-1--moved{
+    margin-bottom: -50px;
+}
+/* mover caja 2 50px hacia arriba con margin sin posicionarla */
+.container-3 .box__box-2--moved{
+    margin-top: -50px;
+    padding-top: 150px;
+}
+
+
+/* aplicando contextos de apilamiento dentro de otros contextos de apilamiento, caso opacidad*/
+.box__box-1--modify{
+    position: relative;
+    z-index: 1;
+}
+.container__padre--modify{
+    position: relative;
+    opacity: .99;
+}
+.title__hijo--modify{
+    position: relative;
+    z-index: 999999;
+}
+.text__hijo--modify{
+    position: relative;
+    z-index: 99999;
+}
+.box__box-2--modify{
+    position: relative;
+    z-index: -2;
+}
+
+/* solucionar esos casos */
+
+/* .box__box-1--modify{
+    position: relative;
+    z-index: 1;
+} */
+.container__padre--modify--2{
+    position: relative;
+}
+.title__hijo--modify--2{
+    position: relative;
+    opacity: .99;
+    z-index: 3;
+}
+.text__hijo--modify--2{
+    position: relative;
+    z-index: 3;
+}
+.box__box-2--modify--2{
+    position: relative;
+    z-index: 3;
 }
