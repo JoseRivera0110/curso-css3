@@ -4,6 +4,7 @@
 body{
     background-color: #333;
     color: #fff;
+    margin: 0;
 }
 /* ------------------------------------------------------------------------------------------
                                             STACKING CONTEXT
@@ -38,6 +39,28 @@ h4.title{
     width: 15%;
     border: 3px groove darkorange;
     color: darkorange;
+}
+/* diseño del menu de navegacion */
+.header__menu{
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+}
+.nav__menu{
+    padding: 10px;
+    text-align: center;
+}
+.link{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px;
+    margin-left: 10px;
+}
+.section{
+    padding-top: 40px;
 }
 /* diseño de los parrafos */
 .text{
@@ -171,6 +194,7 @@ h4.title{
 }
 
 /* solucionar esos casos */
+
 
 /* .box__box-1--modify{
     position: relative;
