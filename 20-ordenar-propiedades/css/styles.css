@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #333;
+    color: #fff;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------
+                                                    ORDENAR PROPIEDADES
+
+    Ordenar las propiedades es importante, no existen ninguna norma ni especificación sobre como hacerlo, pero la mayoría de experto coinciden en los mismos puntos.
+
+    1 - Propiedades de posicionamiento
+    2 - propiedades de box model
+    3 - Propiedades de texto 
+    4 - Propiedades visuales (colores, bordes, background...)
+    5 - El resto  
+
+    NOTA: el orden dentro de las propiedades es irrelevante, lo importante es que se distingan entre propiedades principales, para que el codigo sea más manejable.
+*/
+
+    /* Diseño en los titulos */
+.title{
+    background-color: #fff;
+}
+h1.title{
+    text-align: center;
+    border: 5px solid darkred;
+    color: darkred;
+}
+h2.title{
+    border: 3px solid darkblue;
+    color: darkblue;
+}
+h3.title{
+    width: 20%;
+    border: 3px solid darkcyan;
+    margin-left: auto;
+    margin-right: auto;
+    color: darkcyan;
+}
+h4.title{
+    width: 15%;
+    border: 3px groove darkorange;
+    color: darkorange;
+}
+
+/* diseño de texto y la lista ordenada */
+.text, .list{
+    background-color: silver;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: black;
+    padding: 15px;
+    border-radius: 3px;
+}
+.list_item{
+    margin-left: 15px;
+}
+/* ----------------------------------------------------------------------------------------------------------
+                                                        COMO ORDENARLOS
+*/
+
+.box{
+    /* positionamiento */
+    position: relative;
+    left: 500px;
+
+    /* box model  */
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    margin-left: -30px;
+    padding: 10px;
+    overflow: auto;
+
+    /* texto  */
+    font-size: 20px;
+    font-family: monospace;
+
+    /* visuales */
+    background-color:orchid;
+    border: 10px double black;
+    color: initial;
+    border-radius: 5px;
+
+    /* varios */
+    opacity: .8;
+}
