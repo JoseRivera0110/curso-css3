@@ -4,6 +4,7 @@
 body{
     background-color: #333;
     color: #fff;
+    margin: 0;
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------
@@ -55,8 +56,8 @@ h4.title{
     color: darkorange;
 }
 
-/* diseño del texto */
-.text{
+/* ! diseño de texto y la lista ordenada */
+.text, .list{
     background-color: silver;
     margin-left: 5%;
     margin-right: 5%;
@@ -64,3 +65,44 @@ h4.title{
     padding: 15px;
     border-radius: 3px;
 }
+.list_ul{
+    padding-left: 0;
+    list-style-type: disc;
+}
+.list_item{
+    margin-left: 15px;
+}
+
+.container-img{
+    text-align: center;
+}
+.img{
+    border-radius: 2em;
+    border: 10px solid steelblue;
+    box-shadow: 10px 10px 15px 1px #000;
+}
+
+.list_item--disable{
+    list-style-type: none;
+}
+
+
+
+
+/* .link{
+    background-color: indianred;
+    color: #333;
+}
+.link-1{
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+}
+
+.link-2{
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    font-size: 2rem;
+} */
+
+
