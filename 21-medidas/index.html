@@ -7,7 +7,7 @@
     <title>Medidas en CSS</title>
 </head>
 <body>
-    <h1 class="title">MEDIDAS EN CSS</h1>
+    <!-- <h1 class="title">MEDIDAS EN CSS</h1>
         <p class="text">Las unidades en CSS determinan el tamaño de elementos, textos, márgenes y paddings. Se clasifican en absolutas (fijas) y relativas (adaptables).</p>
         <div class="container-img">
             <img src="assets/images/images.jpg" alt="medidas en css" class="img">
@@ -67,6 +67,25 @@
                 border: [(16px) x 0.2] = 3.2px solid #333;                                      border: [(32px) x .2] = 6.4px solid #333;
             }                                                                               }
                         </code>
-                    </pre>
+                    </pre> -->
+
+                <h3 class="title">PORCENTAJE (%) Y AUTO</h3>
+                <p class="text">El porcentaje como unidad de medida, es útil para aumentar o disminuir el tamaño de un elemento, de acuerdo al contexto que se encuentre, pero va a estar directamente referenciada a su elemento padre inmediato. Es otra unidad muy empleada al momento de generar responsive.</p>
+                <p class="text">Su funcionamiento puede llegar a ser complejo, ya que tiene algunas diferencias al usarse en el alto y ancho de un elemento.</p>
+                <h4 class="title">EN WIDTH</h4>
+                <p class="text">En el width (ancho) su uso es frecuente y es el más sencillo de entender, ya que como se menciono anteriomente, va a estar referenciado a su elemento padre, por lo que primero es necesario que dicho elemento padre contenga un ancho declarado para que funcione correctamente, a excepcion si es directamente en el &lt;body&gt;. Al incluirlo el porcentaje, este se adaptara al padre y su vez al ancho del dispositivo que se encuentre.</p>    
+                <div class="container">
+                    <div class="box">
+                        <div class="box-1">Hijo con el 50% del ancho del padre (100px)</div>
+                    Padre de 200px de ancho
+                    </div>                   
+                </div>
+                <p class="text">Ahora bien, pueden existir algunos problemas con el uso de los porcentajes, como suele suceder al usar el 100% de algun elemento, debido a que en los procentajes la cantidad es exactamente ese 100% referenciada al padre, por lo que si existe algun movimiento, esta no se adaptara y de igual forma medira el ancho completo del padre.</p>
+                <div class="container">Margen al lado izquierdo de 20px
+                    <div class="box box_2">
+                        <div class="box-1_segundocaso">Hijo con el 100% del ancho del padre</div>
+                    Padre de 200px de ancho
+                    </div>                   
+                </div>            
 </body>
 </html>

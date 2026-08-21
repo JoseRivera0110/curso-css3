@@ -29,7 +29,7 @@ body{
 */
 
 /* ? -----------------------------------------------------------------------------------------------------------------------------------
-                                                                ?DISEÑO */
+                                                                ? DISEÑO GENERAL*/
 /* Diseño en los titulos */
 .title{
     background-color: #fff;
@@ -44,6 +44,7 @@ h2.title{
     color: darkblue;
 }
 h3.title{
+    text-align: center;
     width: 20%;
     margin-left: auto;
     margin-right: auto;
@@ -51,6 +52,7 @@ h3.title{
     color: darkcyan;
 }
 h4.title{
+    text-align: center;
     width: 15%;
     margin-left: auto;
     margin-right: auto;
@@ -94,9 +96,20 @@ h4.title{
     box-shadow: 10px 10px 15px 1px #000;
 }
 
-/* ? -----------------------------------------------------------------------------------------------------------------------------------
-                                                                ? REM Y EM */
- 
+/* todo -----------------------------------------------------------------------------------------------------------------------------------
+                                                               todo REM Y EM */
+
+/* 
+        rem -> Corresponde a la medida de la "m" de la raiz del documento (html).
+
+        ejemplo: 16px = 1rem
+        
+        em -> Corresponde a la medida de la "m" del contexto donde nos encontremos.
+
+        El estandar del tamaño de fuente por defecto en la raiz del documento es 16px, y NO ES RECOMENDABLE MODIFICARLO.
+
+        NOTA: Tanto "em" como "rem" se calcula en base a la propiedad font-size (tamaño de fuente)
+*/
 /* diseño de los contenedores de los botones*/
 .container_link{
     text-align: center;
@@ -137,5 +150,42 @@ pre{
 code{
     color: #f8f8f2;
 }
+
+/* todo -----------------------------------------------------------------------------------------------------------------------------------
+                                                               todo % Y AUTO */
+                                                                /* en WIDTH */
+
+/* WIDTH:
+    % -> Cuando usamos porcentaje usamos de referencia el tamaño del contenedor y el navegador calcula ese porcentaje. Esto no ocurre cuando usamos transform.
+
+    auto -> Cuando usamos auto le pedimos al navegador que calcule el ancho en función del espacio disponible.
+*/
+.box{
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    background-color: goldenrod;
+    color: initial;
+    text-align: center;
+}
+.box-1{
+    width: 50%;
+    height: 100px;
+    background-color: darkred;
+    padding: 5px;
+    color: #fff;
+}
+
+
+
+                                                        /* en HEIGHT*/
+/* HEIGHT:
+    % -> Cuando estamos dentro de un contenedor, este tiene que tener un alto declarado, si no no podrá calcular el porcentaje. Si se le aplica una medida con porcentaje se sustituirá automaticamente por auto.
+
+    auto -> Cuando utilizamos auto el alto lo calculará el navegador en base al contenido del elemento
+
+  NOTA: Height es una propiedad que tenéis que usar con mucho cuidado. Si no es necesario establecer un alto, dejad que el contenido sea el que decida el alto del elemento. 
+*/
 
 
