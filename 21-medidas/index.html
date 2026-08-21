@@ -48,11 +48,24 @@
                     <pre> 
                         <code>
                                 .link-1{                                                    .link-2{
+                                    font-size: 2rem;                                            font-size: 2rem;
                                     padding: 1rem 2rem;                                         padding: 1em 2em;
                                     border-radius: 0.5rem;                                      border-radius: 0.5em;
-                                    font-size: 2rem;                                            font-size: 2rem;
                                     border: .2rem solid #333;                                   border: .2em solid #333;
                                 }                                                           }
+                        </code>
+                    </pre>   
+                    <p class="text">Como se puede observar, ambos botones poseen el mismo digito de rem y em en cada propiedad, sin embargo, debido a que su toma de referencia del tamaño de la fuente es diferente, influye en el tamaño de el modelo de caja y de su contenido.</p>
+                    <p class="text">Para el REM siempre su valor sera el referenciado al HTML (por defecto 16px), que podrian variar si se cambia manualmente. Mientras en el caso del EM el tamaño de la fuente varia segun la etiqueta, contenedor, body o html. En este caso puntual el font-size presente (2rem) modifica el valor de la fuente por defecto del HTML de 16px a 32px.</p>
+                    <p class="text">Para hacer una explicacion grafica, esto vendria a funcionar de la siguiente forma:</p>
+                    <pre> 
+                        <code>
+            .link-1{                                                                        .link-2{
+                font-size: [(16px) x 2] = 32px; &lt;--(el REM mantendra los 16px del HTML)         font-size: [(16px) x 2] = 32px; &lt;--(este es el nuevo EM)
+                padding: [(16px) x 1] = 16px [(16px) x 2] = 32px;                               padding: [(32px) x 1] = 32px [(32px) x 2] = 64px;
+                border-radius: [(16px) x 0.5] = 8px;                                            border-radius: [(32px) x 0.5] = 16px;
+                border: [(16px) x 0.2] = 3.2px solid #333;                                      border: [(32px) x .2] = 6.4px solid #333;
+            }                                                                               }
                         </code>
                     </pre>
 </body>

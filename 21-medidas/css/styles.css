@@ -7,8 +7,8 @@ body{
     margin: 0;
 }
 
-/* ----------------------------------------------------------------------------------------------------------------------
-                                                            MEDIDAS
+/* * ----------------------------------------------------------------------------------------------------------------------
+                                                                * MEDIDAS
 
   Las medidas en CSS se pueden agrupar en 2 grupos, absolutas y relativas.
 
@@ -28,6 +28,8 @@ body{
       lh -> Altura de la línea del elemento.                                                           
 */
 
+/* ? -----------------------------------------------------------------------------------------------------------------------------------
+                                                                ?DISEÑO */
 /* Diseño en los titulos */
 .title{
     background-color: #fff;
@@ -59,7 +61,7 @@ h4.title{
 .container{
     background-color:darkgray;
 }
-/* ! diseño de texto y la lista ordenada */
+/* diseño de texto y la lista ordenada */
 .text, .list{
     background-color: silver;
     margin-left: 5%;
@@ -68,6 +70,8 @@ h4.title{
     padding: 15px;
     border-radius: 3px;
 }
+
+/* diseño dentro de las listas */
 .list_ul{
     padding-left: 0;
     list-style-type: disc;
@@ -75,47 +79,51 @@ h4.title{
 .list_item{
     margin-left: 15px;
 }
+.list_item--disable{
+    list-style-type: none;
+}
 
+/* diseño del contenedor de la imagen */
 .container-img{
     text-align: center;
 }
+/* diseño de la imagen */
 .img{
     border-radius: 2em;
     border: 10px solid steelblue;
     box-shadow: 10px 10px 15px 1px #000;
 }
 
-.list_item--disable{
-    list-style-type: none;
-}
-
-
-
+/* ? -----------------------------------------------------------------------------------------------------------------------------------
+                                                                ? REM Y EM */
+ 
+/* diseño de los contenedores de los botones*/
 .container_link{
     text-align: center;
     padding: 1.5em;
 }
+/* diseño de los botones */
 .link{
     display: inline-block;
     background-color: indianred;
     text-decoration: none;
-    color: #333;
-    
+    color: #333; 
 }
+/* boton con REM */
 .link-1{
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     font-size: 2rem;
     border: .2rem solid #333;
 }
-
+/* boton con EM */
 .link-2{
     padding: 1em 2em;
     border-radius: 0.5em;
     font-size: 2rem;
     border: .2em solid #333;
 }
-
+/* preconfigurando lineas de codigo visibles en la pagina web */
 pre{
     background: #2d2d2d;
     color: #f8f8f2;
