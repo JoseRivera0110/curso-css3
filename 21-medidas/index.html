@@ -76,7 +76,7 @@
                     <p class="text">En el width (ancho) su uso es frecuente y es el más sencillo de entender, ya que como se menciono anteriomente, va a estar referenciado a su elemento padre, por lo que primero es necesario que dicho elemento padre contenga un ancho declarado para que funcione correctamente, a excepcion si es directamente en el &lt;body&gt;. Al incluirlo el porcentaje, este se adaptara al padre y su vez al ancho del dispositivo que se encuentre.</p>    
                     <div class="container">
                         <div class="box">
-                            <div class="box-1">Hijo con el 50% del ancho del padre (100px)</div>
+                            <div class="box-1 box-1--padding">Hijo con el 50% del ancho del padre (100px)</div>
                         Padre de 200px de ancho
                         </div>                   
                     </div>
@@ -105,15 +105,19 @@
                             <div class="box-1 box-1--modify-height box-1--moved"><p class="box_text">Hijo con el 100% del alto del padre y un margin top de 20px</p></div>
                         </div>                     
                     </div>
-                    <p class="text">El valor AUTO en height no funciona de la misma manera que en el Width, esto es debido a que el Height <strong>siempre</strong> va a requerir que su padre inmediato tenga declarado un valor en el alto, para que este pueda verse reflejado, y como en la mayoria de los casos su padre suele ser &lt;body&gt; o &lt;htmk&gt; (las cuales por obvias razones no tienen un valor alto declarado), esta no suelen funcionar.</p>
+                    <p class="text">El valor AUTO en height no funciona de la misma manera que en el Width, esto es debido a que el height <strong>siempre</strong> va a requerir que su padre inmediato tenga contenido integrado para que este pueda verse reflejado. Por lo tanto no importa si tenemos un alto declarado, esta no va a funcionar</p>
                     <div class="container">
-                        <div class="box box--display">
-                            <div class="box-1 box-1--modify-height"><p class="box_text">Hijo con el 100% del alto del padre</p></div>
+                        <div class="box box--height-position">
+                            <div class="box-1 box-1--height-auto"></div>
                         </div>
-                        <div class="box box--display">
-                            <div class="box-1 box-1--modify-height box-1--moved"><p class="box_text">Hijo con el 100% del alto del padre y un margin top de 20px</p></div>
-                        </div>                     
                     </div>
+                    <p class="text">Ahora agregando contenido a la caja, esta si logra funcionar de manera correcta</p>
+                    <div class="container">
+                        <div class="box box--height-position">
+                            <div class="box-1 box-1--height-auto">Soy contenido de ejemplo, donde muestro que el hight:auto se adapta al tamaño del contenido</div>
+                        </div>
+                    </div>
+                <h3 class="title">UNIDADES DE VIEWPORT</h3>
     
 </body>
 </html>

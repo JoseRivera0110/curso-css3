@@ -153,7 +153,7 @@ code{
 
 /* todo -----------------------------------------------------------------------------------------------------------------------------------
                                                                todo % Y AUTO */
-
+C
 .box{
     margin-left: auto;
     margin-right: auto;
@@ -167,7 +167,6 @@ code{
     width: 50%;
     height: 100px;
     background-color: darkred;
-    padding: 5px;
     color: #fff;
 }
 
@@ -187,7 +186,9 @@ code{
 .box-1--modify-auto{
     width: auto;
 }                                                                   
-                                                                    /* en HEIGHT*/
+.box-1--padding{
+    padding: 5px;
+}                                                                    /* en HEIGHT*/
 /*
     % -> Cuando estamos dentro de un contenedor, este tiene que tener un alto declarado, si no no podrá calcular el porcentaje. Si se le aplica una medida con porcentaje se sustituirá automaticamente por auto.
 
@@ -205,6 +206,7 @@ code{
 .container{
     text-align: center;
 }
+
 .box--display{
     display: inline-block;
     margin-right: 2em;
@@ -214,4 +216,7 @@ code{
     position: absolute;
     width: 6%;
 }
-
+.box-1--height-auto{
+    height: auto;
+    padding: 0;
+}
