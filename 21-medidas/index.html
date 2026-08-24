@@ -68,7 +68,7 @@
             }                                                                               }
                         </code>
                     </pre> -->
-
+    
                 <h3 class="title">PORCENTAJE (%) Y AUTO</h3>
                 <p class="text">El porcentaje como unidad de medida, es útil para aumentar o disminuir el tamaño de un elemento, de acuerdo al contexto que se encuentre, pero va a estar directamente referenciada a su elemento padre inmediato. Es otra unidad muy empleada al momento de generar responsive.</p>
                 <p class="text">Su funcionamiento puede llegar a ser complejo, ya que tiene algunas diferencias al usarse en el alto y ancho de un elemento.</p>
@@ -107,17 +107,40 @@
                     </div>
                     <p class="text">El valor AUTO en height no funciona de la misma manera que en el Width, esto es debido a que el height <strong>siempre</strong> va a requerir que su padre inmediato tenga contenido integrado para que este pueda verse reflejado. Por lo tanto no importa si tenemos un alto declarado, esta no va a funcionar</p>
                     <div class="container">
-                        <div class="box box--height-position">
+                        <div class="box">
                             <div class="box-1 box-1--height-auto"></div>
                         </div>
                     </div>
                     <p class="text">Ahora agregando contenido a la caja, esta si logra funcionar de manera correcta</p>
                     <div class="container">
-                        <div class="box box--height-position">
+                        <div class="box">
                             <div class="box-1 box-1--height-auto">Soy contenido de ejemplo, donde muestro que el hight:auto se adapta al tamaño del contenido</div>
                         </div>
                     </div>
+                    <p class="text">Y por ultimo, otra consideracion a tomar cuando se usa porcentaje en height, es al momento de tener elementos posicionados, mas detalladamente con position absolute, ya que se comporta de manera distinta. Esto es porque su punto de referencia deja de ser un padre inmediato y pasa a ser el viewport.</p>
+                    <div class="container container-position">
+                        <div class="box">
+                            <div class="box-1 box-1--height-position"></div>
+                        </div>
+                    </div>
                 <h3 class="title">UNIDADES DE VIEWPORT</h3>
-    
+
+                 <div class="container container-ojos">
+                    <div class="box-ojo">
+                        <div class="box-ojo_iris"></div>
+                    </div>
+                    <div class="box-ojo">
+                        <div class="box-ojo_iris"></div>
+                    </div>
+                 </div> 
+                 <div class="container container-boca">
+                    <div class="box-boca"></div>
+                    <div class="box-boca2"></div>
+                 </div>
+                 <div class="container container-labio">
+                    <div class="box-labio"></div>
+                 </div>
+
+
 </body>
 </html>

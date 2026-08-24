@@ -153,7 +153,7 @@ code{
 
 /* todo -----------------------------------------------------------------------------------------------------------------------------------
                                                                todo % Y AUTO */
-C
+
 .box{
     margin-left: auto;
     margin-right: auto;
@@ -170,7 +170,7 @@ C
     color: #fff;
 }
 
-                                                               /* en WIDTH */
+                                                                    /* en WIDTH */
 
 /* WIDTH:
     % -> Cuando usamos porcentaje usamos de referencia el tamaño del contenedor y el navegador calcula ese porcentaje. Esto no ocurre cuando usamos transform.
@@ -219,4 +219,79 @@ C
 .box-1--height-auto{
     height: auto;
     padding: 0;
+}
+.container-position{
+    padding-bottom: 6.5rem;
+}
+.box-1--height-position{
+    position: absolute;
+    width: 100px;
+    height: 47.5%;
+}
+
+/* todo -----------------------------------------------------------------------------------------------------------------------------------
+                                                                    /* todo VIEWPORT */
+/* 
+    El viewport es el área útil donde se mostrará la página web. IMPORTANTE, tened en cuenta que es el area visible sin hacer scroll.
+    Podemos usar el viewport como medida de varias formas:
+      vw-> Viewport Width, hace referencia al ancho del viewport. 
+      vh -> Viewport Height, hace referencia al alto del viewport.
+      vmax -> Utiliza el valor más grande entre el ancho y el alto del viewport.
+      vmin -> Utiliza el valor más pequeño entre el ancho y el alto del viewport.
+
+      1vw = 1% del ancho del viewport
+      1vh = 1% del alto del viewport
+      1vmin = 1% del valor que sea más pequeño del viewport
+      1vmax = 1% del valor que sea más grande del viewport */
+
+/* .container-cara{
+    width: 100%;
+    height: auto;
+} */
+.box-ojo{
+    display: inline-block;
+    position: relative;
+    width: 10vw;
+    height: 13vh;
+    margin-right: 7rem;
+    background-color: #fff;
+    border: 0.2em solid #000;
+}
+.box-ojo_iris{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 2vw;
+    height: 5vh;
+    background-color: #000;
+}
+.container-boca{
+    position: relative;
+}
+.box-boca{
+    position: relative;
+    right: 15.625rem;
+    display: inline-block;
+    width: 5vw;
+    height: 8vh;
+    background-color: #000;
+}
+.box-boca2{
+    position: relative;
+    left: 8.75rem;
+    display: inline-block;
+    width: 5vw;
+    height: 8vh;
+    background-color: #000;
+}
+.container-labio{
+    /* position: relative; */
+}
+.box-labio{
+    display: inline-block;
+    position: relative;
+    right: 3.375rem;
+    width: 28.2vw;
+    height: 8vh;
+    background-color: #000;
 }
