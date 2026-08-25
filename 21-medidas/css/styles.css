@@ -199,6 +199,7 @@ code{
 
   NOTA: Height es una propiedad que tenéis que usar con mucho cuidado. Si no es necesario establecer un alto, dejad que el contenido sea el que decida el alto del elemento. 
 */
+
 /* agregar valor 100% en alto a caja de ejemplo  */
 .box-1--modify-height{
     height: 100%;
@@ -302,14 +303,42 @@ code{
 
 /* -------------------------------------------------------------------------------------------------------
                                                                         VMAX Y VMIN */
+/* El funcionamiento del vmin y el vmax, va relacionado al 1% minimo/maximo que se encuentre en el ancho o alto del viewport. En este caso, los ojos tienen un comportamiento normal, debido a que el width corresponde al valor maximo de la pantalla (1366px) por esa razon tomara el valor mas alto en este caso el mismo width,  entonces si le damos un valor de 4vmax, se lo damos como porcentaje, por lo que, al mantenerse el width como valor maximo, seria 1366x0.01 = 13.66, a ese resultado se le multiplica el porcentaje que se le puso como valor maximo 4vmax, 13.66x4 = 54,64px, ese sera el valor del elemento mientras el viewport se mantenga en su valor original. */
 
 /* agregar valor de de viewport minimo en ancho de ojo izquierdo */
 .box-ojo_iris--modify{
-    width: 10vmin;
-    height: 2rem;
+    width: 4vmax;
 }
+
+/* mientras que por el lado del vmin, sera aplicado en su defecto al height ya que el alto es mas pequeño que el ancho (641px), por lo que al hacer los calculos, 641x0.01 = 6.41, y al multiplicarlo por el porcentaje de minimo de viewport que se le puso al alto, quedaria de la siguiente manera: 6.41x5 = 32.05px. Valor del elemento mientras se mantiene el viewport originalmente. */
+
 /* agregar valor de viewport maximo en alto de ojo derecho */
 .box-ojo_iris--modify--new{
-    width: 4rem;
-    height: 2.5vmax;
+    height: 5vmin;
+}
+
+/* todo -----------------------------------------------------------------------------------------------------------------------------------
+                                                            /* todo MIN/MAX WIDTH Y HEIGHT */
+
+        /* Limitadores al ancho y alto
+            Cuando establecemos un width y/o un height con una medida que es relativa, es posible que no queramos que se respete esa medida en todos los casos.
+            Para ello tenemos propiedades que limitan esas medidas:
+            min-width: Indica el ancho minimo que puede alcanzar el elemento.
+            max-width: Indica el ancho máximo que puede alcanzar el elemento.
+            min-height: Indica el alto minimo que puede alcanzar el elemento.
+            max-height: Indica el alto máximo que puede alcanzar el elemento. */
+
+/* la imagen como ejemplo es una iglesia con valor por defecto de 640px de ancho por 480px de alto, por lo que al agregar un width del 100% indica que se usara todo el ancho de su padre, en este caso un contenedor que a su vez usa el 100% del body, por lo que no habra ninguna diferencia, ahora el height tendra un valor de 70vh lo que equivale a 70% del alto del viewport, que en pixeles vendrian siendo 448px aproximadamente. */
+.img_iglesia{
+    width: 100%;
+
+    /* ahora al agregar los siguientes valores, se modifica el tamaño maximo y minimo del ancho de la imagen, en este caso el minimo es de 35em, y si se sabe que en EM para este momento equivale a 16px, la medida sera 35x16=560px para el ancho minimo de la imagen, mientras que en ancho maximo de 50em, siguiendo el orden vendria a ser 50x16=800px. Vendrian a ser las medidas de la imagen al momento de cambiar de tamaño de pantallas o viewports. */
+    min-width: 35em;
+    max-width: 50em;
+
+    height: 70vh;
+
+    /* caso parecido se ve en el alto, donde ya sabiendo tanto su valor por defecto, como que el em equivale a 16px, aqui seria basicamente lo mismo, 25x16=400px para el alto maximo, mientras que para el minimo seria 15x16=240px. */
+    max-height: 25em;
+    min-height: 15em;
 }
