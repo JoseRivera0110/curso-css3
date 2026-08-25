@@ -153,7 +153,7 @@ code{
 
 /* todo -----------------------------------------------------------------------------------------------------------------------------------
                                                                todo % Y AUTO */
-
+/* Diseño de las cajas para ejemplos */
 .box{
     margin-left: auto;
     margin-right: auto;
@@ -163,6 +163,7 @@ code{
     color: initial;
     text-align: center;
 }
+/* caja hijo de ejemplo */
 .box-1{
     width: 50%;
     height: 100px;
@@ -178,14 +179,16 @@ code{
     auto -> Cuando usamos auto le pedimos al navegador que calcule el ancho en función del espacio disponible.
 */
 
-
+/* moviendo caja de ejemplo a la izquierda para demostrar el 100% en width */
 .box-1--modify-width{
     width: 100%;
     margin-left: 50px;
 }
+/* valores de auto en width de ejemplo*/
 .box-1--modify-auto{
     width: auto;
-}                                                                   
+}
+/* agregando padding para mejorar visualizacion del texto                                                                    */
 .box-1--padding{
     padding: 5px;
 }                                                                    /* en HEIGHT*/
@@ -196,33 +199,38 @@ code{
 
   NOTA: Height es una propiedad que tenéis que usar con mucho cuidado. Si no es necesario establecer un alto, dejad que el contenido sea el que decida el alto del elemento. 
 */
-
+/* agregar valor 100% en alto a caja de ejemplo  */
 .box-1--modify-height{
     height: 100%;
 }
+/* margen hacia arriba de 20px para caja de ejemplo del 100% del height */
 .box-1--moved{
     margin-top: 20px;
 }
+/* centrar dos cajas de ejemplo del height con porcentaje */
 .container{
     text-align: center;
 }
-
+/* aplicar display para ubicar las cajas una al lado de la otra */
 .box--display{
     display: inline-block;
     margin-right: 2em;
 }
-
+/* posicionando texto para que se vea mejor visualmente */
 .box_text{
     position: absolute;
     width: 6%;
 }
+/* demostrando el uso de auto con height, ademas de quitar el padding usado en la clase box-1 */
 .box-1--height-auto{
     height: auto;
     padding: 0;
 }
+/* agregando relleno al contenedor para mejora visual en ejemplo de height auto */
 .container-position{
     padding-bottom: 6.5rem;
 }
+/* agregando modificaciones para ejemplo de caja posicionado con absolute y alto en porcentaje */
 .box-1--height-position{
     position: absolute;
     width: 100px;
@@ -248,6 +256,14 @@ code{
     width: 100%;
     height: auto;
 } */
+
+/* -------------------------------------------------------------------------------------------------------
+                                                                UNIDADES: VW Y VH */
+/* agregando espacio entre ojos y boca de cara de ejemplo */
+.container-ojos{
+    padding-bottom: 50px;
+}
+/* diseño de ojos*/
 .box-ojo{
     display: inline-block;
     position: relative;
@@ -256,42 +272,44 @@ code{
     margin-right: 7rem;
     background-color: #fff;
     border: 0.2em solid #000;
+    border-radius: 50%;
 }
+/* diseño de iris de los ojos */
 .box-ojo_iris{
     position: absolute;
     bottom: 0;
-    right: 0;
-    width: 2vw;
+    right: 0.7em;
+    width: 4vw;
     height: 5vh;
     background-color: #000;
+    border-radius: inherit;
 }
-.container-boca{
-    position: relative;
+/* centrando caras arreglo visual */
+.container-boca, .container-boca, .container-ojos{
+    padding-left: 7em;
 }
+/* diseño de boca */
 .box-boca{
-    position: relative;
-    right: 15.625rem;
-    display: inline-block;
-    width: 5vw;
-    height: 8vh;
-    background-color: #000;
-}
-.box-boca2{
-    position: relative;
-    left: 8.75rem;
-    display: inline-block;
-    width: 5vw;
-    height: 8vh;
-    background-color: #000;
-}
-.container-labio{
-    /* position: relative; */
-}
-.box-labio{
     display: inline-block;
     position: relative;
     right: 3.375rem;
     width: 28.2vw;
     height: 8vh;
+    text-align: center;
+    border-radius: 3em;
     background-color: #000;
+}
+
+/* -------------------------------------------------------------------------------------------------------
+                                                                        VMAX Y VMIN */
+
+/* agregar valor de de viewport minimo en ancho de ojo izquierdo */
+.box-ojo_iris--modify{
+    width: 10vmin;
+    height: 2rem;
+}
+/* agregar valor de viewport maximo en alto de ojo derecho */
+.box-ojo_iris--modify--new{
+    width: 4rem;
+    height: 2.5vmax;
 }

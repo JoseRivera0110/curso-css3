@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles-dist.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Medidas en CSS</title>
 </head>
 <body>
@@ -124,23 +124,34 @@
                         </div>
                     </div>
                 <h3 class="title">UNIDADES DE VIEWPORT</h3>
-
-                 <div class="container container-ojos">
-                    <div class="box-ojo">
-                        <div class="box-ojo_iris"></div>
+                    <h4 class="title">VW Y VH</h4>
+                    <p class="text">Acontinuacion como funciona el vh y vw, basicamente cada uno representa el 1% de lo que vemos en pantalla sea horizontal o verticalmente, es decir, como en este caso, si se le asigna un width de 10vw, estara representando el 10% de la pantalla en ese momento, si la pantalla se agranda o se minimiza se adapta a su 10%</p>
+                    <div class="container container-ojos">
+                        <div class="box-ojo">
+                            <div class="box-ojo_iris"></div>
+                        </div>
+                        <div class="box-ojo">
+                            <div class="box-ojo_iris"></div>
+                        </div>
+                    </div> 
+                    <div class="container container-boca">
+                        <div class="box-boca"></div>
                     </div>
-                    <div class="box-ojo">
-                        <div class="box-ojo_iris"></div>
+                    <h4 class="title">VMIN Y VMAX</h4>
+                    <p class="text">En el caso de los vmax y vmin, es mas complejo, ya que el usara el 1% sea del ancho o alto, del tamaño mas pequeño en el caso del vmin, o el tamaño mas grande en el caso del vmax. Este ejemplo, se centra en la iris de los ojos donde estas creceran o decreceran de acuerdo al tamaño de la pantalla donde se encuentre.</p>
+                    <div class="container container-ojos">
+                        <div class="box-ojo">
+                            <div class="box-ojo_iris box-ojo_iris--modify"></div>
+                        </div>
+                        <div class="box-ojo">
+                            <div class="box-ojo_iris box-ojo_iris--modify--new"></div>
+                        </div>
+                    </div> 
+                    <div class="container container-boca">
+                        <div class="box-boca">
+                        </div>
                     </div>
-                 </div> 
-                 <div class="container container-boca">
-                    <div class="box-boca"></div>
-                    <div class="box-boca2"></div>
-                 </div>
-                 <div class="container container-labio">
-                    <div class="box-labio"></div>
-                 </div>
-
-
+                    <p class="text">Como se observa, al realizar cambios en el tamaño de la pagina se obervan los cambios realizados en la iris de los ojos, cada una tiene valores disntintos, la izquierda tiene un viweport minimo modificado en el ancho, mientras el iris derecho tiene un viewport maximo modificado en el alto.</p>
+                    
 </body>
 </html>
