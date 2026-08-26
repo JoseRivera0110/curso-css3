@@ -57,7 +57,16 @@ body{
 .section{
     padding-top: 40px;
 }
-                                               /* Diseño en los titulos */
+/* titulos suspendidos */
+.article-title{
+    position: sticky;
+    top: 60px;
+}
+.section-title{
+    position: sticky;
+    top: 60px;
+}
+/* Diseño en los titulos */
 .title{
     background-color: #fff;
 }
@@ -370,4 +379,27 @@ code{
     /* caso parecido se ve en el alto, donde ya sabiendo tanto su valor por defecto, como que el em equivale a 16px, aqui seria basicamente lo mismo, 25x16=400px para el alto maximo, mientras que para el minimo seria 15x16=240px. */
     max-height: 25em;
     min-height: 15em;
+}
+
+/* otra forma de usar el min-height es por medio de emplearlo en el body, esto para que si se requiere posicionar un elemento en todo el pie de pagina, no este directamente relacionado a la cantidad de contenido que tenga la pagina, para que siempre quede posicionado en la parte inferior. */
+
+/* para ello es necesario posicionar y darle un min-height 100vh, para que ocupe todo el alto */
+body{
+    position: relative;
+    min-height: 100vh;
+}
+/* configurando un footer para que se vea en la parte inferior (no aplica en este caso ya que el contenido desplaza el footer a la parte inferior) */
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.8em;
+    background-color:#fff;
+    color: #333;
+    border: 2px solid #333;
+    text-align: center;
+}
+/* al posicionar el body se daña esta propiedad, por lo que toca agregarle un alto */
+.box-1--height-position{
+    height: 47vh;
 }
