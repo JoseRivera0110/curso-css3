@@ -30,7 +30,34 @@ body{
 
 /* ? -----------------------------------------------------------------------------------------------------------------------------------
                                                                 ? DISEÑO GENERAL*/
-/* Diseño en los titulos */
+
+
+/* diseño del menu de navegacion */
+.header__menu{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid #333;
+}
+.nav__menu{
+    padding: 10px;
+    text-align: center;
+}
+.nav_menu_link{
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid #333;
+    color: #333;
+    border-radius: 6px;
+    padding: 5px;
+    margin-left: 10px;
+}
+.section{
+    padding-top: 40px;
+}
+                                               /* Diseño en los titulos */
 .title{
     background-color: #fff;
 }
@@ -91,6 +118,8 @@ h4.title{
 }
 /* diseño de la imagen */
 .img{
+    width: 540px;
+    height: 380px;
     border-radius: 2em;
     border: 10px solid steelblue;
     box-shadow: 10px 10px 15px 1px #000;

@@ -7,156 +7,170 @@
     <title>Medidas en CSS</title>
 </head>
 <body>
-    <!-- <h1 class="title">MEDIDAS EN CSS</h1>
-        <p class="text">Las unidades en CSS determinan el tamaño de elementos, textos, márgenes y paddings. Se clasifican en absolutas (fijas) y relativas (adaptables).</p>
-        <div class="container-img">
-            <img src="assets/images/images.jpg" alt="medidas en css" class="img">
-        </div>
-            <h2 class="title">MEDIDAS ABSOLUTAS</h2>
-            <p class="text">Es el tipo de medidas las cuales siempre se mantendran fijas, indiferentemente del tamaño donde se visualice. Como ejemplo esta el pixel (px), se va a adaptar a la cantidad de pixeles que se coloquen, y si estan sobrepasa el tamaño es posible que se cree un scroll</p>
-            <h2 class="title">MEDIDAS RELATIVAS</h2>
-            <p class="text">Son aquellas medidas las cuales pueden variar de acuerdo al contexto donde se encuentre, son un tipo de medidas muy empleado para lograr el efecto responsive. Suelen adaptarse a el tamaño del viewport de donde se pueda visualizar.</p>
-                <h3 class="title">REM y EM</h3>
-                <ul class="list">
-                    <li class="list_item--disable">La diferencia central entre rem y em está en cuál es su punto de referencia (de dónde heredan el tamaño):
-                        <ul class="list list_ul">
-                            <li>rem (Root EM): Toma como referencia el tamaño de fuente del elemento raíz (&lt;html&gt;).</li>
-                            <li>em: Toma como referencia el tamaño de fuente de su propio elemento o de su padre directo.</li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-                <ol class="list list_ol">
-                    <li class="list_item">rem (Root EM)
-                        <p>Por defecto en los navegadores, &lt;html&gt; tiene un tamaño de 16 px.</p>
-                            <ul>
-                                <li>1 rem = 16 px</li>
-                                <li>1.5 rem = 24 px</li>
-                                <li>2 rem = 32 px</li>
+    <header class="header__menu">
+        <nav class="nav__menu">
+            <a href="#inicio" class="nav_menu_link">INICIO</a>
+            <a href="#primer" class="nav_menu_link">PRIMER EJEMPLO</a>
+            <a href="#segundo" class="nav_menu_link">SEGUNDO EJEMPLO</a>
+        </nav>
+    </header>
+    <main>
+        <h1 class="title">MEDIDAS EN CSS</h1>
+            <p class="text">Las unidades en CSS determinan el tamaño de elementos, textos, márgenes y paddings. Se clasifican en absolutas (fijas) y relativas (adaptables).</p>
+            <div class="container-img">
+                <img src="assets/images/images.jpg" alt="medidas en css" class="img">
+            </div>
+                <h2 class="title">MEDIDAS ABSOLUTAS</h2>
+                <p class="text">Es el tipo de medidas las cuales siempre se mantendran fijas, indiferentemente del tamaño donde se visualice. Como ejemplo esta el pixel (px), se va a adaptar a la cantidad de pixeles que se coloquen, y si estan sobrepasa el tamaño es posible que se cree un scroll</p>
+                <div class="container-img">
+                    <img src="assets/images/mabsolutas.png" alt="Medidas absolutas" class="img_mabsolutas">
+                </div>
+                <h2 class="title">MEDIDAS RELATIVAS</h2>
+                <p class="text">Son aquellas medidas las cuales pueden variar de acuerdo al contexto donde se encuentre, son un tipo de medidas muy empleado para lograr el efecto responsive. Suelen adaptarse a el tamaño del viewport de donde se pueda visualizar.</p>
+                    <h3 class="title">REM y EM</h3>
+                    <ul class="list">
+                        <li class="list_item--disable">La diferencia central entre rem y em está en cuál es su punto de referencia (de dónde heredan el tamaño):
+                            <ul class="list list_ul">
+                                <li>rem (Root EM): Toma como referencia el tamaño de fuente del elemento raíz (&lt;html&gt;).</li>
+                                <li>em: Toma como referencia el tamaño de fuente de su propio elemento o de su padre directo.</li>
                             </ul>
-                    </li>
-                    <li class="list_item">em: 
-                        <p>Calcula el valor multiplicando la fuente del padre (para el font-size) o del propio elemento (para padding, margin, width, etc.).</p>
-                        <p><strong>Efecto Cascada / Multiplicativo:</strong> Si anidas varios elementos usando em en su font-size, los tamaños se van multiplicando exponencialmente.</p>
-                    </li>
-                </ol>
-                    <h4 class="title">EJEMPLO PRACTICO</h4>
-                    <div class="container container_link">
-                        <a href="#" class="link link-1">Boton con medidas REM</a>
-                        <a href="#" class="link link-2">Boton con medidas EM</a>
-                    </div>
-                    <pre> 
-                        <code>
-                                .link-1{                                                    .link-2{
-                                    font-size: 2rem;                                            font-size: 2rem;
-                                    padding: 1rem 2rem;                                         padding: 1em 2em;
-                                    border-radius: 0.5rem;                                      border-radius: 0.5em;
-                                    border: .2rem solid #333;                                   border: .2em solid #333;
-                                }                                                           }
-                        </code>
-                    </pre>   
-                    <p class="text">Como se puede observar, ambos botones poseen el mismo digito de rem y em en cada propiedad, sin embargo, debido a que su toma de referencia del tamaño de la fuente es diferente, influye en el tamaño de el modelo de caja y de su contenido.</p>
-                    <p class="text">Para el REM siempre su valor sera el referenciado al HTML (por defecto 16px), que podrian variar si se cambia manualmente. Mientras en el caso del EM el tamaño de la fuente varia segun la etiqueta, contenedor, body o html. En este caso puntual el font-size presente (2rem) modifica el valor de la fuente por defecto del HTML de 16px a 32px.</p>
-                    <p class="text">Para hacer una explicacion grafica, esto vendria a funcionar de la siguiente forma:</p>
-                    <pre> 
-                        <code>
-            .link-1{                                                                        .link-2{
-                font-size: [(16px) x 2] = 32px; &lt;--(el REM mantendra los 16px del HTML)         font-size: [(16px) x 2] = 32px; &lt;--(este es el nuevo EM)
-                padding: [(16px) x 1] = 16px [(16px) x 2] = 32px;                               padding: [(32px) x 1] = 32px [(32px) x 2] = 64px;
-                border-radius: [(16px) x 0.5] = 8px;                                            border-radius: [(32px) x 0.5] = 16px;
-                border: [(16px) x 0.2] = 3.2px solid #333;                                      border: [(32px) x .2] = 6.4px solid #333;
-            }                                                                               }
-                        </code>
-                    </pre> -->
-    
-                <h3 class="title">PORCENTAJE (%) Y AUTO</h3>
-                <p class="text">El porcentaje como unidad de medida, es útil para aumentar o disminuir el tamaño de un elemento, de acuerdo al contexto que se encuentre, pero va a estar directamente referenciada a su elemento padre inmediato. Es otra unidad muy empleada al momento de generar responsive.</p>
-                <p class="text">Su funcionamiento puede llegar a ser complejo, ya que tiene algunas diferencias al usarse en el alto y ancho de un elemento.</p>
-                    <h4 class="title">EN WIDTH</h4>
-                    <p class="text">En el width (ancho) su uso es frecuente y es el más sencillo de entender, ya que como se menciono anteriomente, va a estar referenciado a su elemento padre, por lo que primero es necesario que dicho elemento padre contenga un ancho declarado para que funcione correctamente, a excepcion si es directamente en el &lt;body&gt;. Al incluirlo el porcentaje, este se adaptara al padre y su vez al ancho del dispositivo que se encuentre.</p>    
-                    <div class="container">
-                        <div class="box">
-                            <div class="box-1 box-1--padding">Hijo con el 50% del ancho del padre (100px)</div>
-                        Padre de 200px de ancho
-                        </div>                   
-                    </div>
-                    <p class="text">Ahora bien, pueden existir algunos problemas con el uso de los porcentajes, como suele suceder al usar el 100% de algun elemento, debido a que en los procentajes la cantidad es exactamente ese 100% referenciada al padre, por lo que si existe algun movimiento, esta no se adaptara y de igual forma medira el ancho completo del padre.</p>
-                    <div class="container">
-                        <div class="box">
-                            <div class="box-1 box-1--modify-width">Hijo con el 100% del ancho del padre, con un margen izquierdo de 50px</div>
-                        Padre de 200px de ancho
-                        </div>                   
-                    </div>
-                    <p class="text">Por esta razón para usar el 100% de un elemento se recomienda usar el valor AUTO, para que el navegador calcule hasta donde tiene que llegar dentro de un contenedor y no lo sobrepase, tal y como se ve acontinuación.</p>
-                    <div class="container">
-                        <div class="box">
-                            <div class="box-1 box-1--modify-width box-1--modify-auto">Hijo con un margen izquierdo de 50px y width:auto</div>
-                        Padre de 200px de ancho
-                        </div>                   
-                    </div>
-                    <h4 class="title">EN HEIGHT</h4>
-                    <p class="text">En el caso del height (alto), su uso suele ser algo distinto, y en su defecto menos frecuente que el ancho, ya que el funcionamiento de porcentaje y AUTO con height no es tan efectivo como el anterior. Aunque a priori la consigna es la misma, es necesario que el padre tenga un alto declarado para que estas unidades puedan operar.</p>
-                    <p class="text">En el caso de usar el 100% vendria a ser de igual forma que el ancho, en donde ocupara todo el espacio el alto del padre, pero si existiese un desplazamiento en el margen, la caja se desbordaria</p>
-                    <div class="container">
-                        <div class="box box--display">
-                            <div class="box-1 box-1--modify-height"><p class="box_text">Hijo con el 100% del alto del padre</p></div>
+                        </li>
+                        
+                    </ul>
+                    <ol class="list list_ol">
+                        <li class="list_item">rem (Root EM)
+                            <p>Por defecto en los navegadores, &lt;html&gt; tiene un tamaño de 16 px.</p>
+                                <ul>
+                                    <li>1 rem = 16 px</li>
+                                    <li>1.5 rem = 24 px</li>
+                                    <li>2 rem = 32 px</li>
+                                </ul>
+                        </li>
+                        <li class="list_item">em: 
+                            <p>Calcula el valor multiplicando la fuente del padre (para el font-size) o del propio elemento (para padding, margin, width, etc.).</p>
+                            <p><strong>Efecto Cascada / Multiplicativo:</strong> Si anidas varios elementos usando em en su font-size, los tamaños se van multiplicando exponencialmente.</p>
+                        </li>
+                    </ol>
+                        <h4 class="title">EJEMPLO PRACTICO</h4>
+                        <div class="container container_link">
+                            <a href="#" class="link link-1">Boton con medidas REM</a>
+                            <a href="#" class="link link-2">Boton con medidas EM</a>
                         </div>
-                        <div class="box box--display">
-                            <div class="box-1 box-1--modify-height box-1--moved"><p class="box_text">Hijo con el 100% del alto del padre y un margin top de 20px</p></div>
-                        </div>                     
-                    </div>
-                    <p class="text">El valor AUTO en height no funciona de la misma manera que en el Width, esto es debido a que el height <strong>siempre</strong> va a requerir que su padre inmediato tenga contenido integrado para que este pueda verse reflejado. Por lo tanto no importa si tenemos un alto declarado, esta no va a funcionar</p>
-                    <div class="container">
-                        <div class="box">
-                            <div class="box-1 box-1--height-auto"></div>
+                        <pre> 
+                            <code>
+                                    .link-1{                                                    .link-2{
+                                        font-size: 2rem;                                            font-size: 2rem;
+                                        padding: 1rem 2rem;                                         padding: 1em 2em;
+                                        border-radius: 0.5rem;                                      border-radius: 0.5em;
+                                        border: .2rem solid #333;                                   border: .2em solid #333;
+                                    }                                                           }
+                            </code>
+                        </pre>   
+                        <p class="text">Como se puede observar, ambos botones poseen el mismo digito de rem y em en cada propiedad, sin embargo, debido a que su toma de referencia del tamaño de la fuente es diferente, influye en el tamaño de el modelo de caja y de su contenido.</p>
+                        <p class="text">Para el REM siempre su valor sera el referenciado al HTML (por defecto 16px), que podrian variar si se cambia manualmente. Mientras en el caso del EM el tamaño de la fuente varia segun la etiqueta, contenedor, body o html. En este caso puntual el font-size presente (2rem) modifica el valor de la fuente por defecto del HTML de 16px a 32px.</p>
+                        <p class="text">Para hacer una explicacion grafica, esto vendria a funcionar de la siguiente forma:</p>
+                        <pre> 
+                            <code>
+                .link-1{                                                                        .link-2{
+                    font-size: [(16px) x 2] = 32px; &lt;--(el REM mantendra los 16px del HTML)         font-size: [(16px) x 2] = 32px; &lt;--(este es el nuevo EM)
+                    padding: [(16px) x 1] = 16px [(16px) x 2] = 32px;                               padding: [(32px) x 1] = 32px [(32px) x 2] = 64px;
+                    border-radius: [(16px) x 0.5] = 8px;                                            border-radius: [(32px) x 0.5] = 16px;
+                    border: [(16px) x 0.2] = 3.2px solid #333;                                      border: [(32px) x .2] = 6.4px solid #333;
+                }                                                                               }
+                            </code>
+                        </pre>
+        
+                    <h3 class="title">PORCENTAJE (%) Y AUTO</h3>
+                    <p class="text">El porcentaje como unidad de medida, es útil para aumentar o disminuir el tamaño de un elemento, de acuerdo al contexto que se encuentre, pero va a estar directamente referenciada a su elemento padre inmediato. Es otra unidad muy empleada al momento de generar responsive.</p>
+                    <p class="text">Su funcionamiento puede llegar a ser complejo, ya que tiene algunas diferencias al usarse en el alto y ancho de un elemento.</p>
+                        <h4 class="title">EN WIDTH</h4>
+                        <p class="text">En el width (ancho) su uso es frecuente y es el más sencillo de entender, ya que como se menciono anteriomente, va a estar referenciado a su elemento padre, por lo que primero es necesario que dicho elemento padre contenga un ancho declarado para que funcione correctamente, a excepcion si es directamente en el &lt;body&gt;. Al incluirlo el porcentaje, este se adaptara al padre y su vez al ancho del dispositivo que se encuentre.</p>    
+                        <div class="container">
+                            <div class="box">
+                                <div class="box-1 box-1--padding">Hijo con el 50% del ancho del padre (100px)</div>
+                            Padre de 200px de ancho
+                            </div>                   
                         </div>
-                    </div>
-                    <p class="text">Ahora agregando contenido a la caja, esta si logra funcionar de manera correcta</p>
-                    <div class="container">
-                        <div class="box">
-                            <div class="box-1 box-1--height-auto">Soy contenido de ejemplo, donde muestro que el hight:auto se adapta al tamaño del contenido</div>
+                        <p class="text">Ahora bien, pueden existir algunos problemas con el uso de los porcentajes, como suele suceder al usar el 100% de algun elemento, debido a que en los procentajes la cantidad es exactamente ese 100% referenciada al padre, por lo que si existe algun movimiento, esta no se adaptara y de igual forma medira el ancho completo del padre.</p>
+                        <div class="container">
+                            <div class="box">
+                                <div class="box-1 box-1--modify-width">Hijo con el 100% del ancho del padre, con un margen izquierdo de 50px</div>
+                            Padre de 200px de ancho
+                            </div>                   
                         </div>
-                    </div>
-                    <p class="text">Y por ultimo, otra consideracion a tomar cuando se usa porcentaje en height, es al momento de tener elementos posicionados, mas detalladamente con position absolute, ya que se comporta de manera distinta. Esto es porque su punto de referencia deja de ser un padre inmediato y pasa a ser el viewport.</p>
-                    <div class="container container-position">
-                        <div class="box">
-                            <div class="box-1 box-1--height-position"></div>
+                        <p class="text">Por esta razón para usar el 100% de un elemento se recomienda usar el valor AUTO, para que el navegador calcule hasta donde tiene que llegar dentro de un contenedor y no lo sobrepase, tal y como se ve acontinuación.</p>
+                        <div class="container">
+                            <div class="box">
+                                <div class="box-1 box-1--modify-width box-1--modify-auto">Hijo con un margen izquierdo de 50px y width:auto</div>
+                            Padre de 200px de ancho
+                            </div>                   
                         </div>
-                    </div>
-                <h3 class="title">UNIDADES DE VIEWPORT</h3>
-                    <h4 class="title">VW Y VH</h4>
-                    <p class="text">Acontinuacion como funciona el vh y vw, basicamente cada uno representa el 1% de lo que vemos en pantalla sea horizontal o verticalmente, es decir, como en este caso, si se le asigna un width de 10vw, estara representando el 10% de la pantalla en ese momento, si la pantalla se agranda o se minimiza se adapta a su 10%</p>
-                    <div class="container container-ojos">
-                        <div class="box-ojo">
-                            <div class="box-ojo_iris"></div>
+                        <h4 class="title">EN HEIGHT</h4>
+                        <p class="text">En el caso del height (alto), su uso suele ser algo distinto, y en su defecto menos frecuente que el ancho, ya que el funcionamiento de porcentaje y AUTO con height no es tan efectivo como el anterior. Aunque a priori la consigna es la misma, es necesario que el padre tenga un alto declarado para que estas unidades puedan operar.</p>
+                        <p class="text">En el caso de usar el 100% vendria a ser de igual forma que el ancho, en donde ocupara todo el espacio el alto del padre, pero si existiese un desplazamiento en el margen, la caja se desbordaria</p>
+                        <div class="container">
+                            <div class="box box--display">
+                                <div class="box-1 box-1--modify-height"><p class="box_text">Hijo con el 100% del alto del padre</p></div>
+                            </div>
+                            <div class="box box--display">
+                                <div class="box-1 box-1--modify-height box-1--moved"><p class="box_text">Hijo con el 100% del alto del padre y un margin top de 20px</p></div>
+                            </div>                     
                         </div>
-                        <div class="box-ojo">
-                            <div class="box-ojo_iris"></div>
+                        <p class="text">El valor AUTO en height no funciona de la misma manera que en el Width, esto es debido a que el height <strong>siempre</strong> va a requerir que su padre inmediato tenga contenido integrado para que este pueda verse reflejado. Por lo tanto no importa si tenemos un alto declarado, esta no va a funcionar</p>
+                        <div class="container">
+                            <div class="box">
+                                <div class="box-1 box-1--height-auto"></div>
+                            </div>
                         </div>
-                    </div> 
-                    <div class="container container-boca">
-                        <div class="box-boca"></div>
-                    </div>
-                    <h4 class="title">VMIN Y VMAX</h4>
-                    <p class="text">En el caso de los vmax y vmin, es mas complejo, ya que el usara el 1% sea del ancho o alto, del tamaño mas pequeño en el caso del vmin, o el tamaño mas grande en el caso del vmax. Este ejemplo, se centra en la iris de los ojos donde estas creceran o decreceran de acuerdo al tamaño de la pantalla donde se encuentre.</p>
-                    <div class="container container-ojos">
-                        <div class="box-ojo">
-                            <div class="box-ojo_iris box-ojo_iris--modify"></div>
+                        <p class="text">Ahora agregando contenido a la caja, esta si logra funcionar de manera correcta</p>
+                        <div class="container">
+                            <div class="box">
+                                <div class="box-1 box-1--height-auto">Soy contenido de ejemplo, donde muestro que el hight:auto se adapta al tamaño del contenido</div>
+                            </div>
                         </div>
-                        <div class="box-ojo">
-                            <div class="box-ojo_iris box-ojo_iris--modify--new"></div>
+                        <p class="text">Y por ultimo, otra consideracion a tomar cuando se usa porcentaje en height, es al momento de tener elementos posicionados, mas detalladamente con position absolute, ya que se comporta de manera distinta. Esto es porque su punto de referencia deja de ser un padre inmediato y pasa a ser el viewport.</p>
+                        <div class="container container-position">
+                            <div class="box">
+                                <div class="box-1 box-1--height-position"></div>
+                            </div>
                         </div>
-                    </div> 
-                    <div class="container container-boca">
-                        <div class="box-boca">
+                    <h3 class="title">UNIDADES DE VIEWPORT</h3>
+                        <h4 class="title">VW Y VH</h4>
+                        <p class="text">Acontinuacion como funciona el vh y vw, basicamente cada uno representa el 1% de lo que vemos en pantalla sea horizontal o verticalmente, es decir, como en este caso, si se le asigna un width de 10vw, estara representando el 10% de la pantalla en ese momento, si la pantalla se agranda o se minimiza se adapta a su 10%</p>
+                        <div class="container container-ojos">
+                            <div class="box-ojo">
+                                <div class="box-ojo_iris"></div>
+                            </div>
+                            <div class="box-ojo">
+                                <div class="box-ojo_iris"></div>
+                            </div>
+                        </div> 
+                        <div class="container container-boca">
+                            <div class="box-boca"></div>
                         </div>
-                    </div>
-                    <p class="text">Como se observa, al realizar cambios en el tamaño de la pagina se obervan los cambios realizados en la iris de los ojos, cada una tiene valores disntintos, la izquierda tiene un viweport minimo modificado en el ancho, mientras el iris derecho tiene un viewport maximo modificado en el alto.</p>
-                <h3 class="title">MIN/MAX WIDTH Y HEIGHT</h3>
-                    <p class="text">Ejemplo usando una imagen para comprobar el tamaño maximo y minimo en el width y height. Para el width el maximo sera de 800px, mientras el minimo sera de 560px. Para el alto las medidas sera un minimo de 240px y un maximo de 400px.</p>
-                    <div class="container">
-                         <img src="assets/images/iglesia.jpg" alt="Iglesia" class="img_iglesia">
-                    </div>   
-                    
+                        <h4 class="title">VMIN Y VMAX</h4>
+                        <p class="text">En el caso de los vmax y vmin, es mas complejo, ya que el usara el 1% sea del ancho o alto, del tamaño mas pequeño en el caso del vmin, o el tamaño mas grande en el caso del vmax. Este ejemplo, se centra en la iris de los ojos donde estas creceran o decreceran de acuerdo al tamaño de la pantalla donde se encuentre.</p>
+                        <div class="container container-ojos">
+                            <div class="box-ojo">
+                                <div class="box-ojo_iris box-ojo_iris--modify"></div>
+                            </div>
+                            <div class="box-ojo">
+                                <div class="box-ojo_iris box-ojo_iris--modify--new"></div>
+                            </div>
+                        </div> 
+                        <div class="container container-boca">
+                            <div class="box-boca">
+                            </div>
+                        </div>
+                        <p class="text">Como se observa, al realizar cambios en el tamaño de la pagina se obervan los cambios realizados en la iris de los ojos, cada una tiene valores disntintos, la izquierda tiene un viweport minimo modificado en el ancho, mientras el iris derecho tiene un viewport maximo modificado en el alto.</p>
+                    <h3 class="title">MIN/MAX WIDTH Y HEIGHT</h3>
+                        <p class="text">Ejemplo usando una imagen para comprobar el tamaño maximo y minimo en el width y height. Para el width el maximo sera de 800px, mientras el minimo sera de 560px. Para el alto las medidas sera un minimo de 240px y un maximo de 400px.</p>
+                        <div class="container">
+                            <img src="assets/images/iglesia.jpg" alt="Iglesia" class="img_iglesia">
+                        </div>   
+    </main>
+    <footer>
+        © 2026 Web hecha por José Rivera
+    </footer>            
 </body>
 </html>
