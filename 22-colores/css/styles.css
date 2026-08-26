@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #4e4e4e;
+    color: #fff;
+    margin: 0;
+}
+
+/* ? -----------------------------------------------------------------------------------------------------------------------------------
+                                                                ? DISEÑO GENERAL*/
+
+/* Diseño en los titulos */
+.title{
+    background-color: #fff;
+}
+h1.title{
+    text-align: center;
+    border: 5px solid darkred;
+    color: darkred;
+}
+h2.title{
+    border: 3px solid darkblue;
+    color: darkblue;
+}
+h3.title{
+    text-align: center;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid darkcyan;
+    color: darkcyan;
+}
+h4.title{
+    text-align: center;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid dimgrey;
+    color: dimgrey;
+}
+/* diseño contenedor */
+.container{
+    background-color:darkgray;
+}
+/* diseño de texto y la lista ordenada */
+.text{
+    background-color: silver;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: black;
+    padding: 15px;
+    border-radius: 3px;
+}
+/* * ----------------------------------------------------------------------------------------------------------------------
+                                                        *   COLORES
+
+   La mayoría las pantallas funcionan con un modo de color aditivo. La suma de RGB da como resultado un blanco
+   Tenemos varias formas de dar color en CSS
+
+    Keywords -> Palabras clave que representan colores https://www.w3.org/wiki/CSS/Properties/color/keywords
+    
+    IMPORTANTE: Recordad que existe el color "transparent"
+*/
+.container{
+    text-align: center;
+}
+.container_box{
+    display: inline-block;
+    width: 12.5rem;
+    height: 12.5rem;
+    padding-top: 5rem;
+}
+.box_box-1{
+    background-color: yellow;
+    color: black;
+}
+.box_box-2{
+    background-color: #0000FF;
+}
+.box_box-3{
+    background-color: rgb(255, 0, 0);
+}
+
+/* .container_triangle{
+    border-left: ;
+} */
