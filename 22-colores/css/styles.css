@@ -43,7 +43,7 @@ h4.title{
 .container{
     background-color:darkgray;
 }
-/* diseño de texto y la lista ordenada */
+/* diseño de texto*/
 .text{
     background-color: silver;
     margin-left: 5%;
@@ -71,17 +71,86 @@ h4.title{
     height: 12.5rem;
     padding-top: 5rem;
 }
+/* color por nombre */
 .box_box-1{
     background-color: yellow;
     color: black;
 }
+/* color hexadecimal */
 .box_box-2{
     background-color: #0000FF;
 }
+/* color rgb */
 .box_box-3{
     background-color: rgb(255, 0, 0);
 }
+/* crear bandera en base a colores y border */
+.container_flag{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 100px solid #0000CD;
+    border-top: 100px solid #fff;
+    border-bottom: 100px solid #B22222;
+    width: 350px;
+}
+/* empleo de transparent en colores */
+.container_triangle{
+    width: 300px;
 
-/* .container_triangle{
-    border-left: ;
-} */
+    /* border toma forma trangular */
+    border-top: 150px solid darkblue;
+    /* estos border elementos con forma rectangular desaparecen por el transparent */
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------
+                                                                    CurrentColor 
+    
+    Es una palabra clave que se puede usar en lugar de cualquier valor de color y usará el valor ya sea establecido o heredado en la propiedad color. 
+*/
+/* declarando un color de fuente al contenedor padre de los dos elementos, para demostrar propiedad currentcolor */
+.container-currentcolor{
+    color: steelblue
+}
+/* primera caja hija, con la propiedad currentcolor */
+.container-currentcolor_box{
+    position: relative;
+
+    /* al tener el padre un color de fuente declarado, con la propiedad currentcolor, se adapta a ese color, en caso de que no estuviese declarado en su elemento padre mas proximo, tomaria el anterior, en este caso, tomaria el del body. */
+    background-color: currentColor;
+    margin-right: 30px;
+}
+/* ! configurando texto dentro de las cajas hijas de ejemplo, no interfiere con la practica solo es visual */
+.container_text{
+    position: absolute;
+    margin: 0 20px;
+    color: black;
+}
+    /* la otra caja de ejemplo tiene un border, sin un color declarado, en estas situaciones, el border automaticamente se adapta al color del padre mas cercano tal como la propiedad currentcolor. Por esta razon tiene el mismo color de la otra caja. */
+.container-currentcolor_border{
+    position: relative;
+    border: 5px solid;
+}
+
+/* 
+                                                                        RGB/RGBA
+
+    En el modo RGB tenemos tres canales (Red, Green, Blue) y tenemos 8 bits de color por canal, (cada bit tiene dos posibles valores 0 ó 1) lo que significa que tenemos 2^8 posibles valores, que van desde 0 hasta 255.
+    
+    Esto nos da un total de 255 * 255 * 255 = 16.581.375 colores.
+
+    Su sintaxis es rgb(R,G,B)
+
+    Si ponemos todos los canales a 0 tendremos un negro puro y si los ponemos a 255 tendremos un blanco.
+
+    Para movermos por la gama de grises debemos poner los 3 canales con el mismo valor, si ponemos los 3 canales a 128 tendremos el gris puro.
+
+    El modo RGB nos da la opción de utilizar un cuarto canal que correspondería al canal alpha, es decir, la transparencia, y su valor va desde 0 a 1. Tenemos dos sintaxis para utilizar el canal aplha
+      rgba(R,G,B,A)
+      rgb(R G B / A) 
+*/

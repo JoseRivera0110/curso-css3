@@ -127,13 +127,16 @@ h4.title{
 }
 /* diseño de la imagen */
 .img{
-    width: 540px;
-    height: 380px;
+    width: 30rem;
+    height: 20rem;
     border-radius: 2em;
     border: 10px solid steelblue;
     box-shadow: 10px 10px 15px 1px #000;
 }
 
+.img_mabsolutas{
+    width: 80%;
+}
 /* todo -----------------------------------------------------------------------------------------------------------------------------------
                                                                todo REM Y EM */
 
@@ -369,7 +372,7 @@ code{
 /* la imagen como ejemplo es una iglesia con valor por defecto de 640px de ancho por 480px de alto, por lo que al agregar un width del 100% indica que se usara todo el ancho de su padre, en este caso un contenedor que a su vez usa el 100% del body, por lo que no habra ninguna diferencia, ahora el height tendra un valor de 70vh lo que equivale a 70% del alto del viewport, que en pixeles vendrian siendo 448px aproximadamente. */
 .img_iglesia{
     width: 100%;
-
+    
     /* ahora al agregar los siguientes valores, se modifica el tamaño maximo y minimo del ancho de la imagen, en este caso el minimo es de 35em, y si se sabe que en EM para este momento equivale a 16px, la medida sera 35x16=560px para el ancho minimo de la imagen, mientras que en ancho maximo de 50em, siguiendo el orden vendria a ser 50x16=800px. Vendrian a ser las medidas de la imagen al momento de cambiar de tamaño de pantallas o viewports. */
     min-width: 35em;
     max-width: 50em;
