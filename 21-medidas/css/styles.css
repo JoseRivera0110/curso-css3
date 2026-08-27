@@ -343,7 +343,8 @@ code{
 }
 
 /* -------------------------------------------------------------------------------------------------------
-                                                                        VMAX Y VMIN */
+                                                                        
+                                                            VMAX Y VMIN */
 /* El funcionamiento del vmin y el vmax, va relacionado al 1% minimo/maximo que se encuentre en el ancho o alto del viewport. En este caso, los ojos tienen un comportamiento normal, debido a que el width corresponde al valor maximo de la pantalla (1366px) por esa razon tomara el valor mas alto en este caso el mismo width,  entonces si le damos un valor de 4vmax, se lo damos como porcentaje, por lo que, al mantenerse el width como valor maximo, seria 1366x0.01 = 13.66, a ese resultado se le multiplica el porcentaje que se le puso como valor maximo 4vmax, 13.66x4 = 54,64px, ese sera el valor del elemento mientras el viewport se mantenga en su valor original. */
 
 /* agregar valor de de viewport minimo en ancho de ojo izquierdo */
