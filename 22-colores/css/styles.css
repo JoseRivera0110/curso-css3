@@ -70,6 +70,7 @@ h4.title{
     width: 12.5rem;
     height: 12.5rem;
     padding-top: 5rem;
+    margin-right: 2em;
 }
 /* color por nombre */
 .box_box-1{
@@ -123,7 +124,6 @@ h4.title{
 
     /* al tener el padre un color de fuente declarado, con la propiedad currentcolor, se adapta a ese color, en caso de que no estuviese declarado en su elemento padre mas proximo, tomaria el anterior, en este caso, tomaria el del body. */
     background-color: currentColor;
-    margin-right: 30px;
 }
 /* ! configurando texto dentro de las cajas hijas de ejemplo, no interfiere con la practica solo es visual */
 .container_text{
@@ -137,7 +137,7 @@ h4.title{
     border: 5px solid;
 }
 
-/* 
+/* -------------------------------------------------------------------------------------------------------------------------- 
                                                                         RGB/RGBA
 
     En el modo RGB tenemos tres canales (Red, Green, Blue) y tenemos 8 bits de color por canal, (cada bit tiene dos posibles valores 0 ó 1) lo que significa que tenemos 2^8 posibles valores, que van desde 0 hasta 255.
@@ -154,3 +154,75 @@ h4.title{
       rgba(R,G,B,A)
       rgb(R G B / A) 
 */
+
+/* al usar el valor mas alto en cada canal y en los demas el minimo, ese color prevalecera como se ve: */
+
+/* Primer canal color rojo */
+.container_box-rgb-red{
+    background-color: rgb(255, 0, 0);
+}
+/* Segundo canal color verde */
+.container_box-rgb-lime{
+    background-color: rgb(0, 255, 0);
+}
+/* Tercer canal color azul */
+.container_box-rgb-blue{
+    background-color: rgb(0, 0, 255);
+}
+
+/* !subir la altura del contenedor para mejora visual */
+.container-height-modify{
+    height: 210px;
+}
+
+/* demostracion de rgba con una sombra a la caja */
+.container_box_rgba{
+    background-color: rgb(128,128,128);
+    box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------- 
+                                                                        HEXADECIMAL 
+
+    La notación hexadecimal es la más común en desarrollo web, se basa en los mismos principios que el RGB pero escrito en notación hexadecimal.
+
+    El sistema hexadecimal es un sistema basado en 16 valores del 0 al 15
+    Utiliza los dígitos del 0 al 9 y las letras de la A a la F
+    
+    En este tipo de notacíon también necesitamos 256 valores.
+
+    Se compone de 16 caracteres en parejas ya que 16*16 = 256
+    0 1 2 3 4 5 6 7 8 9 A B C D E F
+    0 1 2 3 4 5 6 7 8 9 A B C D E F
+
+    Para indicar que vamos a usar notación hexadecimal debemos usar el símbolo de hash/almohadilla # y a continuación usaremos esta notación por parejas.
+    #RRGGBB
+    Cuando una pareja usa el mismo valor se puede omitir el segundo valor, siempre que se haga en las 3 parejas.
+
+    rgb(255,255,255) -> #FFFFFF -> #FFF
+    rgb(0,0,0) -> #000000 -> #000
+
+    También tenemos la opción de usar transparencias en hexadecimal añadiendo un cuarto canal que sigue las mismas normas.
+
+    rgb(0 0 0 / .5) -> #00000080 ~> #0007
+ */
+
+.container_box_hexadecimal{
+
+    /* los valores hexadecimales como su nombre indica se compone de seis valores, en donde de igual manera que el rgb, se compone por los colores rojo, verde y azul, pero por medio de parejas en cada canal. Como ejemplo: (rojo) 00 (verde) 00 (azul) 00, al ser el valor minimo de cada uno, vendria a ser el color negro. */
+
+    background-color: #000000;
+
+    /* en el caso de que las parejas sean iguales, se puede simplicar a 3 valores, tal como se acontinuacion: 00 00 00 = 000. */
+    background-color: #000;
+}
+.container_box_hexadecimal_shadow{
+
+    /* en el caso de que se agregue un canal alpha en hexadecimal, se agrega mediante un cuarto canal con un pareja. */
+
+    background-color: #000;
+
+    /* aqui se hace la prueba con un box-shadow usando un color hexadecimal y un canal alpha de 9, que vendria a funcionar similar al rgb, en este caso como si tuviese un 0.6 de opacidad */
+    box-shadow: 10px 10px 10px #0009;
+}
