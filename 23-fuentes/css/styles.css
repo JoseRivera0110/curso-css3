@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #4e4e4e;
+    color: #fff;
+    margin: 0;
+}
+
+/* ? -----------------------------------------------------------------------------------------------------------------------------------
+                                                                ? DISEÑO GENERAL*/
+
+/* Diseño en los titulos */
+.title{
+    background-color: #fff;
+}
+h1.title{
+    text-align: center;
+    border: 5px solid darkred;
+    color: darkred;
+}
+h2.title{
+    border: 3px solid darkblue;
+    color: darkblue;
+}
+h3.title{
+    text-align: center;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid darkcyan;
+    color: darkcyan;
+}
+h4.title{
+    text-align: center;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid dimgrey;
+    color: dimgrey;
+}
+/* diseño contenedor */
+.container{
+    background-color:darkgray;
+}
+/* diseño de texto*/
+.text{
+    background-color: silver;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: black;
+    padding: 15px;
+    border-radius: 3px;
+}
+/* 
+*-----------------------------------------------------------------------------------------------------
+*                                                    TIPOGRAFIA Y FUENTES
+
+  La tipografía es la ciencia que estudia el diseño y uso de los tipos de letra
+
+  Las fuentes son tipos específicos de letra
+
+  Los glifos son cada uno de los dibujos que representan cada símbolo de la fuente, incluidos los espacios.
+
+  Los estilos de fuente son las modificaciones que se hacen a las fuentes, como el grosor o la inclinación.
+
+  Familia tipográfica, son las diferentes fuentes que pertenecen a una misma fuente base.
+
+  Cuando usamos una propiedad text-* estamos afectando a un bloque completo
+
+  Cuando utilizamos una propiedad font-* afectamos a la fuente del texto.
+
+  Fuentes predeterminadas, son las fuentes que se consideran seguras ya que son genéricas y no establecen una familia tipográfica, si no un estilo de fuente.
+    serif: Fuentes que tienen serifas (adornos en los caracteres)
+
+    sans-serif: Fuentes sin serifas
+
+    monospace: Fuentes que tienen el mismo espaciado entre todos sus caracteres.
+
+    cursive: Fuentes que pretenden emular escritura a mano, con ligaduras y trazos fluidos
+
+    fantasy: Fuentes que suelen ser decorativas
+*/
+
+.text-cursive, .text-fantasy, .text-monospace, .text-sans_serif, .text-serif{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.text-serif{
+    font-family: serif;
+}
+.text-monospace{
+    font-family: monospace;
+}
+.text-sans_serif{
+    font-family: sans-serif;
+}
+.text-cursive{
+    font-family: cursive;
+}
+.text-fantasy{
+    font-family: fantasy;
+}
