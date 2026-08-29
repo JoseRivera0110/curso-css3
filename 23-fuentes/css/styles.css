@@ -82,10 +82,13 @@ h4.title{
     fantasy: Fuentes que suelen ser decorativas
 */
 
-.text-cursive, .text-fantasy, .text-monospace, .text-sans_serif, .text-serif{
+/* Agregando margen a los lados en el texto de las fuentes */
+.text-cursive, .text-fantasy, .text-monospace, .text-sans_serif, .text-serif, .text-importfont{
     margin-left: 10%;
     margin-right: 10%;
 }
+
+/* diseño a los textos de fuentes predeterminadas */
 .text-serif{
     font-family: serif;
 }
@@ -100,4 +103,47 @@ h4.title{
 }
 .text-fantasy{
     font-family: fantasy;
+}
+
+ /* -----------------------------------------------------------------------------------------------
+                                                    FUENTES IMPORTADAS
+ 
+ Fuentes desde un servidor remoto, son fuentes que se encuentran en un servidor y que nosotros descargamos para su uso, la más famosa es Google Fonts
+
+  Siempre que utilicemos fuentes no genéricas, debemos poner fuentes genéricas de fallback (respaldo) 
+*/
+
+/* todo / ESTAS CLASES SON PARA DECLARAR LAS PROPIEDADEDS DE LA FUENTE IMPORTADA DE GOOGLE FONTS, EN ESTE CASO LA FUENTE LOBSTER-TWO
+
+.lobster-two-regular {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lobster-two-bold {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lobster-two-regular-italic {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lobster-two-bold-italic {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+} */
+
+
+/* APLICANDO LA FUENTE IMPORTADA A UN PARRAFO */
+
+.text-importfont{
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
