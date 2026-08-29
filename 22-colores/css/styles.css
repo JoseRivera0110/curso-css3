@@ -257,4 +257,13 @@ h4.title{
 
   Existen otros cuatro modos de color en los que está trabajando que serían CMYK (Cyan, Magenta, Yellow y Black), HWB (Hue, Whiteness, Blackness), lab(Lightness, distance a, distance b) y lch(Lightness, chroma, hue), todos están en el borrador del modulo de color de nivel 4 pero aún no es estándar.
  */
-
+/* caja con color hsl */
+.container_box_hsl{
+    background-color: hsl(60, 100%, 50%);
+    border: 2px solid hsl(0, 0%, 0%);
+}
+/* caja con color y sombra hsla */
+.container_box_hsla{
+    background-color: hsl(60, 100%, 50%, 0.4);
+    box-shadow: 10px 10px hsla(0, 0%, 0%, 0.5);
+}
