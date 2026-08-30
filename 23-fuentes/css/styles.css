@@ -147,3 +147,88 @@ h4.title{
     font-weight: 400;
     font-style: italic;
 }
+
+
+/* 
+                                                        Google Icons
+
+    Material Icons
+       https://fonts.googleapis.com/css?family=Material+Icons
+    Material Icons Outlined
+       https://fonts.googleapis.com/css?family=Material+Icons+Outlined
+    Material Icons Two Tone
+       https://fonts.googleapis.com/css?family=Material+Icons+Two+Tone
+    Material Icons Rounded
+       https://fonts.googleapis.com/css?family=Material+Icons+Round
+    Material Icons Sharp
+       https://fonts.googleapis.com/css?family=Material+Icons+Sharp
+      
+    Nota: Si vas a usar una gran cantidad de iconos en tu web compensa usar la librería remota
+    Si sólo usarás unos pocos es mejor descargarlos en formato svg y utilizarlos como imágenes 
+*/
+
+
+/* centrando contenido */
+.container_search{
+    text-align: center;
+}
+
+/* En el icono importado si funciona la propiedad font-size, ya que este a fin de cuentas es una fuente, por lo que toma esos valores. Por otro lado el SVG ya no es una fuente, por lo que requiere de otras propiedades para modificar su diseño */
+
+
+/* aumentando tamaño de icono de busqueda importado */
+.icon{
+    font-size: 3rem;
+    color: #000;
+}
+/* detalles en los dos iconos de busqueda */
+span{
+    margin-right: 20px;
+    color: #000;
+}
+
+
+/* 
+                                                    Formatos para fuentes
+
+      True Type Font (TTF) -> Fue el primer formato estándar.
+
+      Open True Type Font (OTF) -> Facilita o implementa la creación de las curvas.
+
+      Web Open Font Format (WOFF) (WOFF2) -> Es un formato mucho más ligero y mejora el rendimiento. Funciona a través de metadatos. WOFF tiene soporte total y WOFF2 no funciona en internet explorer.
+
+      Scalable Vector Graphics (SVG) -> Para efectos y animaciones sobre el texto, no es recomendable usarlo en el texto genérico de la web, tiene muchos problemas.
+
+      Embedded Open Type (EOT) -> Primer formato digital propuesto para sitios WEB y es comprimido. Se quedó como una propuesta pero no pasó a ser un estándar. 
+
+
+       Regla @font-face
+      Esta es la forma de utilizar fuentes que tenemos descargadas y que no traemos de un servidor remoto, cuando usamos google fonts, esto es lo que está pasando por detrás.
+
+      La sintaxis es:
+         @font-face {
+            font-family: Nombre de la familia, se lo asignamos nosotros;
+            src: aquí pondremos dos tipos de valores.
+               local() -> pondremos el nombre de la fuente para buscarla en el ordenador del usuario, de esa forma podremos evitar descargarla
+               url() -> Si no encontramos esa fuente procederemos a descargarla.
+               Existe otro valor, menos usado que es format
+               format() -> Este valor lo pasaremos de forma opcional si queremos ser más específicos con la fuente que vamos a buscar o descargar, si no lo ponemos cogerá el primer formato soportado, si lo ponemos sólo usará el que hemos establecido, y si no lo encuentra no hará nada. 
+         }
+
+         Podemos añadirle más valores como font-style, font-weight y font-display(experimental), pero esos son opcionales.
+
+*/
+
+@font-face {
+            /* nombre cualquiera */
+            font-family: 'Great Vibes';
+            
+            /* local sirve si el usuario tiene previamente descargada la fuente */
+            src: local('Great Vibes'), url(../assets/fonts/GreatVibes-Regular.ttf);
+            /* caso contrario se descargar con la propiedad Url (SIEMPRE IMPORTANTE AGREGAR LA COMA DESDE DE LOCAL SI SE USA) */
+         }
+
+.text_fontface{
+    font-family: 'Great Vibes';
+    font-size: 1.5rem;
+}
