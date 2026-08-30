@@ -106,7 +106,7 @@ h4.title{
 }
 
  /* -----------------------------------------------------------------------------------------------
-                                                    FUENTES IMPORTADAS
+                                                     * FUENTES IMPORTADAS
  
  Fuentes desde un servidor remoto, son fuentes que se encuentran en un servidor y que nosotros descargamos para su uso, la más famosa es Google Fonts
 
@@ -150,7 +150,7 @@ h4.title{
 
 
 /* 
-                                                        Google Icons
+*                                                       Google Icons
 
     Material Icons
        https://fonts.googleapis.com/css?family=Material+Icons
@@ -169,7 +169,7 @@ h4.title{
 
 
 /* centrando contenido */
-.container_search{
+.container_center{
     text-align: center;
 }
 
@@ -183,13 +183,13 @@ h4.title{
 }
 /* detalles en los dos iconos de busqueda */
 span{
-    margin-right: 20px;
+    margin-left: 20px;
     color: #000;
 }
 
 
 /* 
-                                                    Formatos para fuentes
+*                                                    Formatos para fuentes
 
       True Type Font (TTF) -> Fue el primer formato estándar.
 
@@ -228,7 +228,169 @@ span{
             /* caso contrario se descargar con la propiedad Url (SIEMPRE IMPORTANTE AGREGAR LA COMA DESDE DE LOCAL SI SE USA) */
          }
 
+/* Aplicando diseño a parrafo con la fuente creada anteriormente */
 .text_fontface{
     font-family: 'Great Vibes';
     font-size: 1.5rem;
+}
+/* 
+*                                                    Transformaciones de texto
+
+      Text-transform: Esta propiedad nos permite hacer transformaciones ESTÉTICAS en nuestro texto.
+      Admite los valores:
+         none: No se aplicará ninguna transformación.
+         uppercase: El texto se pondrá en mayúsculas
+         lowercase: El texto se pondrá en minúsculas
+         capitalize: Transforma la primera letra de cada palabra en mayúscula.
+   Adornos en el texto
+      Text-decoration: Esta propiedad nos permite controlar la línea que podemos poner en los textos.
+      Admite los valores:
+         none: Elimina cualquier línea.
+         underline: Coloca una linea bajo el texto.
+         overline: Coloca una linea sobre el texto.
+         line-through: Coloca una linea tachando el texto.
+
+      Text-shadow: Funciona exáctamente igual que box-shadow, con la única diferencia de que no admite el valor inset ni la expansión de la sombra.
+      Los valores son: 
+         offsetX: desplazamiento horizontal.
+         offsetY: desplazamiento vertical
+         blur: desenfoque.
+         color: color, por defecto coge el del texto.
+*/
+/* 
+todo        ejemplo de text transform usando clases con el mismo nombre */
+.uppercase{
+    text-transform: uppercase;
+}
+.lowercase{
+    text-transform: lowercase;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+
+
+/* mejorar legibilidad, parte estetica */
+.container_padding{
+    padding: 15px;
+}
+
+/* 
+todo                aplicar adornos de texto o text decoration */
+.link{
+    text-decoration: none;
+    color: #000;
+}
+.underline{
+    text-decoration: underline;
+}
+.overline{
+    text-decoration: overline;
+}
+.line-through{
+    text-decoration: line-through;
+}
+
+
+/* todo aplicando text-shadow */
+
+/* el text-shadow en comparacion al box-shadow no admite el valor inset (sombra interna) y tampoco admite el 4 valor que es una expansion de la sombra*/
+
+/* tambien se admite valores negativos para mover la sombra hacia otra direccion. */
+.text_shadow{
+    /* lo obligatorio es declarar los dos primeros valores que son los desplazamientos, sin estos no va a funcionar la propiedad */
+    text-shadow: 3px 8px 2px #000;
+
+    /* tambien se puede anidar varias sombras de igual modo que el box-shadow, separandolos por una coma. 
+    text-shadow: 3px 8px #000, 2px 0 #f00;
+    */
+}
+
+.text_boxshadow{
+    box-shadow: 3px 8px 2px #000;
+}
+
+/* 
+*                                                            Espaciado en fuentes y textos
+
+    letter-spacing: Establece la separación entre caracteres, se puede establecer en cualquier medida válida para CSS
+
+    word-spacing: Establece la separación entre palabras,
+    se puede establecer en cualquier medida válida para CSS
+
+    line-height: Establece el alto de cada línea, se puede dar una medida concreta o se puede poner un número que se multipliará por el font size del texto al que se lo estemos aplicando.
+
+   Orientación del texto.
+   writing-mode: Establece la dirección del texto
+*/
+
+
+/*todo        espaciado entre caracteres */
+.text_letter-spacing{
+    letter-spacing: 5px;
+}
+/*todo        espaciado entre palabras */
+.text_word-spacing{
+    word-spacing: 5px;
+}
+
+/*todo       interlineado */
+.text_line-hight{
+
+    /* en este caso al introducir un 3, se esta multiplicando el valor de fuente por 3. Si la fuente equivale a los 16px por defecto, seria 16x3= 48px */
+    line-height: 3;
+}
+/* uso de interlineado para centrar verticalmente un texto 
+!solo funciona cuando es una sola linea de texto y se tiene declarado un alto (si el alto se modifica, se tiene que modificar el line-hight)*/
+
+.text_line-height--center{
+    
+
+    /*el alto declarado es importante en este caso, ya que va a influir en el line-hight, mas adelante puede ser mas sencillo de usar mediante el uso de variables */
+    height: 100px;
+
+    
+
+    /*se introduce el mismo alto de la caja, para centrar el contenido, en caso de cambiar el alto de la caja esto se debe cambiar tambien */
+    line-height: 100px;
+
+    /* propiedades para el diseño estetico */
+    width: 300px;
+    color: #000;
+    text-align: center;
+    background-color: snow;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*todo        Orientación del texto */
+
+.text_orientation{
+    display: inline-block;
+    margin-right: 210px;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: rgb(49, 46, 46);
+}
+.title_text-desing{
+    margin: 45px;
+}
+/* vertical */
+
+/* con esta propiedad ponemos el texto en vertical pero de izquierda a derecha (Left-Right) */
+.text_vertical-lr{
+    writing-mode: vertical-lr;
+}
+/* con esta propiedad ponemos el texto en vertical pero de derecha a izquierda (Right-Left) */
+.text_vertical-rl{
+    writing-mode: vertical-rl;
+}
+
+/* con esta propiedad ponemos cada letra en forma vertical, es una propiedad diferente a la anterior y de igual forma funciona totalemente diferente */
+.text_word-break{
+
+    /* con esta propiedad le decimos al texto que se rompa, y que cada letra sea independiente hasta el limite de ancho que esta declarado, en este caso 10px. Por lo que cada letra se posiciona una arriba de otra, formando un texto vertical. */
+    word-break: break-all;
+    width: 10px;
 }

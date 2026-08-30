@@ -32,7 +32,7 @@
     <h2 class="title">Fuentes importadas (Google fonts)</h2>
     <p class="text text-importfont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolores minima labore veritatis laboriosam eveniet fuga, fugit tempore nisi quia at dignissimos consectetur quisquam. Voluptas possimus aperiam magnam quos iste.</p>
     <h2 class="title">Google icons</h2>
-    <div class="container container_search">
+    <div class="container container_center">
         <span class="material-symbols-outlined icon">search</span>
         <span>Icono importado</span>
         <img src="assets/icons/search.svg" alt="" class="icon">
@@ -40,6 +40,56 @@
     </div>
     <h2 class="title">Font Facebook</h2>
     <p class="text text_fontface">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas eum, ipsam pariatur soluta, suscipit debitis commodi hic corrupti aut impedit nostrum corporis deleniti similique ipsa tempore? Neque ipsum temporibus debitis?</p>
-    
+    <h2 class="title">Decorar textos</h2>
+    <h3 class="title">Text Transform</h3>
+    <p class="text">Un detalle a mencionar es que el cambio es netamente visual, en el fondo el texto siguen siendo igual.</p>
+    <div class="container container_center container_padding">
+        <span class="uppercase">Soy un texto con uppercase</span>
+        <span class="lowercase">Soy un texto con lowercase</span>
+        <span class="capitalize">Soy un texto con capitalize</span>
+    </div>
+    <h3 class="title">Adornos en el texto (text decoration)</h3>
+    <div class="container container_center container_padding">
+        <a href="#" class="link">Soy un a con text-decoration:none</a>
+        <span class="underline">Soy un span con text-decoration:underline</span>
+        <span class="overline">Soy un span con text-decoration:overline</span>
+        <span class="line-through">Soy un span con text-decoration:line-through</span>
+    </div>
+    <h3 class="title">Text-shadow</h3>
+    <p class="text">Como se hace notar ambos poseen los mismos valores, pero sus resultados son diferentes, esto es basicamente porque box-shadow esta destinado a cajas, por esa razon dibuja una sombra en forma rectangular a diferencia de text-shadow.</p>
+    <div class="container container_center container_padding">
+        <span class="text_shadow">Soy un texto con Sombra</span>
+        <span class="text_boxshadow">Soy un texto con Sombra con box-shadow</span>
+    </div>
+    <h2 class="title">Espaciado en fuentes y textos</h2>
+    <h3 class="title">Espaciado entre caracteres</h3>
+    <div class="container">
+        <p class="text text_letter-spacing">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusamus maxime itaque omnis fugit est delectus mollitia esse, et, minus animi. Enim nam expedita corporis, cupiditate in et rem perferendis.</p>
+    </div>
+    <h3 class="title">Espaciado entre palabras</h3>
+    <div class="container">
+        <p class="text text_word-spacing">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia quos optio similique ad, veritatis nobis neque quod sapiente vitae voluptatum impedit consequuntur porro. Doloribus, ullam harum mollitia fugit nesciunt ipsa.</p>
+    </div>
+    <h3 class="title">Interlineado</h3>
+    <div class="container">
+        <p class="text text_line-hight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tenetur animi alias qui enim, omnis sint perspiciatis eligendi modi eaque quibusdam reiciendis, accusantium iusto? Ipsam minus et aliquam quis commodi?</p>
+    </div>
+    <h4 class="title">Centrar texto con el line-hight</h4>
+    <p class="text">Existe uso de la propiedad line-height, la cual consiste en centrar herizontalmente un texto, el detalle es que solo funciona cuando es en una sola linea</p>
+    <div class="container">
+        <p class="text_line-height--center">Soy un texto centrado</p>
+    </div>
+    <h3 class="title">Orientacion del texto</h3>
+    <p class="text">Para orientar el texto de forma vertical (originalmente en forma horizontal) es necesario usar la propiedad "writing-mode" que logra girar el texto a 90 grados, aunque existen dos formas de que se posicione el texto, sea de izquierda a derecha (vertical lr) o de derecha a izquierda (vertical rl). Ademas de ellos existen un modo de orientar el texto de forma vertical pero si que gire los 90 grados, usando una propiedad llamada "word-break" que sirve para romper los caracteres y que se posicione uno encima de otro manteniendo un postura horizontal, pero posicionado cada uno en forma evrtical.</p>
+    <div class="container container_center">
+        <h4 class="text_orientation title_text-desing">Texto vertical lr</h4>
+        <h4 class="text_orientation title_text-desing">Texto vertical rl</h4>
+        <h4 class="text_orientation title_text-desing">Texto vertical con word-break</h4>
+    </div>
+    <div class="container container_center">
+        <p class="text_orientation text_vertical-lr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorem nam natus illo aliquam explicabo alias cupiditate. Sunt est consequuntur id in, nihil voluptas natus saepe accusantium inventore, facere doloremque.</p>
+        <p class="text_orientation text_vertical-rl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorem nam natus illo aliquam explicabo alias cupiditate. Sunt est consequuntur id in, nihil voluptas natus saepe accusantium inventore, facere doloremque.</p>
+        <p class="text_orientation text_word-break">Lorem ipsum, dolor sit amet consectet</p>
+    </div>
 </body>
 </html>
