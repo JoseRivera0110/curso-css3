@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #4e4e4e;
+    color: #fff;
+    margin: 0;
+}
+
+/* ? -----------------------------------------------------------------------------------------------------------------------------------
+                                                                ? DISEÑO GENERAL*/
+
+/* Diseño en los titulos */
+.title{
+    background-color: #fff;
+}
+h1.title{
+    text-align: center;
+    border: 5px solid darkred;
+    color: darkred;
+}
+h2.title{
+    border: 3px solid darkblue;
+    color: darkblue;
+}
+h3.title{
+    text-align: center;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid darkcyan;
+    color: darkcyan;
+}
+h4.title{
+    text-align: center;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid dimgrey;
+    color: dimgrey;
+}
+/* diseño contenedor */
+.container{
+    background-color:darkgray;
+}
+/* diseño de texto*/
+.text{
+    background-color: silver;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: black;
+    padding: 15px;
+    border-radius: 3px;
+}
+
+
+/* 
+                                        Los tres componentes de BEM
+    
+    divide los componentes de una interfaz en tres conceptos básicos:
+
+    Bloque (block): Es un componente independiente y con significado por sí mismo. Ejemplos: un menú de navegación (.nav), un formulario (.form) o un botón (.btn).
+
+    Elemento (element): Es una parte del bloque que depende de él para existir y no tiene sentido fuera de ese bloque. Se escribe usando el nombre del bloque seguido de dos guiones bajos (__) y el nombre del elemento. Ejemplo: .btn__price (el precio dentro de un botón).
+
+    Modificador (modifier): Es una bandera o variante que cambia el aspecto o estado de un bloque o un elemento. Se escribe usando el nombre base seguido de dos guiones medios (--). Ejemplo: .btn--orange o .btn--big.
+*/
+
+
+/* CAJA */
+.card{
+    width: 50%;
+    height: 23em;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: navy;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    padding: 15px 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* CAJA-ELEMENTO */
+.card__title{
+    text-align: center;
+    text-shadow: 10px 10px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card__text{
+    font-weight: 800;
+}
+.card__btn{
+    display: inline-block;
+    border: none;
+    padding: 10px 30px;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-left: 42%;
+    cursor: pointer;
+}
+/* CAJA-ELEMENTO-MODIFICADOR */
+.card__text--border{
+    padding: 10px;
+    border: 1px solid #fff;
+}
+
