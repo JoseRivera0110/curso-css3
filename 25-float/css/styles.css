@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #4e4e4e;
+    color: #fff;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ? -----------------------------------------------------------------------------------------------------------------------------------
+                                                                ? DISEÑO GENERAL*/
+
+/* Diseño en los titulos */
+.title{
+    background-color: #fff;
+}
+h1.title{
+    text-align: center;
+    border: 5px solid darkred;
+    color: darkred;
+}
+h2.title{
+    border: 3px solid darkblue;
+    color: darkblue;
+}
+h3.title{
+    text-align: center;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid darkcyan;
+    color: darkcyan;
+}
+h4.title{
+    text-align: center;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid dimgrey;
+    color: dimgrey;
+}
+/* diseño contenedor */
+.container{
+    background-color:darkgray;
+}
+/* diseño de texto*/
+/* .text{
+    background-color: silver;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: black;
+    padding: 15px;
+    border-radius: 3px;
+} */
+/* 
+                                                            FLOAT
+La propiedad float en CSS desplaza un elemento hacia la izquierda o la derecha de su contenedor, lo que permite que el texto y otros elementos fluyan a su alrededor. 
+
+left: Mueve el elemento hacia el lado izquierdo de su contenedor. 
+right: Mueve el elemento hacia el lado derecho de su contenedor. 
+none: Deja el elemento en su flujo normal (valor por defecto). 
+inline-start / inline-end: Se adaptan según la dirección del texto (izquierda a derecha o derecha a izquierda).
+ */
+
+.text{
+    width: 400px;
+}
+
+.text-1{
+    float: left;
+}
+.text-2{
+    float: right;
+}
+
+/* !Si se usan div, yse pone uno a la izquierda y uno a la derecha, y posterior uno debajo, habria que quitar la propiedad float, para que no ocurran inconvenientes, se hace con el siguiente codigo */
+/* float:none 
+clear:both; */
