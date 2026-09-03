@@ -55,12 +55,9 @@ h4.title{
 }
 /* 
                                                             CURSOR
-La propiedad float en CSS desplaza un elemento hacia la izquierda o la derecha de su contenedor, lo que permite que el texto y otros elementos fluyan a su alrededor. 
+En CSS, los cursores se utilizan para cambiar la apariencia del cursor del ratón cuando se encuentra sobre un elemento interactivo. Esto permite personalizar la forma del cursor y proporcionar retroalimentación visual al usuario.
 
-left: Mueve el elemento hacia el lado izquierdo de su contenedor. 
-right: Mueve el elemento hacia el lado derecho de su contenedor. 
-none: Deja el elemento en su flujo normal (valor por defecto). 
-inline-start / inline-end: Se adaptan según la dirección del texto (izquierda a derecha o derecha a izquierda).
+CSS proporciona una variedad de valores para la propiedad cursor, que se utiliza para especificar el estilo del cursor.
  */
 
 .container{
