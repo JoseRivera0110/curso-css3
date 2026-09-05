@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #4e4e4e;
+    color: #fff;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ? -----------------------------------------------------------------------------------------------------------------------------------
+                                                                ? DISEÑO GENERAL*/
+
+/* Diseño en los titulos */
+.title{
+    background-color: #fff;
+}
+h1.title{
+    text-align: center;
+    border: 5px solid darkred;
+    color: darkred;
+}
+h2.title{
+    border: 3px solid darkblue;
+    color: darkblue;
+}
+h3.title{
+    text-align: center;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid darkcyan;
+    color: darkcyan;
+}
+h4.title{
+    text-align: center;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid dimgrey;
+    color: dimgrey;
+}
+/* diseño contenedor */
+.container{
+    background-color:darkgray;
+}
+/* diseño de texto*/
+.text{
+    background-color: silver;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: black;
+    padding: 15px;
+    border-radius: 3px;
+}
+
+
+/* BACKGROUNG
+
+    - Color: modifica el color liso del fondo
+    - Image: agrega una imagen en el fondo, necesario agregar medidas
+    - Size: modificar tamaño de la imagen ya en forma de fondo
+    - attachment: modifica la visualizacion de la imagen, principalemente al momento de desplazarse o scrollear en la pagina, el valor fixed es el mas usado, la imagen se queda estatica mientras se scrollea.
+    - repeat: como su nombre indica, sirve para repetir o dejar de repetir una imagen, con los valores repeat o no-repeat, ademas de valores en ambos ejes (X o Y) repeat-x o repeat-y.
+    - Position: desplazar el fondo hacia una posicion especifica. Se puede mediante palabras reservadas o medidas absolutas o relativas.
+    - origin: es el origen de la imagen en el box-model, por defecto padding-box, se puede modificar al content-box o border-box.
+    - clip: esta propiedad nos ayuda a indicar hasta donde se va a expandir el fondo, se maneja con los mismos valores del origin, la diferencia con origin es que clip afecta todo el fondo incluyendo el color, en cambio origin solo afecta la imagen.
+*/
+
+/* insertar color en el fondo con background color*/
+.bg__color{
+    width: 100%;
+    height: 50vh;
+    background-color: darkblue;
+    text-align: center;
+    line-height: 50vh;
+}
+
+/* insertar una imagen con background image */
+.bg__image{
+    width: 100%;
+    height: 50vh;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5SX-sEbmVBdVLy24ySq0EmhOdUcxz5os6PMRcbbzlKZLjxBUDAWNT3kc&s=10');
+}
+
+/* A la imagen anterior con bg-attachment se puede modificar su desplazamiento, principalmente con el valor fixed (para que quede estatico en vista del viewport al scrollear el usuario) */
+.bg__attachment{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 50vh;
+    background-image: url(../assets/images/images.jpg);
+    background-attachment: fixed;
+}
+
+/* modificar tamaño solo de la imagen de fondo (no el contenedor o caja) */
+.bg__size{
+    width: auto;
+    height: 60vh;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5SX-sEbmVBdVLy24ySq0EmhOdUcxz5os6PMRcbbzlKZLjxBUDAWNT3kc&s=10');
+    background-size: 200px;
+}
+
+/* repetir o no repetir imagen, tambien se puede modificar su valor en x o y. */
+.bg__repeat{
+    width: auto;
+    height: 60vh;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5SX-sEbmVBdVLy24ySq0EmhOdUcxz5os6PMRcbbzlKZLjxBUDAWNT3kc&s=10');
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+
+/* modificando un contenedor para propiedad bg-position para centrarlo y demostrar que se puede desplazar el fondo dentro del contenedor */
+.container-position{
+    width: 80%;
+    height: 50vh;
+    margin: 0 auto;
+    border: 3px solid #000;
+}
+
+/* valores para el bg-position entre ellos que tenga un tamaño de 300px y que se mueva a la parte inferior derecha, hay que agregar que el valor puede ser con la palabras reservadas como bottom y right, sin emabargo, tambien se pueden usar valores numericos y unidades relativas o absolutas, con la condicion de que estos si importan el orden que se le haya puesto. El primer valor significa el movimiento en X (horizontal) y el segundo en Y (Vertical.) */
+
+.bg__position{
+    width: 100%;
+    height: 100%;
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/images.jpg);
+    background-position: bottom right;
+}
+
+/* el origen de la imagen, en este caso se modifico el valor por defecto (padding-box) por content-box, por lo que en el modelo de caja, la imagen iniciara en el contenido */
+.bg__origin{
+    width: 40%;
+    height: 50vh;
+    padding: 50px;
+    border: 6px dotted red;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/images.jpg);
+    background-position: bottom right;
+    background-origin: content-box;
+}
+/* en este caso se modifico el valor a content-box por lo que todo el fondo y los colores se expandiran en el contenido, no al padding como viene por defecto. */
+.bg__clip{
+    width: 40%;
+    height: 50vh;
+    padding: 50px;
+    border: 6px dotted red;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/images.jpg);
+    background-position: bottom right;
+    background-origin: content-box;
+    background-clip: content-box;
+}
