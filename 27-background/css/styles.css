@@ -57,12 +57,14 @@ h4.title{
 
 /* BACKGROUNG
 
-    - Color: modifica el color liso del fondo
+    - Color: modifica el color liso del fondo, por defecto el valor es transparent.
     - Image: agrega una imagen en el fondo, necesario agregar medidas
-    - Size: modificar tamaño de la imagen ya en forma de fondo
+    - Size: modificar tamaño de la imagen ya en forma de fondo, se puede usar las unidades de medidas ya conocidas sea absolutas o relativas en donde estas se manejan en los valores horizales (x) y verticales (y), por lo que el orden es necesario, o tambien palabras reservadas con otros significados como puede ser: 
+        --contain: la imagen se adapta al contenedor hasta que uno de sus lados sea el ancho, el alto o ambos lleguen al limite que es el borde, en ese momento dejara de crecer.
+        --cover: este valor extira la imagen hasta que llegue al limite tanto de alto como de ancho, con la consigna de que parte del contenido que sobrepase el ancho o alto, no sera visible, se puede modificar lo visible mediante background position.
     - attachment: modifica la visualizacion de la imagen, principalemente al momento de desplazarse o scrollear en la pagina, el valor fixed es el mas usado, la imagen se queda estatica mientras se scrollea.
     - repeat: como su nombre indica, sirve para repetir o dejar de repetir una imagen, con los valores repeat o no-repeat, ademas de valores en ambos ejes (X o Y) repeat-x o repeat-y.
-    - Position: desplazar el fondo hacia una posicion especifica. Se puede mediante palabras reservadas o medidas absolutas o relativas.
+    - Position: desplazar el fondo hacia una posicion especifica. Se puede mediante palabras reservadas (top-bottom-right-left) o medidas absolutas o relativas teniendo en cuenta el mismo orden de valor horizontal primero y luego el vertical.
     - origin: es el origen de la imagen en el box-model, por defecto padding-box, se puede modificar al content-box o border-box.
     - clip: esta propiedad nos ayuda a indicar hasta donde se va a expandir el fondo, se maneja con los mismos valores del origin, la diferencia con origin es que clip afecta todo el fondo incluyendo el color, en cambio origin solo afecta la imagen.
 */
