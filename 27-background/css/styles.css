@@ -55,7 +55,8 @@ h4.title{
 }
 
 
-/* BACKGROUNG
+/* 
+*                                                    BACKGROUNG
 
     - Color: modifica el color liso del fondo, por defecto el valor es transparent.
     - Image: agrega una imagen en el fondo, necesario agregar medidas
@@ -125,6 +126,7 @@ h4.title{
 .bg__position{
     width: 100%;
     height: 100%;
+    background-color: gray;
     background-size: 300px;
     background-repeat: no-repeat;
     background-image: url(../assets/images/images.jpg);
@@ -137,6 +139,7 @@ h4.title{
     height: 50vh;
     padding: 50px;
     border: 6px dotted red;
+    background-color: gray;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../assets/images/images.jpg);
@@ -149,10 +152,21 @@ h4.title{
     height: 50vh;
     padding: 50px;
     border: 6px dotted red;
+    background-color: gray;
+    background-image: url(../assets/images/images.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../assets/images/images.jpg);
     background-position: bottom right;
     background-origin: content-box;
     background-clip: content-box;
+}
+
+/* el shorthand se puede usar de la siguiente manera */
+.bg__shorthand{
+    width: 40%;
+    height: 50vh;
+    padding: 50px;
+    border: 6px dotted red;
+    /* background: color image repeat position / size origin clip */
+    background: gray url(../assets/images/images.jpg) no-repeat 30% 80% / 50% 50% content-box border-box;
 }
