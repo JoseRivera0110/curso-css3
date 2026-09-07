@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #4e4e4e;
+    color: #fff;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ? -----------------------------------------------------------------------------------------------------------------------------------
+                                                                ? DISEÑO GENERAL*/
+
+/* Diseño en los titulos */
+.title{
+    background-color: #fff;
+}
+h1.title{
+    text-align: center;
+    border: 5px solid darkred;
+    color: darkred;
+}
+h2.title{
+    border: 3px solid darkblue;
+    color: darkblue;
+}
+h3.title{
+    text-align: center;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid darkcyan;
+    color: darkcyan;
+}
+h4.title{
+    text-align: center;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid dimgrey;
+    color: dimgrey;
+}
+/* diseño contenedor */
+.container{
+    background-color:darkgray;
+}
+/* diseño de texto*/
+.text{
+    background-color: silver;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: black;
+    padding: 15px;
+    border-radius: 3px;
+}
+
+/* * ---------------------------------------------------------------------------------------------------------
+                                                 *GRADIENTE*/
+
+/* agregando espaciado en el contenedor mejora visual */
+.container-gradient{
+    padding: 10px;
+}
+
+/* configurando imagen que muestra el manejo de los grados, que sirve como guia en los gradientes */
+.grados{
+    position: relative;
+    width: 30%;
+    height: 60vh;
+    left: 35vw;
+    border-radius: 50%;
+    border: 3px solid #000;
+}
+
+/* configurando las medidas y otros valores de la caja */
+.bg__size{
+    width: 300px;
+    height: 300px;
+    border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* primer gradiente de ejemplo, usando las palabras clave (estas son top, bottom, right y left pero antes SIEMPRE debe ir un "to")y direccionando el color hacia la parte inferior derecha*/
+.bg__gradient{
+    /* valor por defecto to bottom */
+    background: linear-gradient(to bottom right, black, pink);
+}
+
+/* los gradientes se pueden declarar en base a los grados, como se ve en la imagen de la pagina, que van desde 0 hasta 360 grados (vuelve al punto inicial, es decir, 0 grados)  */
+.bg__gradient-grados{
+    /* 270 grados para el color negro */
+    background: linear-gradient(270deg, black, pink);
+}
+/* tambien se le puede dar porcentajes a cada color, de modo que el color sea mas o menos extenso en relacion a la cantidad que se le ponga */
+.bg__gradient-porcent{
+    background: linear-gradient(black 20%, gray, white 55%);
+}
+/* cuando la junta de cada valor, llega al 100% exacto, genera colores solidos, tal como se hace ver a continuacion */
+.bg__gradient-porcent-solid{
+    background: linear-gradient(black 25%, rgb(97, 97, 97) 25% 50%, darkgray 50% 75%, white 75%);
+}
+/* seria lo mismo se se hablara de 50% tal color y 50% otro color, y asi sucesivamente */
+
+/* ----------------------------------------------------------------------------------------------------------------
+
+                                                    RADIAL-GRADIENT
+*/
+/* los radial gradient, corresponden a circulos por lo que el primer valor representa un circulo interno, y el segundo valor representa el circulo externo, dependiendo del valor que se le de sera mas o menos extenso, ademas de que aplica de igual forma a los gradientes anteriores, si ambos valores suman el porcentaje de 100% representan colores solidos */
+.bg__radial_gradient{
+    background: radial-gradient(darkblue 5%, lightblue 30%);
+}
+/* Ahora bien para direccionar el radial gradient, funciona de manera similar a los gradientes normales, solo con la diferencia de que cambia el "to" por el "at", antes de implementar la direccion, por ejemplo, "at top right, color, color". El valor por defecto es "at center"*/
+
+.bg__radial_gradient-position{
+    /* background: radial-gradient(at top left, darkblue 10%, lightblue 40%); */
+
+    /* todo tambien se pueden agregar valores a cada direccion, ejemplo:*/
+    background: radial-gradient(at top 10% left 35%, darkblue 10%, lightblue 40%);
+}
+
