@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #4e4e4e;
+    color: #fff;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ? -----------------------------------------------------------------------------------------------------------------------------------
+                                                                ? DISEÑO GENERAL*/
+
+/* Diseño en los titulos */
+.title{
+    background-color: #fff;
+}
+h1.title{
+    text-align: center;
+    border: 5px solid darkred;
+    color: darkred;
+}
+h2.title{
+    border: 3px solid darkblue;
+    color: darkblue;
+}
+h3.title{
+    text-align: center;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid darkcyan;
+    color: darkcyan;
+}
+h4.title{
+    text-align: center;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid dimgrey;
+    color: dimgrey;
+}
+/* diseño contenedor */
+.container{
+    background-color:darkgray;
+}
+/* diseño de texto*/
+.text{
+    background-color: silver;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: black;
+    padding: 15px;
+    border-radius: 3px;
+}
+
+                                            /* PSEUDOCLASES
+
+Las pseudo-clases son selectores especiales en CSS que nos permiten aplicar estilos a elementos según su estado o posición. Son fundamentales para crear interfaces interactivas y accesibles.
+
+Una pseudo-clase se escribe con dos puntos : seguido del nombre de la pseudo-clase:
+
+    selector:pseudo-clase {
+        /* estilos 
+    }
+
+Las pseudo-clases más comunes relacionadas con la interacción del usuario son:
+
+:hover - cuando el usuario pasa el ratón sobre el elemento
+:focus - cuando el elemento tiene el foco (seleccionado)
+:active - cuando el elemento está siendo activado/clicado
+:disabled - cuando el elemento está deshabilitado
+*/
+
+.card{
+    width: 21%;
+    padding: 20px;
+    color: #000;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: linear-gradient(white, steelblue);
+    border-radius: 1rem;
+    box-shadow: 10px 10px 15px rgba(0,0,0, .5);
+}
+.card_title{
+    margin-top: 0;
+    text-transform: uppercase;
+}
+/* .card_text{
+    
+} */
+
+.card_btn{
+    display: inline-block;
+    padding: 1em;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: .5rem;
+    color: #000;
+    text-decoration: none;
+    box-shadow: 5px 5px 15px rgba(0,0,0, .5);
+}
+
+.card_btn:hover{
+    opacity: .8;
+}
+
+.card_btn:active{
+    background-color: black;
+    color: #fff;
+    box-shadow: none;
+}
