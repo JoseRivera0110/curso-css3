@@ -8,10 +8,39 @@
 </head>
 <body>
     <h1 class="title">Pseudoclases</h1>
+    <h2 class="title">Pseudoclases de interaccion</h2>
+    <h3 class="title">:hover y :active</h3>
     <div class="card">
         <h2 class="card_title">Ejemplo con las principales</h2>
-        <p class="card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima numquam commodi repellendus labore aliquam dolores, earum velit quos laboriosam, quam, aut placeat eum vel blanditiis quasi maiores iure magni nostrum!</p>
+        <p class="card_text">Al pasar el cursor por el boton, se activa el estado <span class="bg_hover">hover</span>, donde aparece una opacidad. Ahora al momento de mantener apretado el cursor encima del boton, se activa el estado <span class="bg_active">active</span>, que conlleva a que tome un tonalidad oscura y la letra blanca.</p>
         <a href="#" class="card_btn">Boton de ejemplo</a>
     </div>
+    <h3 class="title">:focus</h3>
+    <div class="container container_center">
+        <input type="text" class="input" placeholder="Hola soy un texto" readonly>
+        <input type="text" class="input" placeholder="Hola otro texto" readonly>
+        <input type="text" class="input" placeholder="Hola soy un tercer texto" readonly>
+    </div>
+    <h2 class="title">Pseudoclase de ubicacion</h2>
+    <h3 class="title">:any-link</h3>
+    <div class="container container_center">
+        <a href="#">Link por defecto</a>
+        <a href="#" class="link">Link con :any-link</a>
+    </div>
+    <h3 class="title">:link</h3>
+    <div class="container container_center">
+        <a href="#" class="link link-new">Link con :link</a>
+    </div>
+    <h3 class="title">:visited</h3>
+    <div class="container container_center">
+        <a href="#" class="link link_visited">Link con :visited</a>
+    </div>
+    <h3 id="link" class="title">:target</h3>
+    <div class="container container_center">
+        <a href="#link" class="link">Link por defecto</a>
+        <a href="#target" class="link link_target">Link con :target</a>
+        <div class="target" id="target">Boton rojo</div>
+    </div>
+    <h2 class="title">Pseudoclases de estructura de documentos HTML</h2>
 </body>
 </html>

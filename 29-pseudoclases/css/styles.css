@@ -44,6 +44,9 @@ h4.title{
 .container{
     background-color:darkgray;
 }
+.container_center{
+    text-align: center;
+}
 /* diseño de texto*/
 .text{
     background-color: silver;
@@ -69,7 +72,6 @@ Las pseudo-clases más comunes relacionadas con la interacción del usuario son:
 :hover - cuando el usuario pasa el ratón sobre el elemento
 :focus - cuando el elemento tiene el foco (seleccionado)
 :active - cuando el elemento está siendo activado/clicado
-:disabled - cuando el elemento está deshabilitado
 */
 
 .card{
@@ -90,7 +92,21 @@ Las pseudo-clases más comunes relacionadas con la interacción del usuario son:
 /* .card_text{
     
 } */
+.bg_hover{
+    text-decoration: underline;
+}
+.bg_hover:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
 
+.bg_active{
+    text-decoration: underline;
+}
+.bg_active:active{
+    text-decoration: none;
+    cursor: pointer;
+}
 .card_btn{
     display: inline-block;
     padding: 1em;
@@ -110,4 +126,48 @@ Las pseudo-clases más comunes relacionadas con la interacción del usuario son:
     background-color: black;
     color: #fff;
     box-shadow: none;
+}
+
+.input{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+    padding: 20px;
+}
+
+.input:focus {
+    background-color: black;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+
+.link{
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: .7rem;
+    color: #000;
+    padding: 20px;
+}
+.link:any-link{
+    text-decoration: none;
+}
+.link-new:link{
+    text-decoration: underline;
+    color: darkblue;
+}
+.link_visited:visited{
+    background-color: #000;
+    color: #fff;
+    border: 1px solid;
+}
+#link:target::before{
+    background-color: red;
+}
+#target:target::after{
+    background-color: green;
 }
