@@ -57,7 +57,8 @@ h4.title{
     border-radius: 3px;
 }
 
-                                            /* PSEUDOCLASES
+/* 
+todo                                                                PSEUDOCLASES
 
 Las pseudo-clases son selectores especiales en CSS que nos permiten aplicar estilos a elementos según su estado o posición. Son fundamentales para crear interfaces interactivas y accesibles.
 
@@ -165,9 +166,48 @@ Las pseudo-clases más comunes relacionadas con la interacción del usuario son:
     color: #fff;
     border: 1px solid;
 }
-#link:target::before{
+.target{
+    width: 50px;
+    height: 50px;
     background-color: red;
+    margin: 10px auto;
+    border: 3px solid #000;
+    border-radius: 50%;
 }
-#target:target::after{
+
+#target:target{
     background-color: green;
+}
+
+/* 
+todo                                                    Pseudoclases de estructuras
+
+    :first-child: selecciona el primer hijo
+    :last-child: selecciona el ultimo hijo
+    :nth-child(): selecciona cualquier hijo, introduciendo el valor donde este localizado
+        dentro de estas se puede usar palabras clave como es el caso de:
+            **Odd: elementos impares
+            **even: elementos pares.
+            **(numero de veces en la que se selecciona un elemento)seguido de la n. Ejemplo 3n.
+    :nth-last-child(): selecciona culquier hijo, desde abajo hacia arriba, introduciendo un valor.
+
+*/
+.list{
+    list-style-type: none;
+}
+.list li{
+    background-color: #fff;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.list li:first-child{
+    background-color: gold;
+}
+.list li:nth-child(even){
+    background-color: cornflowerblue;
+    color: #fff;
+}
+.list li:last-child{
+    background-color: purple;
 }
