@@ -34,7 +34,7 @@ h3.title{
 }
 h4.title{
     text-align: center;
-    width: 15%;
+    width: max-content;
     margin-left: auto;
     margin-right: auto;
     border: 3px solid dimgrey;
@@ -184,7 +184,7 @@ todo                                                    Pseudoclases de estructu
 
     :first-child: selecciona el primer hijo
     :last-child: selecciona el ultimo hijo
-    :nth-child(): selecciona cualquier hijo, introduciendo el valor donde este localizado
+    :nth-child(): selecciona cualquier hijo especifico, introduciendo el valor donde este localizado
         dentro de estas se puede usar palabras clave como es el caso de:
             **Odd: elementos impares
             **even: elementos pares.
@@ -192,22 +192,75 @@ todo                                                    Pseudoclases de estructu
     :nth-last-child(): selecciona culquier hijo, desde abajo hacia arriba, introduciendo un valor.
 
 */
+
+/* definir la lista y el diseño */
 .list{
     list-style-type: none;
+
 }
 .list li{
+    width: 96%;
     background-color: #fff;
     font-size: 1.2rem;
     color: #000;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
 }
 
-.list li:first-child{
+/* aplicando pseudoclases */
+.list_first li:first-child{
     background-color: gold;
 }
-.list li:nth-child(even){
+.list_first li:nth-child(even){
     background-color: cornflowerblue;
     color: #fff;
 }
-.list li:last-child{
+.list_first li:last-child{
     background-color: purple;
+    border-bottom: 2px solid #000;
+}
+
+
+/* parte estetica */
+
+.gold{
+    background-color: gold;
+}
+.purple{
+    background-color: purple;
+    color: #fff;
+}
+.cornblue{
+    background-color: cornflowerblue;
+    color: #fff;
+}
+
+/* posicionando contenedores uno al lado del otro */
+
+.container_last-child{
+    float: left;
+    width: 500px;
+    margin-left: 70px;
+}
+
+.container_last-child-n{
+    float: right;
+    width: 500px;
+    margin-right: 70px;
+}
+/* parte estetica  */
+.list li:first-child{
+    border-top: 2px solid #000;
+}
+
+/* aplicando color a listas impares de abajo hacia arriba */
+.list_last-child li:nth-last-child(odd){
+    background-color: tomato;
+    color: #fff;
+}
+/* aplicando color a listas de 5 en 5 */
+.list_last-child-n li:nth-child(5n){
+    background-color: brown;
+    color: #fff;
 }
