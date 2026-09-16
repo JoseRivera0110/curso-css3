@@ -26,11 +26,12 @@ h2.title{
 }
 h3.title{
     text-align: center;
-    width: 20%;
+    width: max-content;
     margin-left: auto;
     margin-right: auto;
     border: 3px solid darkcyan;
     color: darkcyan;
+    padding: 0.2em;
 }
 h4.title{
     text-align: center;
@@ -39,6 +40,7 @@ h4.title{
     margin-right: auto;
     border: 3px solid dimgrey;
     color: dimgrey;
+    padding: 0.2em;
 }
 /* diseño contenedor */
 .container{
@@ -166,6 +168,7 @@ Las pseudo-clases más comunes relacionadas con la interacción del usuario son:
     color: #fff;
     border: 1px solid;
 }
+
 .target{
     width: 50px;
     height: 50px;
@@ -174,7 +177,14 @@ Las pseudo-clases más comunes relacionadas con la interacción del usuario son:
     border: 3px solid #000;
     border-radius: 50%;
 }
-
+.link-red{
+    background-color: red;
+    color: #fff;
+}
+.link_target{
+    background-color: green;
+    color: #fff;
+}
 #target:target{
     background-color: green;
 }
@@ -248,6 +258,7 @@ todo                                                    Pseudoclases de estructu
     float: right;
     width: 500px;
     margin-right: 70px;
+    margin-bottom: 30px;
 }
 /* parte estetica  */
 .list li:first-child{
@@ -263,4 +274,53 @@ todo                                                    Pseudoclases de estructu
 .list_last-child-n li:nth-child(5n){
     background-color: brown;
     color: #fff;
+}
+
+/* 
+    :first-of-type: Primer elemento hijo de su mismo tipo
+    :last-of-type: ultimo elemento hijo de su mismo tipo
+    :nth-of-type(): Hijo especifico de su tipo.
+    :nth-last-of-type(): Hijo especifico de abajo hacia arriba de su tipo.
+*/
+
+.clear_float{
+    float:none;
+    clear:both;
+}
+
+.container_type-child{
+    width: 90%;
+    margin: 0 auto;
+    background-color:rgb(41, 40, 40);
+    padding: 15px;
+}
+
+.container_type-child h4{
+    background-color: #fff;
+    color: #000;
+    padding: 0.8em;
+}
+
+
+.container_type-child h4:first-of-type{
+    background-color: lightblue;
+}
+
+.container_type-child h4:last-of-type{
+    background-color: lightcoral
+}
+
+.container_type-child h4:nth-of-type(3){
+    background-color: lightgreen;
+}
+
+.container_type-child h4:nth-last-of-type(even){
+    background-color: lightsalmon;
+}
+
+.container_type-child .link{
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
 }
