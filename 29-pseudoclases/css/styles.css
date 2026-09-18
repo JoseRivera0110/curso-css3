@@ -283,25 +283,68 @@ todo                                                    Pseudoclases de estructu
     :nth-last-of-type(): Hijo especifico de abajo hacia arriba de su tipo.
 */
 
+/* eliminar propiedad float anterior para iniciar un nuevo tema */
 .clear_float{
     float:none;
     clear:both;
 }
 
-.container_type-child{
-    width: 90%;
+/* diseño de contenedores internos */
+.container_desing{
+    /* width: 90%; */
     margin: 0 auto;
     background-color:rgb(41, 40, 40);
     padding: 15px;
 }
 
-.container_type-child h4{
+/* diseño a titulos de contenedores internos */
+.container_desing h4{
     background-color: #fff;
     color: #000;
     padding: 0.8em;
 }
 
+/* pseudoclases de hijo general para realizar comparativa */
 
+/* pseudoclase de estructura sobre los titulos  */
+.container_child h4:first-child{
+    /* aqui se busca especificamente el primer hijo de container_child, por lo que de igual forma es el titulo, asi que de esta forma toma el diseño que se especifica abajo, de otra forma si el primer hijo fuese diferente de un h4 no tomaria el diseño. */
+    background-color: lightblue;
+}
+    
+.container_child h4:last-child{
+    /* Ahora en este caso se busca que el ultimo hijo de container_child, sea un h4 para aplicar estilo, pero como se hace notar, el h4 no coincide con esta regla, por lo que el estilo no se aplica. */
+    background-color: lightcoral
+}
+
+.container_child h4:nth-child(3){
+    /* Aqui como hijo especifico se busac darle estilo al tercer hijo y que coincida con un h4, por lo que se hace notar que el 3 hijo no es un h4 por lo que la regla nuevamente no se cumple y no se dan los estilos. */
+    background-color: lightgreen;
+}
+
+.container_child h4:nth-last-child(even){
+    /* Ahora en este punto, tanto el segundo titulo como el cuarto titulo, al ser hijos pares (el cuarto y decimo hijo respectivamente), si cumplen la regla por lo tanto toman el estilo. */
+    background-color: lightsalmon;
+}
+
+/* pseudoclases sobre los parrafos */
+.container_child p:nth-child(4n){
+    /* El tercer parrafo es el unico que cumple esta condicion al ser octavo hijo (de 4 a 8) y ser un parrafo, por lo que se le aplican los estilos */
+    border: 1px solid yellow;
+}
+
+/* pseudoclases sobre los botones */
+.container_child .link:nth-child(3n){
+    
+    background-color: darkblue;
+    border: 1px solid white;
+    color: #fff;
+}
+
+
+/* pseudoclases de hijo de tipo especifico */
+
+/* pseudoclase de estructura sobre los titulos  */
 .container_type-child h4:first-of-type{
     background-color: lightblue;
 }
@@ -317,10 +360,33 @@ todo                                                    Pseudoclases de estructu
 .container_type-child h4:nth-last-of-type(even){
     background-color: lightsalmon;
 }
+/* pseudoclases sobre los parrafos */
+.container_type-child p:nth-of-type(4n){
+    border: 1px solid yellow;
+}
 
-.container_type-child .link{
+/* pseudoclases sobre los botones */
+.container_type-child .link:nth-of-type(3n){
+    background-color: darkblue;
+    border: 1px solid white;
+    color: #fff;
+}
+/* .container_type-child .link{
     display: block;
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+} */
+
+
+
+/* diseño para colocar la comparativa de un lado del otro */
+.container_float .container_float-properties:first-of-type{
+    float: left;
+    margin-left: 2rem;
+    
+}
+.container_float .container_float-properties:last-of-type{
+    float: right;
+    margin-right: 2rem;
 }
