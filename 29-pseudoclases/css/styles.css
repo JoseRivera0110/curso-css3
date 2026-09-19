@@ -147,6 +147,15 @@ Las pseudo-clases más comunes relacionadas con la interacción del usuario son:
     border: none;
     color: #fff;
 }
+/* 
+                                                pseudoclases de ubicacion
+
+    sirven para emplearlas en anclas (enlaces) y pueden ser: 
+        :any-link: sirve para aplicar estilo a los <a> o en su defecto a los <area>
+        :link: sirve para aplicar estilo a los <a> (enlaces) que aun no han sido visitados.
+        :visited: sirve para aplicar estilo a un enlace que fue visitado.
+        :target: sirve para seleccionar un elementos donde su id coincida con la url del navegador, preferiblemente en <a>    
+*/
 
 .link{
     display: inline-block;
@@ -185,7 +194,7 @@ Las pseudo-clases más comunes relacionadas con la interacción del usuario son:
     background-color: green;
     color: #fff;
 }
-#target:target{
+.target:target{
     background-color: green;
 }
 
@@ -258,7 +267,6 @@ todo                                                    Pseudoclases de estructu
     float: right;
     width: 500px;
     margin-right: 70px;
-    margin-bottom: 30px;
 }
 /* parte estetica  */
 .list li:first-child{
@@ -277,6 +285,9 @@ todo                                                    Pseudoclases de estructu
 }
 
 /* 
+
+                                                Pseudoclases de hijo de tipo
+
     :first-of-type: Primer elemento hijo de su mismo tipo
     :last-of-type: ultimo elemento hijo de su mismo tipo
     :nth-of-type(): Hijo especifico de su tipo.
@@ -335,7 +346,7 @@ todo                                                    Pseudoclases de estructu
 
 /* pseudoclases sobre los botones */
 .container_child .link:nth-child(3n){
-    
+    /* en el caso de los botones, al ser el tercer hijo y cada boton estar cada 3 hijos, la condicion se cumple por lo que los botones se les agrega el diseño */
     background-color: darkblue;
     border: 1px solid white;
     color: #fff;
@@ -345,28 +356,35 @@ todo                                                    Pseudoclases de estructu
 /* pseudoclases de hijo de tipo especifico */
 
 /* pseudoclase de estructura sobre los titulos  */
+    /* con esta pseudoclase no hay mucho misterio puesto que se maneja en base a los hijos de un mismo tipo (que manejen el mismo elemento), y no en general como en la pseudoclase anterior */
 .container_type-child h4:first-of-type{
+    /* primer hijo de tipo h4 */
     background-color: lightblue;
 }
 
 .container_type-child h4:last-of-type{
+    /* ultimo hijo de tipo h4 */
     background-color: lightcoral
 }
 
 .container_type-child h4:nth-of-type(3){
+    /* tercer hijo de tipo h4 */
     background-color: lightgreen;
 }
 
 .container_type-child h4:nth-last-of-type(even){
+    /* hijos pares de tipo h4 */
     background-color: lightsalmon;
 }
 /* pseudoclases sobre los parrafos */
 .container_type-child p:nth-of-type(4n){
+    /* cada 4 hijos de tipo <p> se les agrega el diseño */
     border: 1px solid yellow;
 }
 
 /* pseudoclases sobre los botones */
 .container_type-child .link:nth-of-type(3n){
+    /* cada 3 hijos botones con la clase .link, se les agrega el diseño */
     background-color: darkblue;
     border: 1px solid white;
     color: #fff;
@@ -390,3 +408,23 @@ todo                                                    Pseudoclases de estructu
     float: right;
     margin-right: 2rem;
 }
+
+h3.title.clear_float{
+    position: relative;
+    top: 40px;
+}
+/* 
+                                        Pseudoclases de hijo Unico y de hijo unico de tipo
+
+    :only-child: Solo selecciona si es el unico hijo
+    :only-of-type: Selecciona solo si es el unico hijo de un tipo de elemento en especifico. 
+*/
+
+.container_float_only-child :first-child{
+    float: left;
+} 
+
+
+.container_float_only-child :last-child{
+    float: right;
+} 
