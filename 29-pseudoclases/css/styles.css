@@ -409,10 +409,7 @@ todo                                                    Pseudoclases de estructu
     margin-right: 2rem;
 }
 
-h3.title.clear_float{
-    position: relative;
-    top: 40px;
-}
+
 /* 
                                         Pseudoclases de hijo Unico y de hijo unico de tipo
 
@@ -420,11 +417,68 @@ h3.title.clear_float{
     :only-of-type: Selecciona solo si es el unico hijo de un tipo de elemento en especifico. 
 */
 
-.container_float_only-child :first-child{
+/* !puro diseño */
+
+h3.title.clear_float, h2.title.clear_float{
+    position: relative;
+    top: 40px;
+    margin-bottom: 50px;
+}
+.container_float .container_float-properties_only-child:first-of-type{
     float: left;
-} 
+    position: relative;
+    left: 2rem;
+}
 
+.container_float .container_float-properties_only-child:nth-last-of-type(2){
+    float: left;
+    position: relative;
+    left: 25rem;
+}
 
-.container_float_only-child :last-child{
+.container_float .container_float-properties_only-child:last-of-type{
     float: right;
-} 
+    position: relative;
+    right: 2rem;
+}
+
+/*?                                              PSEUDOCLASE ONLY-CHILD Y ONLY-OF-TYPE */
+
+/* HIJO UNICO: SOLO FUNCIONA SI HAY 1 SOLO HIJO DENTRO DEL PADRE, SI CUMPLE ESA CONDICION TOMA LOS ESTILOS*/
+.container_only-child :only-child{
+    border: 1px solid blue;
+    background-color: black;
+    color: #fff;
+}
+
+/* HIJO UNICO DE TIPO: PUEDEN HABER MAS DE 1 HIJO DENTRO DEL PADRE, PERO LOS ESTILOS SE TOMARAN SIEMPRE Y CUANDO EL HIJO SELECCIONADO EL ELEMENTO SEA UNICO */
+.container_only-child h4:only-of-type{
+    border: 1px solid red;
+    background-color: black;
+    color: #fff;
+}
+
+/* EN ESTE CASO ES UNA MUESTRA DE COMO FUNCIONA ESTA PSEUDOCLASE, A PESAR DE QUE PUEDE MANTENER LOS ESTILOS ANTERIORES POR POSEER ELEMENTOS H4, NO LOS TOMA DEBIDO A QUE HAY MAS DE UN HIJO CON ESE ELEMENTO POR LO QUE NO CUMPLE LA CONDICION Y LOS H4 NO TOMAN ESE DISEÑO. MIENTRAS QUE EL ELEMENTO P AL CUMPLIR CON LA CONDICION DE SER UNICO ELEMENTO HIJO DE ESE TIPO SI TOMA EL ESTILO. */
+.container_only-child p:only-of-type{
+    border: 1px solid yellow;
+}
+
+
+/* *                                        PSEUDOCLASES DE FORMULARIO 
+
+    Existen varios tipos de pseudoclases para formulario como son:
+
+    :valid
+    :invalid
+    :read-only
+    :required
+    :disabled
+    :placeholder-shown
+
+
+
+
+*/
+
+
+
