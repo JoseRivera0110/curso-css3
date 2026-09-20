@@ -474,7 +474,7 @@ h3.title.clear_float, h2.title.clear_float{
     :required
     :disabled
     :placeholder-shown
-
+    :focus
 
 */
 .bg-form{
@@ -509,7 +509,30 @@ h3.title.clear_float, h2.title.clear_float{
     border-radius: 0.9rem;
 }
 
+
 /* pseudoclases de formulario */
 
+.form_input:focus{
+    outline: 2px solid #4e4e4e;
+}
+.form_input:valid{
+    background-color: rgb(167, 255, 164);
+    /* outline: 2px solid lime; */
+}
 
+.form_input:hover{
+    background-color: rgba(202, 201, 201, 0.8);
+    outline: 2px solid #4e4e4e;
+}
+.form_input:active{
 
+}
+
+.form_input:invalid{
+    background-color: rgb(250, 134, 134);
+    outline: 2px solid rgb(194, 0, 0);
+}
+
+.form_input:invalid.form_input:hover{
+    background-color: black;
+}
