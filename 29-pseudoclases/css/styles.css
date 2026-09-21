@@ -473,18 +473,21 @@ h3.title.clear_float, h2.title.clear_float{
     :read-only
     :required
     :disabled
+    :enable
     :placeholder-shown
     :focus
 
 */
 .bg-form{
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     background: linear-gradient(152deg,rgba(138, 75, 166, 1) 0%, rgba(153, 115, 191, 1) 45%, rgba(108, 145, 217, 1) 100%);
 }
 .form{
     position: relative;
-    top: 40px;
+    top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
     width: 35%;
     border-radius: 1rem;
     padding: 2rem;
@@ -499,6 +502,7 @@ h3.title.clear_float, h2.title.clear_float{
     font-size: 2rem;
     font-weight: inherit;
     margin: 0.7rem 0;
+    text-transform: uppercase;
 }
 
 .form_input{
@@ -515,26 +519,48 @@ h3.title.clear_float, h2.title.clear_float{
 
 
 .form_input:valid{
-    background-color: rgb(167, 255, 164);
-    outline: 2px solid lime; 
+    background-color: rgb(241, 239, 239);
+    
 }
-.form_input:focus{
-    outline: 2px solid #4e4e4e;
-}
-.form_input:hover{
-    background-color: rgba(202, 201, 201);
-    outline: 2px solid #4e4e4e;
-}
-/* .form_input:active{
-
-} */
 
 .form_input:invalid{
     background-color: rgb(250, 134, 134);
-    outline: 2px solid rgb(194, 0, 0);
 }
 
-.form_input:invalid.form_input:hover{
-    background-color: rgba(252, 105, 105);
+.form_input:placeholder-shown{
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+.form_input:valid:focus{
+    outline: 2px solid lime; 
     
 }
+.form_input:invalid:focus{
+    outline: 2px solid rgb(194, 0, 0);
+    
+}
+
+.form_input:valid:hover{
+    background-color: rgb(207, 207, 207);
+    
+}
+.form_input:invalid:hover{
+    background-color: rgba(252, 105, 105);
+}
+
+
+
+
+/* .form_input:required{
+    background-color:rgb(255, 255, 166);
+}
+
+.form_input:required:focus{
+    outline: 2px solid yellow;
+}
+
+.form_input:required:hover{
+    background-color:rgb(218, 218, 125);
+} */
+
