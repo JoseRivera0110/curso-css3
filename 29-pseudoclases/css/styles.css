@@ -551,16 +551,23 @@ h3.title.clear_float, h2.title.clear_float{
 
 
 
+/* .form_input-modified:{
 
-/* .form_input:required{
+} */
+
+.form_input-modified:required{
     background-color:rgb(255, 255, 166);
 }
 
-.form_input:required:focus{
+.form_input-modified:required:focus{
     outline: 2px solid yellow;
 }
 
-.form_input:required:hover{
+.form_input-modified:required:hover{
     background-color:rgb(218, 218, 125);
-} */
+}
 
+.form_input-modified:required:user-valid{
+    background-color: rgb(241, 239, 239);
+    outline: 2px solid lime; 
+}
