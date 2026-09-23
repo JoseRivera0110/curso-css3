@@ -476,7 +476,8 @@ h3.title.clear_float, h2.title.clear_float{
     :enable
     :placeholder-shown
     :focus
-
+    :user-valid
+    :user-invalid
 */
 .bg-form{
     width: 100%;
@@ -542,7 +543,7 @@ h3.title.clear_float, h2.title.clear_float{
 }
 
 .form_input:valid:hover{
-    background-color: rgb(207, 207, 207);
+    background-color: rgb(228, 227, 227);
     
 }
 .form_input:invalid:hover{
@@ -551,9 +552,17 @@ h3.title.clear_float, h2.title.clear_float{
 
 
 
-/* .form_input-modified:{
 
-} */
+
+.form_input-modified:optional{
+    background-color: rgb(241, 239, 239);
+}
+.form_input-modified:optional:focus{
+    outline: 2px solid blue;
+}
+.form_input-modified:optional:hover{
+    background-color: rgb(196, 196, 253);
+}
 
 .form_input-modified:required{
     background-color:rgb(255, 255, 166);
@@ -567,7 +576,23 @@ h3.title.clear_float, h2.title.clear_float{
     background-color:rgb(218, 218, 125);
 }
 
-.form_input-modified:required:user-valid{
+.form_input-modified:user-valid{
     background-color: rgb(241, 239, 239);
+}
+.form_input-modified:user-valid:focus{
     outline: 2px solid lime; 
 }
+.form_input-modified:user-valid:hover{
+    background-color: rgb(228, 227, 227);
+}
+
+.form_input-modified:user-invalid{
+    background-color: rgb(250, 134, 134);
+}
+.form_input-modified:user-invalid:focus{
+    outline: 2px solid rgb(194, 0, 0);
+}
+.form_input-modified:user-invalid:hover{
+    background-color: rgba(252, 105, 105);
+}
+
