@@ -491,11 +491,12 @@ h3.title.clear_float, h2.title.clear_float{
     margin-left: auto;
     margin-right: auto;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2rem 2rem 4rem 2rem;
     font-family: "Yantramanav", sans-serif;
     font-weight: 500;
     font-style: normal;
     background-color: rgba(255, 255, 255, 0.12);
+    /* box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.3); */
 }
 
 .form_title{
@@ -517,9 +518,9 @@ h3.title.clear_float, h2.title.clear_float{
     background-color: #fff;
 }
 
-.form_input:enabled{
+/* .form_input:enabled{
     box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.3);
-}
+} */
 textarea.form_input:read-write{
     background-color: rgba(255, 200, 179, 0.5);
     color: rgba(0, 0, 0, 0.8);
@@ -586,10 +587,12 @@ textarea.form_input:read-write{
 
 .form_input:valid:hover{
     background-color: rgb(228, 227, 227);
+    color: #000;
     
 }
 .form_input:invalid:hover{
     background-color: rgba(252, 105, 105);
+    color: #000;
 }
 
 
@@ -604,6 +607,7 @@ textarea.form_input:read-write{
 }
 .form_input-modified:optional:hover{
     background-color: rgb(196, 196, 253);
+    color: #000;
 }
 
 .form_input-modified:required{
@@ -616,6 +620,7 @@ textarea.form_input:read-write{
 
 .form_input-modified:required:hover{
     background-color:rgb(218, 218, 125);
+    color: #000;
 }
 
 .form_input-modified:user-valid{
@@ -626,6 +631,7 @@ textarea.form_input:read-write{
 }
 .form_input-modified:user-valid:hover{
     background-color: rgb(228, 227, 227);
+    color: #000;
 }
 
 .form_input-modified:user-invalid{
@@ -636,8 +642,43 @@ textarea.form_input:read-write{
 }
 .form_input-modified:user-invalid:hover{
     background-color: rgb(255, 178, 178);
+    color: #000;
 }
 
+.btn_submit{
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 1.2rem;
+    padding: 0.8rem 3rem;
+    font-family: inherit;
+    font-size: 0.98rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color:rgb(0, 240, 240);
+    color: #fff;
+    box-shadow: inset 0 -2px 3px 3px rgba(0, 99, 99, 0.5); ;
 
+}
+
+.form_div-terms{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.form_div-btn{
+    text-align: center;
+}
+.form_div-terms-text{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.form_div-terms-link{
+    text-decoration: none;
+    color:rgb(2, 231, 231);
+}
+.form_div-terms-link:hover{
+    text-decoration: underline;
+}
 
 

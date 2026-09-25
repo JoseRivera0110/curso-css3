@@ -206,23 +206,29 @@
         </form>
     </div>
     <p class="text"></p>
-    <div class="bg-form">
+    <div class="bg-form" id="form">
         <form class="form">
             <h3 class="form_title">registro</h3>
-            <div class="form_div">
+            <div class="form_div-name">
                 <input type="text" name="name" id="name" placeholder="Nombre" class="form_input form_input-modified" minlength="4" maxlength="40" required>
             </div>
-            <div class="form_div">
+            <div class="form_div-surname">
                 <input type="text" name="surname" id="surname" placeholder="Apellido" class="form_input form_input-modified" minlength="4" maxlength="40" >
             </div>
-            <div class="form_div">
+            <div class="form_div-email">
                 <input type="email" name="email" id="email" placeholder="Correo electronico" class="form_input form_input-modified" required>
             </div>
-            <div class="form_div">
+            <div class="form_div-password">
                 <input type="password" name="password" id="password" placeholder="Contraseña" class="form_input form_input-modified" minlength="4" maxlength="40" required>
             </div>
-            <div class="form_div">
+            <div class="form_div-password-confirm">
                 <input type="password" name="confirm_password" id="password" placeholder="Confirmar contraseña" class="form_input form_input-modified" minlength="4" maxlength="40" required>
+            </div>
+            <div class="form_div-terms">
+                <input type="checkbox" name="terms" id="terms" class="form_checkbox" required><label for="terms" class="form_div-terms-text">Acepto <a href="#form" class="form_div-terms-link">Los Terminos de Uso</a></label>
+            </div>
+            <div class="form_div-btn">
+                <button type="submit" class="btn_submit">registrar ahora</button>
             </div>
         </form>
     </div>
