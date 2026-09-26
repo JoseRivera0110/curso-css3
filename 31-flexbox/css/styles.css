@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #4e4e4e;
+    background-color: #303030;
     color: #fff;
     margin: 0 4rem;
     font-family: "Yantramanav", sans-serif;
@@ -17,11 +17,13 @@ body{
     margin-left: auto;
     text-transform: uppercase;
     font-weight: 500;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     text-shadow: 0 0 7px red;
 }
 ::selection{
     background-color:gray;
+    color:#000
 }
 .title:hover{
     
@@ -34,6 +36,7 @@ body{
     width: max-content;
     font-weight: 900;
     text-shadow: 0 0 7px #fff;
+    text-transform: uppercase;
 }
 .content_title:hover{
     text-decoration: underline;
@@ -42,21 +45,38 @@ body{
 
 p{
     font-size: 1.2rem;
+    text-indent: 30px;
 }
 
 .list{
     list-style-type: none;
     padding: 0;
 }
-
+.container_list{
+    background-color: #fff;
+}
 .content_span-color{
     background-color: black;
     padding: 3px;
+    border-radius: 10px;
 }
 .content_span-color:hover{
     background-color: #fff;
     color: #000;
 }
+/* 
+todo                                                                Aspectos básicos de Flex
+
+    Para activar el modo flex, utilizaremos sobre el elemento contenedor la propiedad display, y especificaremos el valor flex o inline-flex (dependiendo de como queramos que se comporte el contenedor):
+
+    Valor display                                   Descripción
+    	                            
+    inline-flex           Contenedor en línea, similar a inline-block (ocupa solo el contenido).
+    flex                  Contenedor en bloque, similar a block (ocupa todo el ancho del padre).
+
+    Por defecto, y sólo con esto, observaremos que los elementos se disponen todos sobre una misma línea. Esto ocurre porque estamos utilizando el modo flex y estaremos trabajando con ítems flexibles básicos, garantizando que no se desbordarán ni mostrarán los problemas que, por ejemplo, tienen los porcentajes sobre elementos que no utilizan flex.
+ */
+
 .flex_list{
     display: flex;
     background-color: darkblue;
@@ -75,4 +95,132 @@ p{
     background-color: red;
 }
 
+
+/* 
+todo                                                            Dirección de ejes
+
+    Existen dos propiedades principales para manipular la dirección y comportamiento de los ítems a lo largo del eje principal del contenedor. Son las que veremos a continuación:
+
+    Propiedad	                                Valor	                                        Significado
+  flex-direction	            row | row-reverse | column | column-reverse	        Cambia la orientación del eje principal.
+
+
+    Mediante la propiedad flex-direction podemos modificar la dirección del eje principal del contenedor para que se oriente en horizontal (valor por defecto) o en vertical. Además, también podemos incluir el sufijo -reverse para indicar que coloque los ítems en orden inverso.
+
+    Valor	                                                Descripción
+    row	                                    Eje principal en dirección horizontal.
+    row-reverse	                            Eje principal en dirección horizontal invertida.
+    column	                                Eje principal en dirección vertical.
+    column-reverse	                        Eje principal en dirección vertical invertida.
+
+
+    Esto nos permite tener un control muy alto sobre el orden de los elementos en una página. Veamos la aplicación de estas propiedades sobre el ejemplo anterior, para modificar el flujo del eje principal del contenedor: */
+
+
+    .list{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .flex-direction_list{
+        display: flex;
+    }
+    .list_item{
+        background-color: rebeccapurple;
+        border: thin solid black;
+    }
+
+    .flex-direction_list:first-of-type{
+        flex-direction: row; /*valor por defecto*/
+    }
+    
+    .flex-direction_list:nth-of-type(2){
+        flex-direction: row-reverse; /*fila invertida*/
+    }
+
+    .flex-direction_list:nth-of-type(3){
+        flex-direction: column; /*columna*/
+    }
+
+    .flex-direction_list:last-of-type{
+        flex-direction: column-reverse; /*columna invertida*/
+    }
+
+
+/* 
+todo                                                                Desborde multilinea (wrap)
+
+    En general, flex se suele utilizar para estructuras de una sola dimensión, es decir, contenedores que sólo van en una dirección. Sin embargo, existe una propiedad denominada flex-wrap con la que podemos especificar un comportamiento especial de nuestro contenedor padre.
+
+    Si un elemento no cabe dentro de nuestro contenedor flex, por defecto, los elementos se harán más pequeños (son flexibles) para ajustarse al contenedor. Este es el comportamiento por defecto de un contenedor flex. Sin embargo, con la propiedad flex-wrap podemos cambiar este comportamiento y permitir que nuestro contenedor flex se desborde, convirtiéndose en un contenedor flex multilínea.
+
+    Propiedad	                        Valor	                                        Significado
+    flex-wrap	            nowrap | wrap | wrap-reverse	               Evita o permite el desbordamiento (multilinea).
+
+    Los valores que puede tomar esta propiedad, son las siguientes:
+
+    Valor	                                                                Descripción
+    nowrap	                Los ítems se ajustan para ocupar el tamaño del contenedor (no permite desbordamiento en múltiples líneas).
+    wrap	                Establece los ítems en modo multilínea (permite que se desborde el contenedor).
+    wrap-reverse	        Establece los ítems en modo multilínea, pero en dirección inversa.
+
+    Imagina ahora, que en nuestro contenedor flex tenemos muchos elementos, por ejemplo, 15 elementos hijos que no caben en el ancho del contenedor padre. Por defecto y siempre que pueda, flex hará más pequeños los elementos hijos para que quepan.
+
+    Sin embargo, si especificamos wrap en la propiedad flex-wrap, lo que permitimos es que el contenedor pueda tener múltiples lineas, mostrando los ítems que quepan en la primera linea, y el resto reubicándose en las siguientes líneas, sin ajustar su tamaño. El valor wrap-reverse haría exactamente lo mismo, pero con el orden inverso. */
+
+
+    .flex-wrap_list{
+        display: flex; 
+    }
+
+    .flex-wrap_list .list_item{
+        width: 20%;
+        min-height: 5rem;
+        text-align: center;
+        align-content: center;
+    }
+
+    .uppercase{
+        text-transform: uppercase;
+    }
+    .flex-wrap_list:first-of-type{
+        flex-wrap: nowrap; /*valor por defecto, no permite saltos de linea*/
+    }
+    
+    .flex-wrap_list:nth-of-type(2){
+        flex-wrap: wrap; /*agrupar elementos, permitiendo multilinea al sobrepasar tamaño maximo del padre*/
+    }
+
+    .flex-wrap_list:nth-of-type(3){
+        flex-wrap: wrap-reverse; /*la misma funcion de wrap solo que a la inversa*/
+    }
+
+    .flex-wrap_list:nth-of-type(4){
+        width: 50%; /* ancho declarado para demostrar la flexibilidad de los elementos */
+        flex-direction: row-reverse; /*La filas de forma inversa*/
+        flex-wrap: wrap-reverse; /*multilinea a la inversa*/
+    }
+
+    .flex-wrap_list:nth-of-type(5){
+        min-height: 20rem;
+        height: 60vh;
+        flex-direction: column-reverse; /*columna a la inversa*/
+        flex-wrap: wrap; /*multilinea*/
+    }    
+
+/* 
+    La propiedad de atajo flex-flow
+
+    Recuerda que existe una propiedad de atajo (short-hand) llamada flex-flow, con la que podemos resumir los valores de las propiedades flex-direction y flex-wrap, especificándolas en una sola propiedad y ahorrándonos utilizar las propiedades concretas. El orden es el siguiente:
+
+    flex-flow: <flex-direction> <flex-wrap>
+ */
+
+    .flex-wrap_list:last-of-type{
+        flex-flow: column nowrap;
+    }   
+    
+    .flex-wrap_list:last-of-type .list_item{
+        width: 50%;
+        min-height: 1.5rem;
+    }  
 
