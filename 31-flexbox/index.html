@@ -14,7 +14,7 @@
     <p class="text">Es un módulo de diseño de CSS3 diseñado para alinear, organizar y distribuir el espacio entre los elementos dentro de un contenedor de manera eficiente, incluso cuando sus tamaños son dinámicos o desconocidos.</p>
     <div class="content">
         <h2 class="content_title">Display</h2>
-        <p class="content_text">Con el display <span class="content_span-color">flex</span> se puede agrupar los hijos de un contenedor en el eje x (main axis), donde ese contenedor padre seguira comportandose como un elemento de bloque.</p>
+        <p class="content_text">Con el display <span class="content_span--color">flex</span> se puede agrupar los hijos de un contenedor en el eje x (main axis), donde ese contenedor padre seguira comportandose como un elemento de bloque.</p>
         <ul class="flex_list list">
             <li class="list_item">Item 1</li>
             <li class="list_item">Item 2</li>
@@ -25,7 +25,7 @@
             <li class="list_item">Item 2</li>
             <li class="list_item">Item 3</li>
         </ul>
-        <p class="content_text">Ahora bien, con el display <span class="content_span-color">inline-flex</span> de igual manera se puede agrupar los hijos de un contenedor en el eje x, con la diferencia que ese contenedor padre ocupara todo el ancho de su contenido, en este caso, de sus hijos por lo su comportamiento sera como de un elemento en linea.</p>
+        <p class="content_text">Ahora bien, con el display <span class="content_span--color">inline-flex</span> de igual manera se puede agrupar los hijos de un contenedor en el eje x, con la diferencia que ese contenedor padre ocupara todo el ancho de su contenido, en este caso, de sus hijos por lo su comportamiento sera como de un elemento en linea.</p>
         <ul class="inline-flex_list list">
             <li class="list_item">Item 1</li>
             <li class="list_item">Item 2</li>
@@ -38,7 +38,7 @@
         </ul>
 
         <h2 class="content_title">Direccion</h2>
-        <p class="content_text">Flexbox se maneja de manera unidimensional, lo que quiere decir que se maneja en una sola direccion, donde el eje principal y predeterminado sera el X, pero puede modificarse hacia el eje Y, usando la propiedad <span class="content_span-color">flex-direction</span> sea row representando las filas y el main axis (eje X) y el column representando las columnas y el cross axis (eje Y).</p>
+        <p class="content_text">Flexbox se maneja de manera unidimensional, lo que quiere decir que se maneja en una sola direccion, donde el eje principal y predeterminado sera el X, pero puede modificarse hacia el eje Y, usando la propiedad <span class="content_span--color">flex-direction</span> sea row representando las filas y el main axis (eje X) y el column representando las columnas y el cross axis (eje Y).</p>
         <div class="content_flex-direction">
             <h3 class="flex-direction_title">row</h3>
             <ul class="flex-direction_list list">
@@ -66,7 +66,7 @@
             </ul>
         </div>
         <h2 class="content_title">wrap</h2>
-        <p class="content_text">Su funcion consiste en modificar la forma en la que los elementos hijos se van a agrupar, sea en una sola linea o en mas lineas independientemente de sus dimensiones, esto mediante la propiedad <span class="content_span-color">flex-wrap</span> y los siguientes valores:</p>
+        <p class="content_text">Su funcion consiste en modificar la forma en la que los elementos hijos se van a agrupar, sea en una sola linea o en mas lineas independientemente de sus dimensiones, esto mediante la propiedad <span class="content_span--color">flex-wrap</span> y los siguientes valores:</p>
         <div class="content_flex-wrap">
             <h3 class="flex-wrap_title">nowrap</h3>
             <p class="flex-wrap_text">Consiste en agrupar elementos en una sola linea sin importar sus medidas, sea ancho o alto, estas seran tomadas en cuenta hasta que llegue a un punto donde sobrepase el tamaño maximo del padre</p>
@@ -190,7 +190,7 @@
                 <li class="list_item">Item 20</li>
             </ul>
             <h3 class="flex-wrap_title">Propiedad de atajo (shorthand)</h3>
-            <p class="flex-wrap_text">Con la propiedad <span class="content_span-color">flex-flow</span> se pueden agregar tanto los valores de <strong>flex-direction</strong> como de <strong>flex-wrap</strong> para simplificar codigo.</p>
+            <p class="flex-wrap_text">Con la propiedad <span class="content_span--color">flex-flow</span> se pueden agregar tanto los valores de <strong>flex-direction</strong> como de <strong>flex-wrap</strong> para simplificar codigo.</p>
             <ul class="flex-wrap_list list">
                 <li class="list_item">Item 1</li>
                 <li class="list_item">Item 2</li>
@@ -214,6 +214,45 @@
                 <li class="list_item">Item 20</li>
             </ul>
         </div>
+        <h2 class="content_title">Alineacion del Main Axis (justify-content)</h2>
+        <div class="content_justify-content">
+
+        </div>
+    
+        <a href="#start" class="link" id="start">Start</a>
+        <a href="#end" class="link" id="end">End</a>
+        <a href="#center" class="link" id="center">Center</a>
+        <a href="#space-between" class="link" id="space-between">Space-Between</a>
+        <a href="#space-around" class="link" id="space-around">Space-Around</a>
+        <a href="#space-evenly" class="link" id="space-evenly">Space-Evenly</a>
+        <section class="container-justify_section">
+            <article class="article_justify">
+                <h3 class="article_justify-title">Start</h3>
+                <p class="article_justify-text">Es el valor por defecto, por lo que los elementos hijos estaran posicionados de acuerdo al flex-direction por lo que si este no contiene un valor declarado, por defecto sera "row", es decir, estara ubicado en la parte superior izquierda.</p>
+            </article>
+            <article class="article_justify">
+                <!-- <h3 class="article_star-title">End</h3> -->
+                <p class="article_justify-text">Es el valor por defecto, por lo que los elementos hijos estaran posicionados de acuerdo al flex-direction, por lo que si este no contiene un valor declarado, por defecto sera "row", es decir, estara ubicado en la parte superior izquierda.</p>
+            </article>
+        </section>
+        <div class="container">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    
+
+        
+        <!-- <div class="container" id="ends">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="container" id="center">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div> -->
     </div>
 </body>
 </html>

@@ -55,12 +55,12 @@ p{
 .container_list{
     background-color: #fff;
 }
-.content_span-color{
+.content_span--color{
     background-color: black;
     padding: 3px;
     border-radius: 10px;
 }
-.content_span-color:hover{
+.content_span--color:hover{
     background-color: #fff;
     color: #000;
 }
@@ -210,7 +210,7 @@ todo                                                                Desborde mul
 /* 
     La propiedad de atajo flex-flow
 
-    Recuerda que existe una propiedad de atajo (short-hand) llamada flex-flow, con la que podemos resumir los valores de las propiedades flex-direction y flex-wrap, especificándolas en una sola propiedad y ahorrándonos utilizar las propiedades concretas. El orden es el siguiente:
+    Existe una propiedad de atajo (short-hand) llamada flex-flow, con la que podemos resumir los valores de las propiedades flex-direction y flex-wrap, especificándolas en una sola propiedad y ahorrándonos utilizar las propiedades concretas. El orden es el siguiente:
 
     flex-flow: <flex-direction> <flex-wrap>
  */
@@ -224,3 +224,139 @@ todo                                                                Desborde mul
         min-height: 1.5rem;
     }  
 
+    /* .content_link{
+        display: flex;
+        width: 15%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+    } */
+    .link{
+        color: #fff;
+    }
+    .link:hover{
+        text-decoration: none;
+    }
+    .container{
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+        background-color: #000;
+        padding: 1.5rem;
+        transition: .3s;
+    }
+    .box{
+        width: 8rem;
+        height: 8rem;
+        background-color: rgb(70, 0, 128);
+        border-radius: 2rem;
+        text-align: center;
+        align-content: center;
+        font-size: 3rem;
+    }
+
+/* 
+    #start:target ~ .container{
+        justify-content: start;
+    }
+
+    #end:target ~ .container{
+        justify-content: end;
+    }
+
+    #center:target ~ .container{
+        justify-content: center;
+    } 
+    #space-between:target ~ .container{
+        justify-content: space-between;
+    }
+    #space-around:target ~ .container{
+        justify-content: space-around;
+    }
+    #space-evenly:target ~ .container{
+        justify-content: space-evenly;
+    } */
+
+
+
+    #start:target ~ .container .box{
+        transform: translateX(0);
+        transition: .3s;
+    }
+    #end:target ~ .container .box{            
+        transform: translateX(751px);
+        transition: .3s;
+    }
+    #center:target ~ .container .box{
+        transform: translateX(376px);
+        transition: .3s;
+    }
+
+    #space-between:target ~ .container :first-of-type{
+        transform: translateX(0);
+        transition: .3s;
+    }
+    #space-between:target ~ .container :nth-of-type(2){
+        transform: translateX(376px);
+        transition: .3s;
+    }
+    #space-between:target ~ .container :last-of-type{
+        transform: translateX(751px);
+        transition: .3s;
+    }
+
+
+    #space-around:target ~ .container :first-of-type{
+        transform: translateX(125px);
+        transition: .3s;
+    }
+    #space-around:target ~ .container :nth-of-type(2){
+        transform: translateX(375px);
+        transition: .3s;
+    }
+    #space-around:target ~ .container :last-of-type{
+        transform: translateX(626px);
+        transition: .3s;
+    }
+
+    #space-evenly:target ~ .container :first-of-type{
+        transform: translateX(188px);
+        transition: .3s;
+    }
+    #space-evenly:target ~ .container :nth-of-type(2){
+        transform: translateX(376px);
+        transition: .3s;
+    }
+    #space-evenly:target ~ .container :last-of-type{
+        transform: translateX(563px);
+        transition: .3s;
+    }
+
+    .container-justify_section :nth-of-type(n){
+        display: none;
+    }
+    #start:target ~ .container-justify_section :first-of-type{
+        display: block;
+    }
+    #end:target ~ .container-justify_section :last-of-type{
+        display: block;
+    }
+
+
+    /* .container#ends{
+        display: none;
+    }
+
+    .container#center{
+        display: none;
+    }
+
+    #ends:target .container_justify {
+        display: none;
+    }
+    .container#ends:target {
+        display: flex;
+    }
+    .container#ends:target .box{
+        transform: translateX(700px);
+    } */
