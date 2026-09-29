@@ -8,7 +8,6 @@ body{
     font-family: "Yantramanav", sans-serif;
     font-weight: 400;
     font-style: normal;
-    
 }
 
 .title{
@@ -234,25 +233,56 @@ todo                                                                Desborde mul
         margin-right: auto;
         justify-content: space-between;
     } */
+
 /* 
 
 ?                                                            ALINEAR Y CENTRAR CON FLEXBOX
- */
+ 
+
+    Propiedades de alineación
+
+    son reglas para distribuir y alinear elementos hijos dentro de un contenedor flexible.
+
+    Estas propiedades nos permiten crear diseños fluidos y adaptables sin tener que hacer cálculos matemáticos manuales, delegando todo el trabajo pesado de posicionamiento al motor del navegador.
+
+    Las propiedades de alineación en Flexbox se estructuran según los dos ejes de un contenedor: el Eje Principal (Main Axis) y el Eje Cruzado (Cross Axis).
+
+    Algunas propiedades actuan en el eje principal 1️⃣
+    Otras propiedades actuan en el eje secundario 2️⃣
+
+      Propiedades                                                               Valor                                          Actúa en eje
+    justify-content	                               start | end | center | space-between | space-around | space-evenly	            1️⃣
+    align-items	                                   start | end | center | stretch | baseline	                                    2️⃣
+    align-content	                               start | end | center | space-between | space-around | space-evenly | stretch	    2️⃣
+    
+    
+    De esta pequeña lista, hay que centrarse en la primera y la segunda propiedad, ya que son las principales. La última propiedad, align-content solo tiene efecto si tenemos un contenedor flex multilinea.
+
+*/
+
+/* 
+todo                                                1. Alineación en el Eje Principal (Main Axis)
+    
+*    justify-content
+
+    Aplica al contenedor y define cómo se distribuyen los elementos y el espacio sobrante a lo largo del eje principal.
+
+    - start (por defecto): Elementos al inicio del eje.
+    - end: Elementos al final del eje.
+    - center: Elementos centrados en el eje.
+    - space-between: Primer elemento al inicio, último al final, espacio uniforme entre ellos.
+    - space-around: Espacio uniforme alrededor de cada elemento (los extremos tienen la mitad de espacio).
+    - space-evenly: Espacio totalmente idéntico entre elementos y bordes. 
+*/
 
     /* DISEÑO DE CONTENEDORES Y ENLACES */
-    
-    /* enlaces */
-    /* .link{
-        color: #fff;
-    }
-    .link:hover{
-        text-decoration: none;
-    } */
+
     .container{
         display: flex;
         gap: 20px;
         background-color: #000;
         padding: 1.5rem;
+        border-radius: 10px;
         /* transition: all .3s ease; */
     }
     .box{
@@ -286,7 +316,6 @@ todo                                                                Desborde mul
     #space-evenly:target ~ .container{
         justify-content: space-evenly;
     } */
-
 
 
     .link_start:target ~ .container .box{
@@ -344,7 +373,7 @@ todo                                                                Desborde mul
 
 
 
-    .container-justify_section .article_justify:nth-of-type(n){
+    .container-justify_section .article_justify{
         display: none;
     }
     .link_start:target ~ .container-justify_section .article_justify:first-of-type{
@@ -353,9 +382,21 @@ todo                                                                Desborde mul
     /* .link_start:target ~ .container-justify_section .article_justify:first-of-type .article_justify-list{
         display: flex;
     } */
-    .link_end:target ~ .container-justify_section :last-of-type{
+    .link_end:target ~ .container-justify_section :nth-of-type(2){
         display: block;
     }
+    .link_center:target ~ .container-justify_section :nth-of-type(3){
+        display: block;
+    }
+    .link_space-between:target ~ .container-justify_section :nth-of-type(4){
+        display: block;
+    }
+    .link_space-around:target ~ .container-justify_section :nth-of-type(5){
+        display: block;
+    }
+    .link_space-evenly:target ~ .container-justify_section :last-of-type{
+        display: block;
+    }              
 
     /* .article_justify-list{
         display:flex;
@@ -383,25 +424,54 @@ todo                                                                Desborde mul
         transform: translateX(700px);
     } */
 
+.container_justify-comparison{
+    display: none;
+}
+.link:target ~ .container_justify-comparison{
+    display: flex;
+    justify-content: space-between;
+}
 .container_justify-list{
    /* background-color: gray; */
-    width: 45%;
+    width: 47%;
     text-align: center;
     /* box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5); */
 
 }
-h3{
+/* h3{
     outline: 2px solid rgba(255, 255, 255, 0.5);
-}
+} */
+
+
 .list_justify{
     display: flex;
-    justify-content: space-evenly;
     width: 100%;
     height: 12rem;
     background-color: rgba(0, 0, 0, 0.3);
     /* box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5); */
     /* outline: 2px solid rgba(255, 255, 255, 0.5); */
 }
+.link_start:target ~ .container_justify-comparison .list_justify{
+    justify-content: start;
+}
+.link_end:target ~ .container_justify-comparison .list_justify{
+    justify-content: end;
+}
+.link_center:target ~ .container_justify-comparison .list_justify{
+    justify-content: center;
+}
+
+.link_space-between:target ~ .container_justify-comparison .list_justify{
+    justify-content: space-between;
+}
+.link_space-around:target ~ .container_justify-comparison .list_justify{
+    justify-content: space-around;
+}
+.link_space-evenly:target ~ .container_justify-comparison .list_justify{
+    justify-content: space-evenly;
+}
+
+
 .list_justify-column{
     flex-flow: column wrap;
 }
@@ -418,22 +488,25 @@ h3{
 }
 
 .list_justify-row .list_items{
-    width: 25%;
+    width: 27%;
 }
 
-
+.text_link{
+    color: rgb(180, 105, 255);
+    text-transform: uppercase;
+    font-weight: 700;
+}
 .link{
     display: inline-block;
     text-decoration: none;
     color: hsla(0, 0%, 100%, 0.5);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.212);
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     padding: 5px 15px;
     transition: .3s;
 }
-.link:any-link{
-    border-bottom: 1px solid hsla(0, 0%, 100%, 0.212);
-}
+
 .link:hover{
     color: rgba(255, 255, 255, 0.9);
     border-bottom-color: hsla(0, 0%, 100%, 0.5);
@@ -443,15 +516,27 @@ h3{
     outline: 0;
 }
 
-
 .link:target{
     color: #fff;
-    border-bottom: 2px solid #fff;
+    border-bottom: 1px solid #fff;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.link:target ~ .container{
-    /* border: 1px solid hsla(0, 0%, 100%, 0.5); */
-    border-top: 2px solid #fff;
+.article_justify-text{
+    text-indent: 0;
 }
+
+/* 
+todo                                                2. Alineación en el Eje Cruzado (Cross Axis)
+
+*   align-items
+
+    Aplica al contenedor y controla la alineación de todos los elementos hijos en una sola línea perpendicular al eje principal.
+
+    - stretch (por defecto): Estira los elementos para llenar todo el alto/ancho del contenedor (si no tienen dimensiones fijas).
+    - flex-start: Alinea los elementos al inicio del eje cruzado.
+    - flex-end: Alinea los elementos al final del eje cruzado.
+    - center: Centra los elementos a lo largo del eje cruzado.
+    - baseline: Alinea los elementos según la línea base de su texto interior.
+ */
 

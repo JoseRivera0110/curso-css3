@@ -202,21 +202,12 @@
                 <li class="list_item">Item 8</li>
                 <li class="list_item">Item 9</li>
                 <li class="list_item">Item 10</li>
-                <li class="list_item">Item 11</li>
-                <li class="list_item">Item 12</li>
-                <li class="list_item">Item 13</li>
-                <li class="list_item">Item 14</li>
-                <li class="list_item">Item 15</li>
-                <li class="list_item">Item 16</li>
-                <li class="list_item">Item 17</li>
-                <li class="list_item">Item 18</li>
-                <li class="list_item">Item 19</li>
-                <li class="list_item">Item 20</li>
             </ul>
         </div>
         <h2 class="content_title">Alineacion del Main Axis (justify-content)</h2>
         <p class="content_text">La primera propiedad, justify-content, sirve para colocar los ítems de un contenedor mediante una disposición concreta a lo largo del eje principal (por defecto, en horizontal). Los valores que puede tomar esta propiedad son los siguientes:</p>
 
+        <span class="text_link">justify-content</span>
         <a href="#start" class="link link_start" id="start">Start</a>
         <a href="#end" class="link link_end" id="end">End</a>
         <a href="#center" class="link link_center" id="center">Center</a>
@@ -233,16 +224,30 @@
         <section class="container-justify_section">
             <article class="article_justify">
                 <h3 class="article_justify-title">Start</h3>
-                <p class="article_justify-text">Es el comportamiento por defecto. Empuja a todos los elementos hacia el inicio de la línea (la izquierda).</p>
-                
+                <p class="article_justify-text">Agrupa los ítems al inicio del eje principal.</p>               
             </article>
             <article class="article_justify">
                 <h3 class="article_justify-title">End</h3>
-                <p class="article_justify-text">Es el valor por defecto, por lo que los elementos hijos estaran posicionados de acuerdo al flex-direction, por lo que si este no contiene un valor declarado, por defecto sera "row", es decir, estara ubicado en la parte superior izquierda.</p>
+                <p class="article_justify-text">Agrupa los ítems al centro del eje principal.</p>
             </article>
+            <article class="article_justify">
+                <h3 class="article_justify-title">Center</h3>
+                <p class="article_justify-text">Agrupa los ítems al centro del eje principal.</p>
+            </article>
+            <article class="article_justify">
+                <h3 class="article_justify-title">Space-Between</h3>
+                <p class="article_justify-text">Distribuye los ítems dejando espacio entre ellos.</p>
+            </article>
+            <article class="article_justify">
+                <h3 class="article_justify-title">Space-Around</h3>
+                <p class="article_justify-text">Distribuye los ítems dejando espacio alrededor de ellos.</p>
+            </article>
+            <article class="article_justify">
+                <h3 class="article_justify-title">Space-Evenly</h3>
+                <p class="article_justify-text">Distribuye como space-around, pero con un espacio exactamente igual alrededor de ellos.</p>
+            </article>            
         </section>
 
-        
         <div class="container_justify-comparison">
             <div class="container_justify-list">
                 <h3 class="title_justify-list">Horizontalmente</h3>
