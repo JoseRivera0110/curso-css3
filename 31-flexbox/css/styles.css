@@ -4,7 +4,7 @@
 body{
     background-color: #303030;
     color: #fff;
-    margin: 0 4rem;
+    margin: 1rem 4rem;
     font-family: "Yantramanav", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -20,6 +20,7 @@ body{
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-shadow: 0 0 7px red;
+    transition: all .3s ease 200ms;
 }
 ::selection{
     background-color:gray;
@@ -29,7 +30,7 @@ body{
     
     text-decoration: underline;
     text-decoration-color: red;
-    transition: .2s;
+
 }
 
 .content_title{
@@ -37,11 +38,11 @@ body{
     font-weight: 900;
     text-shadow: 0 0 7px #fff;
     text-transform: uppercase;
+    transition: all .3s ease 200ms;
 }
 .content_title:hover{
     text-decoration: underline;
     text-decoration-color: yellow;
-    transition: .5s;
 }
 
 p{
@@ -60,6 +61,7 @@ p{
     background-color: black;
     padding: 3px;
     border-radius: 10px;
+    transition: all .2s ease;
 }
 .content_span--color:hover{
     background-color: #fff;
@@ -240,19 +242,18 @@ todo                                                                Desborde mul
     /* DISEÑO DE CONTENEDORES Y ENLACES */
     
     /* enlaces */
-    .link{
+    /* .link{
         color: #fff;
     }
     .link:hover{
         text-decoration: none;
-    }
+    } */
     .container{
         display: flex;
         gap: 20px;
-        margin-top: 30px;
         background-color: #000;
         padding: 1.5rem;
-        transition: .3s;
+        /* transition: all .3s ease; */
     }
     .box{
         width: 8rem;
@@ -288,73 +289,82 @@ todo                                                                Desborde mul
 
 
 
-    #start:target ~ .container .box{
+    .link_start:target ~ .container .box{
         transform: translateX(0);
         transition: .3s;
     }
-    #end:target ~ .container .box{            
+    .link_end:target ~ .container .box{            
         transform: translateX(751px);
         transition: .3s;
     }
-    #center:target ~ .container .box{
+    .link_center:target ~ .container .box{
         transform: translateX(376px);
         transition: .3s;
     }
 
-    #space-between:target ~ .container :first-of-type{
+    .link_space-between:target ~ .container :first-of-type{
         transform: translateX(0);
         transition: .3s;
     }
-    #space-between:target ~ .container :nth-of-type(2){
+    .link_space-between:target ~ .container :nth-of-type(2){
         transform: translateX(376px);
         transition: .3s;
     }
-    #space-between:target ~ .container :last-of-type{
+    .link_space-between:target ~ .container :last-of-type{
         transform: translateX(751px);
         transition: .3s;
     }
 
 
-    #space-around:target ~ .container :first-of-type{
+    .link_space-around:target ~ .container :first-of-type{
         transform: translateX(125px);
         transition: .3s;
     }
-    #space-around:target ~ .container :nth-of-type(2){
+    .link_space-around:target ~ .container :nth-of-type(2){
         transform: translateX(375px);
         transition: .3s;
     }
-    #space-around:target ~ .container :last-of-type{
+    .link_space-around:target ~ .container :last-of-type{
         transform: translateX(626px);
         transition: .3s;
     }
 
-    #space-evenly:target ~ .container :first-of-type{
+    .link_space-evenly:target ~ .container :first-of-type{
         transform: translateX(188px);
         transition: .3s;
     }
-    #space-evenly:target ~ .container :nth-of-type(2){
+    .link_space-evenly:target ~ .container :nth-of-type(2){
         transform: translateX(376px);
         transition: .3s;
     }
-    #space-evenly:target ~ .container :last-of-type{
+    .link_space-evenly:target ~ .container :last-of-type{
         transform: translateX(563px);
         transition: .3s;
     }
 
 
 
-    .container-justify_section :nth-of-type(n){
+    .container-justify_section .article_justify:nth-of-type(n){
         display: none;
     }
-    #start:target ~ .container-justify_section :first-of-type{
+    .link_start:target ~ .container-justify_section .article_justify:first-of-type{
         display: block;
     }
-    #end:target ~ .container-justify_section :last-of-type{
+    /* .link_start:target ~ .container-justify_section .article_justify:first-of-type .article_justify-list{
+        display: flex;
+    } */
+    .link_end:target ~ .container-justify_section :last-of-type{
         display: block;
     }
 
+    /* .article_justify-list{
+        display:flex;
+        justify-content: center;
+    }
 
-
+    .article_justify-list .list_item{
+        padding: 1.5rem;
+    } */
     /* .container#ends{
         display: none;
     }
@@ -372,3 +382,76 @@ todo                                                                Desborde mul
     .container#ends:target .box{
         transform: translateX(700px);
     } */
+
+.container_justify-list{
+   /* background-color: gray; */
+    width: 45%;
+    text-align: center;
+    /* box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5); */
+
+}
+h3{
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+}
+.list_justify{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 12rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5); */
+    /* outline: 2px solid rgba(255, 255, 255, 0.5); */
+}
+.list_justify-column{
+    flex-flow: column wrap;
+}
+.list_justify-row{
+    flex-flow: row wrap;
+
+}
+.list_items{
+    height: 2.5rem;
+    background-color: rebeccapurple;
+    border: thin solid black;
+    text-align: center;
+    align-content: center;
+}
+
+.list_justify-row .list_items{
+    width: 25%;
+}
+
+
+.link{
+    display: inline-block;
+    text-decoration: none;
+    color: hsla(0, 0%, 100%, 0.5);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 5px 15px;
+    transition: .3s;
+}
+.link:any-link{
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.212);
+}
+.link:hover{
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom-color: hsla(0, 0%, 100%, 0.5);
+}
+
+.link:focus{
+    outline: 0;
+}
+
+
+.link:target{
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.link:target ~ .container{
+    /* border: 1px solid hsla(0, 0%, 100%, 0.5); */
+    border-top: 2px solid #fff;
+}
+

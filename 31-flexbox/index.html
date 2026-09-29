@@ -217,29 +217,59 @@
         <h2 class="content_title">Alineacion del Main Axis (justify-content)</h2>
         <p class="content_text">La primera propiedad, justify-content, sirve para colocar los ítems de un contenedor mediante una disposición concreta a lo largo del eje principal (por defecto, en horizontal). Los valores que puede tomar esta propiedad son los siguientes:</p>
 
-        <a href="#start" class="link" id="start">Start</a>
-        <a href="#end" class="link" id="end">End</a>
-        <a href="#center" class="link" id="center">Center</a>
-        <a href="#space-between" class="link" id="space-between">Space-Between</a>
-        <a href="#space-around" class="link" id="space-around">Space-Around</a>
-        <a href="#space-evenly" class="link" id="space-evenly">Space-Evenly</a>
-        <section class="container-justify_section">
-            <article class="article_justify">
-                <h3 class="article_justify-title">Start</h3>
-                <p class="article_justify-text">Es el comportamiento por defecto. Empuja a todos los elementos hacia el inicio de la línea (la izquierda).</p>
-            </article>
-            <article class="article_justify">
-                <h3 class="article_star-title">End</h3>
-                <p class="article_justify-text">Es el valor por defecto, por lo que los elementos hijos estaran posicionados de acuerdo al flex-direction, por lo que si este no contiene un valor declarado, por defecto sera "row", es decir, estara ubicado en la parte superior izquierda.</p>
-            </article>
-        </section>
+        <a href="#start" class="link link_start" id="start">Start</a>
+        <a href="#end" class="link link_end" id="end">End</a>
+        <a href="#center" class="link link_center" id="center">Center</a>
+        <a href="#space-between" class="link link_space-between" id="space-between">Space-Between</a>
+        <a href="#space-around" class="link link_space-around" id="space-around">Space-Around</a>
+        <a href="#space-evenly" class="link link_space-evenly" id="space-evenly">Space-Evenly</a>
+        
         <div class="container">
             <div class="box">1</div>
             <div class="box">2</div>
             <div class="box">3</div>
         </div>
-    
 
+        <section class="container-justify_section">
+            <article class="article_justify">
+                <h3 class="article_justify-title">Start</h3>
+                <p class="article_justify-text">Es el comportamiento por defecto. Empuja a todos los elementos hacia el inicio de la línea (la izquierda).</p>
+                
+            </article>
+            <article class="article_justify">
+                <h3 class="article_justify-title">End</h3>
+                <p class="article_justify-text">Es el valor por defecto, por lo que los elementos hijos estaran posicionados de acuerdo al flex-direction, por lo que si este no contiene un valor declarado, por defecto sera "row", es decir, estara ubicado en la parte superior izquierda.</p>
+            </article>
+        </section>
+
+        
+        <div class="container_justify-comparison">
+            <div class="container_justify-list">
+                <h3 class="title_justify-list">Horizontalmente</h3>
+                <ul class="list_justify list_justify-row list">
+                    <li class="list_items">Item 1</li>
+                    <li class="list_items">Item 2</li>
+                    <li class="list_items">Item 3</li>
+                    <li class="list_items">Item 4</li>
+                    <li class="list_items">Item 5</li>
+                    <li class="list_items">Item 6</li>
+                    <li class="list_items">Item 7</li>
+                </ul>
+            </div>
+            <div class="container_justify-list">
+                <h3 class="title_justify-list">Verticalmente</h3>
+                <ul class="list_justify list_justify-column list">
+                    <li class="list_items">Item 1</li>
+                    <li class="list_items">Item 2</li>
+                    <li class="list_items">Item 3</li>
+                    <li class="list_items">Item 4</li>
+                    <li class="list_items">Item 5</li>
+                    <li class="list_items">Item 6</li>
+                    <li class="list_items">Item 7</li>
+                </ul>                
+            </div>
+        </div>
+        
         
         <!-- <div class="container" id="ends">
             <div class="box"></div>
