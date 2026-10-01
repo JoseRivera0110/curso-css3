@@ -204,78 +204,158 @@
                 <li class="list_item">Item 10</li>
             </ul>
         </div>
-        <h2 class="content_title">Alineacion del Main Axis (justify-content)</h2>
-        <p class="content_text">La primera propiedad, justify-content, sirve para colocar los ítems de un contenedor mediante una disposición concreta a lo largo del eje principal (por defecto, en horizontal). Los valores que puede tomar esta propiedad son los siguientes:</p>
+        <div class="container_alignment-property">
+            <div class="container_justify-content">
+                <h2 class="content_title">Alineacion del Main Axis (justify-content)</h2>
+                <p class="content_text">La primera propiedad, justify-content, sirve para colocar los ítems de un contenedor mediante una disposición concreta a lo largo del eje principal (por defecto, en horizontal). Los valores que puede tomar esta propiedad son los siguientes:</p>
 
-        <span class="text_link">justify-content</span>
-        <a href="#start" class="link link_start" id="start">Start</a>
-        <a href="#end" class="link link_end" id="end">End</a>
-        <a href="#center" class="link link_center" id="center">Center</a>
-        <a href="#space-between" class="link link_space-between" id="space-between">Space-Between</a>
-        <a href="#space-around" class="link link_space-around" id="space-around">Space-Around</a>
-        <a href="#space-evenly" class="link link_space-evenly" id="space-evenly">Space-Evenly</a>
+                <span class="text_link">justify-content</span>
+                <a href="#start" class="link link_start" id="start">Start</a>
+                <a href="#end" class="link link_end" id="end">End</a>
+                <a href="#center" class="link link_center" id="center">Center</a>
+                <a href="#space-between" class="link link_space-between" id="space-between">Space-Between</a>
+                <a href="#space-around" class="link link_space-around" id="space-around">Space-Around</a>
+                <a href="#space-evenly" class="link link_space-evenly" id="space-evenly">Space-Evenly</a>
+                
+                <div class="container">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                </div>
+
+                <section class="container-justify_section">
+                    <article class="article_justify">
+                        <h3 class="article_justify-title">Start</h3>
+                        <p class="article_justify-text">Agrupa los ítems al inicio del eje principal.</p>               
+                    </article>
+                    <article class="article_justify">
+                        <h3 class="article_justify-title">End</h3>
+                        <p class="article_justify-text">Agrupa los ítems al final del eje principal.</p>
+                    </article>
+                    <article class="article_justify">
+                        <h3 class="article_justify-title">Center</h3>
+                        <p class="article_justify-text">Agrupa los ítems al centro del eje principal.</p>
+                    </article>
+                    <article class="article_justify">
+                        <h3 class="article_justify-title">Space-Between</h3>
+                        <p class="article_justify-text">Distribuye los ítems dejando espacio entre ellos.</p>
+                    </article>
+                    <article class="article_justify">
+                        <h3 class="article_justify-title">Space-Around</h3>
+                        <p class="article_justify-text">Distribuye los ítems dejando espacio alrededor de ellos.</p>
+                    </article>
+                    <article class="article_justify">
+                        <h3 class="article_justify-title">Space-Evenly</h3>
+                        <p class="article_justify-text">Distribuye como space-around, pero con un espacio exactamente igual alrededor de ellos.</p>
+                    </article>            
+                </section>
+
+                <div class="container_justify-comparison">
+                    <div class="container_justify-list">
+                        <h3 class="title_justify-list">Horizontalmente</h3>
+                        <ul class="list_justify list_justify-row list">
+                            <li class="list_items">Item 1</li>
+                            <li class="list_items">Item 2</li>
+                            <li class="list_items">Item 3</li>
+                            <li class="list_items">Item 4</li>
+                            <li class="list_items">Item 5</li>
+                            <li class="list_items">Item 6</li>
+                            <li class="list_items">Item 7</li>
+                        </ul>
+                    </div>
+                    <div class="container_justify-list">
+                        <h3 class="title_justify-list">Verticalmente</h3>
+                        <ul class="list_justify list_justify-column list">
+                            <li class="list_items">Item 1</li>
+                            <li class="list_items">Item 2</li>
+                            <li class="list_items">Item 3</li>
+                            <li class="list_items">Item 4</li>
+                            <li class="list_items">Item 5</li>
+                            <li class="list_items">Item 6</li>
+                            <li class="list_items">Item 7</li>
+                        </ul>                
+                    </div>
+                </div>
+            </div>
+            <div class="container_align-items">
+                <h2 class="content_title">Alineacion del Cross Axis (align-items)</h2>
+                <p class="content_text">:</p>
+
+                <span class="text_link">align-items</span>
+                <a href="#stretch" class="link link_stretch" id="stretch">Stretch</a>
+                <a href="#start" class="link link_start" id="start">Start</a>
+                <a href="#end" class="link link_end" id="end">End</a>
+                <a href="#center" class="link link_center" id="center">Center</a>
+                <a href="#baseline" class="link link_baseline" id="baseline">Baseline</a>
+                
+                <div class="container">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                </div>
+
+                <section class="container-justify_section">
+                    <article class="article_justify">
+                        <h3 class="article_justify-title">Start</h3>
+                        <p class="article_justify-text">Agrupa los ítems al inicio del eje principal.</p>               
+                    </article>
+                    <article class="article_justify">
+                        <h3 class="article_justify-title">End</h3>
+                        <p class="article_justify-text">Agrupa los ítems al final del eje principal.</p>
+                    </article>
+                    <article class="article_justify">
+                        <h3 class="article_justify-title">Center</h3>
+                        <p class="article_justify-text">Agrupa los ítems al centro del eje principal.</p>
+                    </article>
+                    <article class="article_justify">
+                        <h3 class="article_justify-title">Space-Between</h3>
+                        <p class="article_justify-text">Distribuye los ítems dejando espacio entre ellos.</p>
+                    </article>
+                    <article class="article_justify">
+                        <h3 class="article_justify-title">Space-Around</h3>
+                        <p class="article_justify-text">Distribuye los ítems dejando espacio alrededor de ellos.</p>
+                    </article>
+                    <article class="article_justify">
+                        <h3 class="article_justify-title">Space-Evenly</h3>
+                        <p class="article_justify-text">Distribuye como space-around, pero con un espacio exactamente igual alrededor de ellos.</p>
+                    </article>            
+                </section>
+
+                <div class="container_justify-comparison">
+                    <div class="container_justify-list">
+                        <h3 class="title_justify-list">Horizontalmente</h3>
+                        <ul class="list_justify list_justify-row list">
+                            <li class="list_items">Item 1</li>
+                            <li class="list_items">Item 2</li>
+                            <li class="list_items">Item 3</li>
+                            <li class="list_items">Item 4</li>
+                            <li class="list_items">Item 5</li>
+                            <li class="list_items">Item 6</li>
+                            <li class="list_items">Item 7</li>
+                        </ul>
+                    </div>
+                    <div class="container_justify-list">
+                        <h3 class="title_justify-list">Verticalmente</h3>
+                        <ul class="list_justify list_justify-column list">
+                            <li class="list_items">Item 1</li>
+                            <li class="list_items">Item 2</li>
+                            <li class="list_items">Item 3</li>
+                            <li class="list_items">Item 4</li>
+                            <li class="list_items">Item 5</li>
+                            <li class="list_items">Item 6</li>
+                            <li class="list_items">Item 7</li>
+                        </ul>                
+                    </div>
+                </div>                
+            </div>
+        </div>
         
-        <div class="container">
+
+        <div class="container container_align">
             <div class="box">1</div>
             <div class="box">2</div>
             <div class="box">3</div>
         </div>
-
-        <section class="container-justify_section">
-            <article class="article_justify">
-                <h3 class="article_justify-title">Start</h3>
-                <p class="article_justify-text">Agrupa los ítems al inicio del eje principal.</p>               
-            </article>
-            <article class="article_justify">
-                <h3 class="article_justify-title">End</h3>
-                <p class="article_justify-text">Agrupa los ítems al centro del eje principal.</p>
-            </article>
-            <article class="article_justify">
-                <h3 class="article_justify-title">Center</h3>
-                <p class="article_justify-text">Agrupa los ítems al centro del eje principal.</p>
-            </article>
-            <article class="article_justify">
-                <h3 class="article_justify-title">Space-Between</h3>
-                <p class="article_justify-text">Distribuye los ítems dejando espacio entre ellos.</p>
-            </article>
-            <article class="article_justify">
-                <h3 class="article_justify-title">Space-Around</h3>
-                <p class="article_justify-text">Distribuye los ítems dejando espacio alrededor de ellos.</p>
-            </article>
-            <article class="article_justify">
-                <h3 class="article_justify-title">Space-Evenly</h3>
-                <p class="article_justify-text">Distribuye como space-around, pero con un espacio exactamente igual alrededor de ellos.</p>
-            </article>            
-        </section>
-
-        <div class="container_justify-comparison">
-            <div class="container_justify-list">
-                <h3 class="title_justify-list">Horizontalmente</h3>
-                <ul class="list_justify list_justify-row list">
-                    <li class="list_items">Item 1</li>
-                    <li class="list_items">Item 2</li>
-                    <li class="list_items">Item 3</li>
-                    <li class="list_items">Item 4</li>
-                    <li class="list_items">Item 5</li>
-                    <li class="list_items">Item 6</li>
-                    <li class="list_items">Item 7</li>
-                </ul>
-            </div>
-            <div class="container_justify-list">
-                <h3 class="title_justify-list">Verticalmente</h3>
-                <ul class="list_justify list_justify-column list">
-                    <li class="list_items">Item 1</li>
-                    <li class="list_items">Item 2</li>
-                    <li class="list_items">Item 3</li>
-                    <li class="list_items">Item 4</li>
-                    <li class="list_items">Item 5</li>
-                    <li class="list_items">Item 6</li>
-                    <li class="list_items">Item 7</li>
-                </ul>                
-            </div>
-        </div>
-        
-        
         <!-- <div class="container" id="ends">
             <div class="box"></div>
             <div class="box"></div>

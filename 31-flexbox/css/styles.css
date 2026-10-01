@@ -11,15 +11,15 @@ body{
 }
 
 .title{
-    width: max-content;
+    max-width: max-content;
     margin-right: auto;
     margin-left: auto;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    text-shadow: 0 0 7px red;
-    transition: all .3s ease 200ms;
+    text-shadow: 0 0 7px rgb(0, 38, 255);
+    transition: all .3s ease;
 }
 ::selection{
     background-color:gray;
@@ -28,20 +28,22 @@ body{
 .title:hover{
     
     text-decoration: underline;
-    text-decoration-color: red;
-
+    text-decoration-color: rgb(0, 38, 255);
+    text-shadow: 0 0 20px rgb(0, 38, 255);
 }
 
 .content_title{
-    width: max-content;
+    /* width: 100%; */
+    max-width: max-content;
     font-weight: 900;
     text-shadow: 0 0 7px #fff;
     text-transform: uppercase;
-    transition: all .3s ease 200ms;
+    transition: all .3s ease;
 }
 .content_title:hover{
     text-decoration: underline;
-    text-decoration-color: yellow;
+    text-decoration-color: #fff;
+    text-shadow: 0 0 15px #fff;
 }
 
 p{
@@ -534,9 +536,18 @@ todo                                                2. Alineación en el Eje Cru
     Aplica al contenedor y controla la alineación de todos los elementos hijos en una sola línea perpendicular al eje principal.
 
     - stretch (por defecto): Estira los elementos para llenar todo el alto/ancho del contenedor (si no tienen dimensiones fijas).
-    - flex-start: Alinea los elementos al inicio del eje cruzado.
-    - flex-end: Alinea los elementos al final del eje cruzado.
+    - start: Alinea los elementos al inicio del eje cruzado.
+    - end: Alinea los elementos al final del eje cruzado.
     - center: Centra los elementos a lo largo del eje cruzado.
     - baseline: Alinea los elementos según la línea base de su texto interior.
  */
+
+    .container_align{
+        flex-direction: column;
+        margin-top: 30px;
+        min-height: 50rem;
+        justify-content: end;
+        align-items: end;
+    }
+
 
