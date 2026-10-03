@@ -279,13 +279,124 @@ todo                                                1. Alineación en el Eje Pri
 
     /* DISEÑO DE CONTENEDORES Y ENLACES */
 
-    .container{
+   .container{
+        position: relative;
+        width: 100%;
+        max-width: 1400px;
+        background-color: #000;
+        padding: 12px;
+        border-radius: 10px;
+        height: 6rem;
+        transition: .4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .container_flex{
+        position: relative;
+        width: 100%;
+        height: 73px;
+
+        left: 0;
+        transform: translateX(0%);
+
+        transition: .4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .box{
+        position: absolute;
+        padding: 1.5rem 2rem;
+        background-color: rgb(70, 0, 128);
+        border-radius: 10px;
+        text-align: center;
+        align-content: center;
+        font-size: 1.2rem;
+        transition: .4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+
+    .box:first-of-type{
+        left: 0%;
+        transform: translateX(0%);
+    }
+    .box:nth-of-type(2){
+        left: 8%;
+        transform: translateX(-8%);
+    }
+    .box:last-of-type{
+        left: 16%;
+        transform: translateX(-16%);
+    }
+    
+    .link_end:target ~ .container .box:first-of-type{
+        left: 84%;
+        transform: translateX(-84%);
+    }
+    .link_end:target ~ .container .box:nth-of-type(2){
+        left: 92%;
+        transform: translateX(-92%);
+    }
+    .link_end:target ~ .container .box:last-of-type{
+        left: 100%;
+        transform: translateX(-100%);
+    }
+
+    .link_center:target ~ .container .box:first-of-type{
+        left: 42%;
+        transform: translateX(-42%);
+    }
+    .link_center:target ~ .container .box:nth-of-type(2){
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .link_center:target ~ .container .box:last-of-type{
+        left: 58%;
+        transform: translateX(-58%);
+    }
+
+
+    .link_space-between:target ~ .container .box:first-of-type{
+        left: 0%;
+        transform: translateX(0%);
+    }
+    .link_space-between:target ~ .container .box:nth-of-type(2){
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .link_space-between:target ~ .container .box:last-of-type{
+        left: 100%;
+        transform: translateX(-100%);
+    }    
+
+    .link_space-around:target ~ .container .box:first-of-type{
+        left: 14%;
+        transform: translateX(-14%);
+    }
+    .link_space-around:target ~ .container .box:nth-of-type(2){
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .link_space-around:target ~ .container .box:last-of-type{
+        left: 86%;
+        transform: translateX(-86%);
+    }    
+
+    .link_space-evenly:target ~ .container .box:first-of-type{
+        left: 21%;
+        transform: translateX(-21%);
+    }
+    .link_space-evenly:target ~ .container .box:nth-of-type(2){
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .link_space-evenly:target ~ .container .box:last-of-type{
+        left: 79%;
+        transform: translateX(-79%);
+    }
+
+    /* .container{
         display: flex;
         gap: 20px;
         background-color: #000;
         padding: 1.5rem;
         border-radius: 10px;
-        /* transition: all .3s ease; */
+
     }
     .box{
         width: 8rem;
@@ -295,7 +406,7 @@ todo                                                1. Alineación en el Eje Pri
         text-align: center;
         align-content: center;
         font-size: 3rem;
-    }
+    } */
 
 /* 
     #start:target ~ .container{
@@ -320,7 +431,7 @@ todo                                                1. Alineación en el Eje Pri
     } */
 
 
-    .link_start:target ~ .container .box{
+    /* .link_start:target ~ .container .box{
         transform: translateX(0);
         transition: .3s;
     }
@@ -372,7 +483,7 @@ todo                                                1. Alineación en el Eje Pri
         transform: translateX(563px);
         transition: .3s;
     }
-
+ */
 
 
     .container-justify_section .article_justify{
@@ -398,7 +509,7 @@ todo                                                1. Alineación en el Eje Pri
     }
     .link_space-evenly:target ~ .container-justify_section :last-of-type{
         display: block;
-    }              
+    }               
 
     /* .article_justify-list{
         display:flex;
@@ -437,7 +548,7 @@ todo                                                1. Alineación en el Eje Pri
    /* background-color: gray; */
     width: 47%;
     text-align: center;
-    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
+    /* box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5); */
 
 }
 /* h3{
@@ -542,12 +653,142 @@ todo                                                2. Alineación en el Eje Cru
     - baseline: Alinea los elementos según la línea base de su texto interior.
  */
 
-    .container_align{
-        flex-direction: column;
-        margin-top: 30px;
-        min-height: 50rem;
-        justify-content: end;
-        align-items: end;
+    .checkbox-start:checked ~ .container .box:first-of-type{
+        left: 0%;
+        transform: translateX(0%);
+    }
+    .checkbox-start:checked ~ .container .box:nth-of-type(2){
+        left: 8%;
+        transform: translateX(-8%);
+    }
+    .checkbox-start:checked ~ .container .box:last-of-type{
+        left: 16%;
+        transform: translateX(-16%);
+    }
+    
+    .checkbox-end:checked ~ .container .box:first-of-type{
+        left: 84%;
+        transform: translateX(-84%);
+    }
+    .checkbox-end:checked ~ .container .box:nth-of-type(2){
+        left: 92%;
+        transform: translateX(-92%);
+    }
+    .checkbox-end:checked ~ .container .box:last-of-type{
+        left: 100%;
+        transform: translateX(-100%);
     }
 
+    .checkbox-center:checked ~ .container .box:first-of-type{
+        left: 42%;
+        transform: translateX(-42%);
+    }
+    .checkbox-center:checked ~ .container .box:nth-of-type(2){
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .checkbox-center:checked ~ .container .box:last-of-type{
+        left: 58%;
+        transform: translateX(-58%);
+    }
+
+
+    .checkbox-space-between:checked ~ .container .box:first-of-type{
+        left: 0%;
+        transform: translateX(0%);
+    }
+    .checkbox-space-between:checked ~ .container .box:nth-of-type(2){
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .checkbox-space-between:checked ~ .container .box:last-of-type{
+        left: 100%;
+        transform: translateX(-100%);
+    }    
+
+    .checkbox-space-around:checked ~ .container .box:first-of-type{
+        left: 14%;
+        transform: translateX(-14%);
+    }
+    .checkbox-space-around:checked ~ .container .box:nth-of-type(2){
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .checkbox-space-around:checked ~ .container .box:last-of-type{
+        left: 86%;
+        transform: translateX(-86%);
+    }    
+
+    .checkbox-space-evenly:checked ~ .container .box:first-of-type{
+        left: 21%;
+        transform: translateX(-21%);
+    }
+    .checkbox-space-evenly:checked ~ .container .box:nth-of-type(2){
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .checkbox-space-evenly:checked ~ .container .box:last-of-type{
+        left: 79%;
+        transform: translateX(-79%);
+    }     
+
+
+[name="align-items"]:checked ~ .container{
+    height: 18rem;
+}
+
+[name="align-items"]:checked ~ .container .container_flex{
+    height: 100%;
+
+}
+
+/* [name="align-items"]:checked ~ .container .container_flex .box{
+    height: 100%;
+    
+} */
+
+/* .checkbox-a_stretch:checked ~ .container .container_flex{
+    height: 100%;
+}
+.checkbox-a_stretch:checked ~ .container .container_flex .box{
+    height: 100%;
+}
+.checkbox-a_start:checked ~ .container .container_flex{
+    top: 0%;
+}
+.checkbox-a_end:checked ~ .container .container_flex{
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+.checkbox-a_center:checked ~ .container .container_flex{
+    top: 50%;
+    transform: translateY(-50%);
+} */
+
+
+
+.checkbox-a_stretch:checked ~ .container .container_flex .box{
+    height: 100%;
+    background-color: darkgreen;
+}
+.checkbox-a_start:checked ~ .container .container_flex .box{
+    top: 0%;
+}
+.checkbox-a_end:checked ~ .container .container_flex .box{
+    top: 73%;
+}
+
+.checkbox-a_center:checked ~ .container .container_flex .box{
+    top: 36%;
+
+}
+.checkbox-a_baseline:checked ~ .container .container_flex .box:not(.box:nth-of-type(2)){
+    top: 11.5%;
+}
+.checkbox-a_baseline:checked ~ .container .container_flex .box:nth-of-type(2){
+    height: 50%;
+    background-color: purple;
+
+}
 
