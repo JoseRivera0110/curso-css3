@@ -284,67 +284,67 @@
                     </div>
                 </div>
             </div>
-            <div class="container_align-items">
+            <div class="container_align-item">
                 <h2 class="content_title">Alineacion del Cross Axis (align-items)</h2>
                 <p class="content_text">Existe otra propiedad importante denominada align-items. Se encarga de alinear los ítems en el eje secundario del contenedor. Hay que tener cuidado de no confundir align-items con align-content, puesto que el segundo actúa sobre cada una de las líneas de un contenedor multilinea (no tiene efecto si no usamos flex-wrap), mientras que align-items lo hace sobre la única línea que tiene un contenedor flex sin wrap.</p>
 
-            <span class="span_practice">justify-content</span>            
-            <input type="radio" name="justify-content" id="j_start" class="checkbox-start">
-            <label for="j_start" class="boton-animar">
-            start
-            </label>
+                <span class="span_practice">justify-content</span>            
+                <input type="radio" name="justify-content" id="j_start" class="checkbox-start" checked>
+                <label for="j_start" class="btn-label">
+                start
+                </label>
 
-            <input type="radio" name="justify-content" id="j_end" class="checkbox-end">
-            <label for="j_end" class="boton-animar">
-            end
-            </label>
+                <input type="radio" name="justify-content" id="j_end" class="checkbox-end">
+                <label for="j_end" class="btn-label">
+                end
+                </label>
 
-            <input type="radio" name="justify-content" id="j_center" class="checkbox-center">
-            <label for="j_center" class="boton-animar">
-            center
-            </label>
+                <input type="radio" name="justify-content" id="j_center" class="checkbox-center">
+                <label for="j_center" class="btn-label">
+                center
+                </label>
 
-            <input type="radio" name="justify-content" id="j_space-between" class="checkbox-space-between">
-            <label for="j_space-between" class="boton-animar">
-            space-between
-            </label>
+                <input type="radio" name="justify-content" id="j_space-between" class="checkbox-space-between">
+                <label for="j_space-between" class="btn-label">
+                space-between
+                </label>
 
-            <input type="radio" name="justify-content" id="j_space-around" class="checkbox-space-around">
-            <label for="j_space-around" class="boton-animar">
-            space-around
-            </label>
-            
-            <input type="radio" name="justify-content" id="j_space-evenly" class="checkbox-space-evenly">
-            <label for="j_space-evenly" class="boton-animar">
-            space-evenly
-            </label>    
+                <input type="radio" name="justify-content" id="j_space-around" class="checkbox-space-around">
+                <label for="j_space-around" class="btn-label">
+                space-around
+                </label>
+                
+                <input type="radio" name="justify-content" id="j_space-evenly" class="checkbox-space-evenly">
+                <label for="j_space-evenly" class="btn-label">
+                space-evenly
+                </label>    
 
-            <span class="span_practice">align-items</span>
+                <span class="span_practice">align-items</span>
 
-            <input type="radio" name="align-items"  id="stretch" class="checkbox-a_stretch">
-            <label for="stretch" class="boton-animar">
-            stretch
-            </label>
+                <input type="radio" name="align-items"  id="stretch" class="checkbox-a_stretch" checked>
+                <label for="stretch" class="btn-label">
+                stretch
+                </label>
 
-            <input type="radio" name="align-items" id="a_start" class="checkbox-a_start">
-            <label for="a_start" class="boton-animar">
-            star
-            </label>
+                <input type="radio" name="align-items" id="a_start" class="checkbox-a_start">
+                <label for="a_start" class="btn-label">
+                star
+                </label>
 
-            <input type="radio" name="align-items" id="a_end" class="checkbox-a_end">
-            <label for="a_end" class="boton-animar">
-            end
-            </label>
+                <input type="radio" name="align-items" id="a_end" class="checkbox-a_end">
+                <label for="a_end" class="btn-label">
+                end
+                </label>
 
-            <input type="radio" name="align-items" id="a_center" class="checkbox-a_center">
-            <label for="a_center" class="boton-animar">
-            center
-            </label>
+                <input type="radio" name="align-items" id="a_center" class="checkbox-a_center">
+                <label for="a_center" class="btn-label">
+                center
+                </label>
 
-            <input type="radio" name="align-items" id="baseline" class="checkbox-a_baseline">
-            <label for="baseline" class="boton-animar">
-            baseline
-            </label>
+                <input type="radio" name="align-items" id="baseline" class="checkbox-a_baseline">
+                <label for="baseline" class="btn-label">
+                baseline
+                </label>
 
                 <div class="container">
                     <div class="container_flex">
@@ -354,6 +354,9 @@
                     </div>
                 </div>
 
+                <div class="container_align-content-information">
+                    
+                </div>
                 <!-- <section class="container-justify_section">
                     <article class="article_justify">
                         <h3 class="article_justify-title">Start</h3>
@@ -407,6 +410,76 @@
                         </ul>                
                     </div>
                 </div>                 -->
+            </div>
+            <div class="container_align-content">
+               <h2 class="content_title">Alineacion Cross Axis (align-content)</h2>
+               <p class="content_text">Esta propiedad ayudará cuando estemos tratando con un contenedor flex multilinea creado mediante flex-wrap. Los contenedores multilinea son un tipo de contenedor en el que, cuando los ítems no caben en el ancho disponible, el eje principal se divide en múltiples líneas.</p>
+
+                <span class="span_practice">justify-content</span>            
+                <input type="radio" name="justify-content" id="j_start" class="checkbox-start">
+                <label for="j_start" class="btn-label">
+                start
+                </label>
+
+                <input type="radio" name="justify-content" id="j_end" class="checkbox-end">
+                <label for="j_end" class="btn-label">
+                end
+                </label>
+
+                <input type="radio" name="justify-content" id="j_center" class="checkbox-center">
+                <label for="j_center" class="btn-label">
+                center
+                </label>
+
+                <input type="radio" name="justify-content" id="j_space-between" class="checkbox-space-between">
+                <label for="j_space-between" class="btn-label">
+                space-between
+                </label>
+
+                <input type="radio" name="justify-content" id="j_space-around" class="checkbox-space-around">
+                <label for="j_space-around" class="btn-label">
+                space-around
+                </label>
+                
+                <input type="radio" name="justify-content" id="j_space-evenly" class="checkbox-space-evenly">
+                <label for="j_space-evenly" class="btn-label">
+                space-evenly
+                </label>    
+
+                <span class="span_practice">align-items</span>
+
+                <input type="radio" name="align-items"  id="stretch" class="checkbox-a_stretch">
+                <label for="stretch" class="btn-label">
+                stretch
+                </label>
+
+                <input type="radio" name="align-items" id="a_start" class="checkbox-a_start">
+                <label for="a_start" class="btn-label">
+                star
+                </label>
+
+                <input type="radio" name="align-items" id="a_end" class="checkbox-a_end">
+                <label for="a_end" class="btn-label">
+                end
+                </label>
+
+                <input type="radio" name="align-items" id="a_center" class="checkbox-a_center">
+                <label for="a_center" class="btn-label">
+                center
+                </label>
+
+                <input type="radio" name="align-items" id="baseline" class="checkbox-a_baseline">
+                <label for="baseline" class="btn-label">
+                baseline
+                </label>
+
+                <div class="container">
+                    <div class="container_flex">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                    </div>
+                </div>                               
             </div>
         </div>
         

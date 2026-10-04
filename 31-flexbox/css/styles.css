@@ -485,6 +485,12 @@ todo                                                1. Alineación en el Eje Pri
     }
  */
 
+    .link:not(:target) ~ .container-justify_section .article_justify:first-of-type{
+        display: block;
+    }
+    .link:target ~ .container-justify_section .article_justify:first-of-type{
+        display: none;
+    }
 
     .container-justify_section .article_justify{
         display: none;
@@ -536,11 +542,10 @@ todo                                                1. Alineación en el Eje Pri
     .container#ends:target .box{
         transform: translateX(700px);
     } */
+     
+
 
 .container_justify-comparison{
-    display: none;
-}
-.link:target ~ .container_justify-comparison{
     display: flex;
     justify-content: space-between;
 }
@@ -739,7 +744,6 @@ todo                                                2. Alineación en el Eje Cru
 
 [name="align-items"]:checked ~ .container .container_flex{
     height: 100%;
-
 }
 
 /* [name="align-items"]:checked ~ .container .container_flex .box{
@@ -780,7 +784,7 @@ todo                                                2. Alineación en el Eje Cru
 }
 
 .checkbox-a_center:checked ~ .container .container_flex .box{
-    top: 36%;
+    top: 36.2%;
 
 }
 .checkbox-a_baseline:checked ~ .container .container_flex .box:not(.box:nth-of-type(2)){
@@ -791,4 +795,80 @@ todo                                                2. Alineación en el Eje Cru
     background-color: purple;
 
 }
+
+
+.span_practice{
+    /* display: inline-block; */
+    color: rgba(180, 105, 255, 0.5);
+    text-transform: uppercase;
+    font-weight: 700;   
+}
+
+.span_practice:nth-of-type(2){
+    margin-left: 10px;
+    color: yellow;
+}
+[type="radio"]{
+    display: none;
+}
+
+.btn-label{
+    display: inline-block;
+    padding: 5px 15px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: hsla(0, 0%, 100%, 0.5);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.212);
+    cursor: pointer;
+    user-select: none;
+    text-transform: capitalize;
+    transition: .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[name="justify-content"] + .btn-label:hover{
+    background-color: rgba(172, 89, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid;
+}
+[name="justify-content"]:checked + .btn-label{
+    background-color: rgba(172, 89, 255, 0.22);
+    color: hsla(0, 0%, 100%);
+    border-bottom: 1px solid;
+}
+
+[name="align-items"] + .btn-label:hover{
+    background-color: rgba(255, 255, 0, 0.082);
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid;
+}
+[name="align-items"]:checked + .btn-label{
+    background-color: rgba(255, 255, 0, 0.2);
+    color: hsla(0, 0%, 100%);
+    border-bottom: 1px solid;
+}
+
+
+
+
+/* 
+
+*   align-content
+
+    Alinea las líneas de un contenedor flexible cuando hay espacio adicional en el eje transversal, de forma similar a como justify-contentse alinean los elementos individuales dentro del eje principal.
+
+    normal: cuando aplicamos esta opción, los elementos se alinean a su posición por defecto, como si no le hubiéramos dado ningún valor.
+    start: alinea las filas o columnas de elementos al inicio del eje transversal.
+    end: alinea las filas o columnas de elementos al final del eje transversal.
+    center: esta opción centra las filas o columnas de elementos en el eje transversal del contenedor.
+    stretch: esta opción hace que las filas o columnas de elementos se alarguen equitativamente para ocupar la totalidad del espacio sobrante en el eje transversal.
+    space-between: esta opción reparte el espacio sobrante entre las filas y columnas de elementos. Esto quiere decir que entre las filas o columnas habrá espacios del mismo tamaño.
+    space around: esta opción reparte el espacio sobrante y lo distribuye alrededor de las filas o columnas de elementos. Esto quiere decir que, además de agregar espacio entre los elementos, también genera espacio entre los elementos y los bordes del eje transversal.
+    space-evenly: esta opción reparte el espcio sobrante entre filas y columnas de elementos por igual incluyendo el borde, es decir, habra la misma distancia entre cada elemento.
+ */
+
+.span_align-items::before { 
+    content: ' '; display: block; 
+}
+
+
 
