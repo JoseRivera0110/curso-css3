@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #303030;
+    color: #fff;
+    margin: 1rem 4rem;
+    font-family: "Yantramanav", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title{
+    max-width: max-content;
+    margin-right: auto;
+    margin-left: auto;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 7px yellow;
+    transition: all .3s ease;
+}
+::selection{
+    background-color:gray;
+    color:#000
+}
+.title:hover{
+    
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    text-shadow: 0 0 20px yellow;
+}
+
+.content_title{
+    /* width: 100%; */
+    max-width: max-content;
+    font-weight: 900;
+    text-shadow: 0 0 7px #fff;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+.content_title:hover{
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    text-shadow: 0 0 15px #fff;
+}
+
+p{
+    font-size: 1.2rem;
+    text-indent: 30px;
+}
+
+.list{
+    list-style-type: none;
+    padding: 0;
+}
+.container_list{
+    background-color: #fff;
+}
+.content_span--color{
+    background-color: black;
+    padding: 3px;
+    border-radius: 10px;
+    transition: all .2s ease;
+}
+.content_span--color:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* todo                                                     GRID */
+
+/*? GRID EXPLICITO */
+                /* Distribucion de filas y columnas
+
+    - grid-template-columns: cantidad y tamaño de las columnas
+    - grid-template-row: cantidad y tamaño de las filas
+
+                    Espaciado entre elementos
+
+    - column-gap: Espaciado entre columnas
+    - row-gap: Espaciado entre filas 
+*/
+
+.container_grid-explicit{
+    display: grid;
+    
+    grid-template-columns: 15% repeat(2, 20%) 1fr 150px;
+    grid-template-rows: 10% auto 50%;
+    border: 3px solid #000;
+    column-gap: 15px;
+    row-gap: 18px;
+    gap: 18px 15px;
+    background-color: darkgray;
+}
+.article_grid-explicit{
+    /* border: 1px solid #000; */
+    background-color: rebeccapurple;
+    text-align: center;
+    align-content: center;
+}
+
+/*? GRID LINES */
+
+
+
+
+
