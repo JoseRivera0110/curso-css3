@@ -658,81 +658,81 @@ todo                                                2. Alineación en el Eje Cru
     - baseline: Alinea los elementos según la línea base de su texto interior.
  */
 
-    .checkbox-start:checked ~ .container .box:first-of-type{
+    .radio-start:checked ~ .container .box:first-of-type{
         left: 0%;
         transform: translateX(0%);
     }
-    .checkbox-start:checked ~ .container .box:nth-of-type(2){
+    .radio-start:checked ~ .container .box:nth-of-type(2){
         left: 8%;
         transform: translateX(-8%);
     }
-    .checkbox-start:checked ~ .container .box:last-of-type{
+    .radio-start:checked ~ .container .box:last-of-type{
         left: 16%;
         transform: translateX(-16%);
     }
     
-    .checkbox-end:checked ~ .container .box:first-of-type{
+    .radio-end:checked ~ .container .box:first-of-type{
         left: 84%;
         transform: translateX(-84%);
     }
-    .checkbox-end:checked ~ .container .box:nth-of-type(2){
+    .radio-end:checked ~ .container .box:nth-of-type(2){
         left: 92%;
         transform: translateX(-92%);
     }
-    .checkbox-end:checked ~ .container .box:last-of-type{
+    .radio-end:checked ~ .container .box:last-of-type{
         left: 100%;
         transform: translateX(-100%);
     }
 
-    .checkbox-center:checked ~ .container .box:first-of-type{
+    .radio-center:checked ~ .container .box:first-of-type{
         left: 42%;
         transform: translateX(-42%);
     }
-    .checkbox-center:checked ~ .container .box:nth-of-type(2){
+    .radio-center:checked ~ .container .box:nth-of-type(2){
         left: 50%;
         transform: translateX(-50%);
     }
-    .checkbox-center:checked ~ .container .box:last-of-type{
+    .radio-center:checked ~ .container .box:last-of-type{
         left: 58%;
         transform: translateX(-58%);
     }
 
 
-    .checkbox-space-between:checked ~ .container .box:first-of-type{
+    .radio-space-between:checked ~ .container .box:first-of-type{
         left: 0%;
         transform: translateX(0%);
     }
-    .checkbox-space-between:checked ~ .container .box:nth-of-type(2){
+    .radio-space-between:checked ~ .container .box:nth-of-type(2){
         left: 50%;
         transform: translateX(-50%);
     }
-    .checkbox-space-between:checked ~ .container .box:last-of-type{
+    .radio-space-between:checked ~ .container .box:last-of-type{
         left: 100%;
         transform: translateX(-100%);
     }    
 
-    .checkbox-space-around:checked ~ .container .box:first-of-type{
+    .radio-space-around:checked ~ .container .box:first-of-type{
         left: 14%;
         transform: translateX(-14%);
     }
-    .checkbox-space-around:checked ~ .container .box:nth-of-type(2){
+    .radio-space-around:checked ~ .container .box:nth-of-type(2){
         left: 50%;
         transform: translateX(-50%);
     }
-    .checkbox-space-around:checked ~ .container .box:last-of-type{
+    .radio-space-around:checked ~ .container .box:last-of-type{
         left: 86%;
         transform: translateX(-86%);
     }    
 
-    .checkbox-space-evenly:checked ~ .container .box:first-of-type{
+    .radio-space-evenly:checked ~ .container .box:first-of-type{
         left: 21%;
         transform: translateX(-21%);
     }
-    .checkbox-space-evenly:checked ~ .container .box:nth-of-type(2){
+    .radio-space-evenly:checked ~ .container .box:nth-of-type(2){
         left: 50%;
         transform: translateX(-50%);
     }
-    .checkbox-space-evenly:checked ~ .container .box:last-of-type{
+    .radio-space-evenly:checked ~ .container .box:last-of-type{
         left: 79%;
         transform: translateX(-79%);
     }     
@@ -751,10 +751,10 @@ todo                                                2. Alineación en el Eje Cru
     
 } */
 
-/* .checkbox-a_stretch:checked ~ .container .container_flex{
+/* .radio-a_stretch:checked ~ .container .container_flex{
     height: 100%;
 }
-.checkbox-a_stretch:checked ~ .container .container_flex .box{
+.radio-a_stretch:checked ~ .container .container_flex .box{
     height: 100%;
 }
 .checkbox-a_start:checked ~ .container .container_flex{
@@ -772,25 +772,25 @@ todo                                                2. Alineación en el Eje Cru
 
 
 
-.checkbox-a_stretch:checked ~ .container .container_flex .box{
+.radio-a_stretch:checked ~ .container .container_flex .box{
     height: 100%;
     background-color: darkgreen;
 }
-.checkbox-a_start:checked ~ .container .container_flex .box{
+.radio-a_start:checked ~ .container .container_flex .box{
     top: 0%;
 }
-.checkbox-a_end:checked ~ .container .container_flex .box{
+.radio-a_end:checked ~ .container .container_flex .box{
     top: 73%;
 }
 
-.checkbox-a_center:checked ~ .container .container_flex .box{
+.radio-a_center:checked ~ .container .container_flex .box{
     top: 36.2%;
 
 }
-.checkbox-a_baseline:checked ~ .container .container_flex .box:not(.box:nth-of-type(2)){
+.radio-a_baseline:checked ~ .container .container_flex .box:not(.box:nth-of-type(2)){
     top: 11.5%;
 }
-.checkbox-a_baseline:checked ~ .container .container_flex .box:nth-of-type(2){
+.radio-a_baseline:checked ~ .container .container_flex .box:nth-of-type(2){
     height: 50%;
     background-color: purple;
 
@@ -870,5 +870,162 @@ todo                                                2. Alineación en el Eje Cru
     content: ' '; display: block; 
 }
 
+.container_align-content .container{
+    height: 18rem;
+}
+
+/* 
+todo                                                    Factor de crecimiento (Flex-grow)
 
 
+
+   
+ */
+
+.btn{
+    display: inline-block;
+    width: 5rem;
+    padding: 0.7rem;
+    text-align: center;
+    align-content: center;
+    background-color: rgba(255, 0, 0, 0.5);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+ .checkbox_flex-direction + .btn::after{
+    content: 'Row';
+ }
+ .checkbox_flex-direction:checked + .btn::after{
+    content: 'Column';
+ }
+.checkbox_flex-direction:checked + .btn{
+    background-color: rgba(0, 128, 0, 0.5);
+}
+
+
+.list_flex{
+    display: flex;
+    /* align-items: start; */
+    width: 55%;
+    height: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list_flex .list_item{
+    text-align: center;
+    align-content: center;
+    transition: flex-grow .3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* width: 15%;
+    height: 15%; */
+}
+
+.list{
+   outline: 1px solid #000;
+}
+
+
+ .checkbox_flex-direction:checked ~ .list_flex{
+    flex-direction: column;
+    
+ }
+ 
+.checkbox_flex-grow:not(:checked) ~ .list_flex-grow :nth-child(n){
+    flex-grow: 0;
+ }
+.checkbox_flex-grow:checked ~ .list_flex-grow :nth-child(n){
+    flex-grow: 1;
+ }
+
+.checkbox_flex-grow-i1:checked ~ .list_flex-grow :first-child{
+    flex-grow: 2;
+}
+.checkbox_flex-grow-i2:checked ~ .list_flex-grow :nth-child(2){
+    flex-grow: 2;
+}
+.checkbox_flex-grow-i3:checked ~ .list_flex-grow :nth-child(3){
+    flex-grow: 2;
+}
+.checkbox_flex-grow-i4:checked ~ .list_flex-grow :nth-child(4){
+    flex-grow: 2;
+}
+.checkbox_flex-grow-i5:checked ~ .list_flex-grow :nth-child(5){
+    flex-grow: 2;
+}
+
+.checkbox_flex-grow-i6:checked ~ .list_flex-grow :last-child{
+    flex-grow: 2;
+}
+
+/* 
+todo                                                    Factor de reduccion (Flex-shrink)
+
+
+
+ */
+
+.list_flex-shrink .list_item{
+    width: 150px;
+}
+
+
+.checkbox_flex-direction:checked ~ .list_flex-shrink .list_item{
+    width: initial;
+    height: 200px;
+    
+ }
+
+.radio_flex-shrink_2:checked ~ .checkbox_flex-shrink-i1:checked ~ .list_flex-shrink :first-child{
+    flex-shrink: 2;
+}
+.radio_flex-shrink_4:checked ~ .checkbox_flex-shrink-i1:checked ~ .list_flex-shrink :first-child{
+    flex-shrink: 4;
+}
+.radio_flex-shrink_2:checked ~ .checkbox_flex-shrink-i2:checked ~ .list_flex-shrink :nth-child(2){
+    flex-shrink: 2;
+}
+.radio_flex-shrink_4:checked ~ .checkbox_flex-shrink-i2:checked ~ .list_flex-shrink :nth-child(2){
+    flex-shrink: 4;
+}
+.radio_flex-shrink_2:checked ~ .checkbox_flex-shrink-i3:checked ~ .list_flex-shrink :nth-child(3){
+    flex-shrink: 2;
+}
+.radio_flex-shrink_4:checked ~ .checkbox_flex-shrink-i3:checked ~ .list_flex-shrink :nth-child(3){
+    flex-shrink: 4;
+}
+.radio_flex-shrink_2:checked ~ .checkbox_flex-shrink-i4:checked ~ .list_flex-shrink :nth-child(4){
+    flex-shrink: 2;
+}
+.radio_flex-shrink_4:checked ~ .checkbox_flex-shrink-i4:checked ~ .list_flex-shrink :nth-child(4){
+    flex-shrink: 4;
+}
+.radio_flex-shrink_2:checked ~ .checkbox_flex-shrink-i5:checked ~ .list_flex-shrink :nth-child(5){
+    flex-shrink: 2;
+}
+.radio_flex-shrink_4:checked ~ .checkbox_flex-shrink-i5:checked ~ .list_flex-shrink :nth-child(5){
+    flex-shrink: 4;
+}
+.radio_flex-shrink_2:checked ~ .checkbox_flex-shrink-i6:checked ~ .list_flex-shrink :last-child{
+    flex-shrink: 2;
+}
+.radio_flex-shrink_4:checked ~ .checkbox_flex-shrink-i6:checked ~ .list_flex-shrink :last-child{
+    flex-shrink: 4;
+}
+
+ /* .radio_flex-shrink-i1:checked {
+
+ } */
+
+ /* 
+todo                                                    Tamaño de hijos flexbox (Flex-basis)
+
+
+
+ */
+
+
+
+
+ 
