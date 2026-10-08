@@ -77,33 +77,97 @@ p{
     - grid-template-columns: cantidad y tamaño de las columnas
     - grid-template-row: cantidad y tamaño de las filas
 
+    funcion repeat(): se puede emplear para introducir valores repetidos sea en filas o columnas siempre y cuando sean adyacentes.
+
+
                     Espaciado entre elementos
 
     - column-gap: Espaciado entre columnas
     - row-gap: Espaciado entre filas 
+
+    shorthand: (r:row / c:column)
+
+    - gap: r c;
 */
 
+.container_grid{
+    border: 3px solid #000;
+    background-color:indigo;
+}
 .container_grid-explicit{
     display: grid;
-    
     grid-template-columns: 15% repeat(2, 20%) 1fr 150px;
     grid-template-rows: 10% auto 50%;
-    border: 3px solid #000;
     column-gap: 15px;
     row-gap: 18px;
     gap: 18px 15px;
-    background-color: darkgray;
+    transition: .3s ease;
 }
-.article_grid-explicit{
+.article_grid{
     /* border: 1px solid #000; */
     background-color: rebeccapurple;
     text-align: center;
     align-content: center;
+    border: 2px solid darkgray;
+    transition: .3s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
+.checkbox_gap:checked + .container_grid-explicit{
+    gap: 0;
+}
+
+
 /*? GRID LINES */
+/* 
+    ubicacion de acuerdo a las lineas grid, sea filas o columnas
+
+    Filas
+    grid-row-start: linea inicial de fila
+    grid-row-end:  lineal final de fila
+
+    Columnas
+    grid-column-start: linea inicial de columna
+    grid-column-end: linea final de columna
+
+    shorthand
+    grid-row: start / end;
+    grid-column: start / end;
+     */
+
+/*!               primer ejemplo usando grid-lines, desplazando una celda de lugar */
+.container_grid-lines{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    transition: .3s ease;
+}
+
+.container_grid-lines :nth-child(15){
+    background-color: darkblue;
+}
+.check_g-lines:checked + .container_grid-lines :nth-child(15){
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    background-color: darkred;
+}
 
 
 
+/* !                        segundo ejemplo usando grid-lines, ampliando celdas */
+
+.container_grid-lines--second{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 33%);
+}
+
+
+
+.check_g-lines--size:checked + .container_grid-lines--second :nth-child(5){
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+}
 
 

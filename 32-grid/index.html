@@ -14,69 +14,179 @@
     <p class="content_text"></p>
     <div class="grid_explicit">
         <h2 class="content_title">Grid explicito</h2>
-        <section class="container_grid-explicit">
-            <article class="article_grid-explicit">
+        <label for="gap">Quitar gap</label>
+        <input type="checkbox" name="gap" id="gap" class="checkbox_gap">
+        <section class="container_grid container_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 1</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 2</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 3</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 4</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 5</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 6</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 7</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 8</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 9</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 10</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 11</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 12</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 13</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 14</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nihil, numquam distinctio enim, eius iure, culpa suscipit temporibus deleniti consectetur quasi harum perspiciatis. Maxime, nihil deleniti fugiat nostrum et impedit.</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 15</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 16</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 17</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 18</p>
             </article>
-            <article class="article_grid-explicit">
+            <article class="article_grid">
                 <p>Grid item 19</p>
             </article>
         </section>
     </div>
-    <div class="container_grid-lines">
+    <div class="grid-lines">
         <h2 class="content_title">Grid lines</h2>
+        <div class="container_grid-lines--firt-example">
+            <h3 class="content_title">Desplazar celdas</h3>
+            <p class="content_text">Demostracion de como funciona las grid lines, desplazando la celda 15, antes de la celda 19</p>
+            <label for="g-lines">Desplazar</label>
+            <input type="checkbox" name="g-lines" id="g-lines" class="check_g-lines">
+            <section class="container_grid container_grid-lines">
+                <article class="article_grid">
+                    <p>Grid item 1</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 2</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 3</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 4</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 5</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 6</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 7</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 8</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 9</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 10</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 11</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 12</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 13</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 14</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 15</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 16</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 17</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 18</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 19</p>
+                </article>
+            </section>      
+        </div>
+        <div class="container_grid-lines--second-example">
+            <h3 class="content_title">Ampliar celdas (filas/columnas)</h3>
+            <p class="content_text">Aumentar tamaño de la celda 5, usando las lineas de grid en filas y columnas</p>
+            <label for="g-lines--size">Aumentar tamaño</label>
+            <input type="checkbox" name="g-lines--size" id="g-lines--size" class="check_g-lines--size">
+            <section class="container_grid container_grid-lines--second">
+                <article class="article_grid">
+                    <p>Grid item 1</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 2</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 3</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 4</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 5</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 6</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 7</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 8</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 9</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 10</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 11</p>
+                </article>
+            </section>
+
+        </div>
+   
     </div>
 </body>
 </html>
