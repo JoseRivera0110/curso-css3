@@ -69,9 +69,16 @@ p{
     color: #000;
 }
 
+.img_grid{
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: 60%;
+    border-radius: 10px;
+}
 /* todo                                                     GRID */
 
-/*? GRID EXPLICITO */
+/*?                                                     GRID EXPLICITO */
                 /* Distribucion de filas y columnas
 
     - grid-template-columns: cantidad y tamaño de las columnas
@@ -93,9 +100,12 @@ p{
 .container_grid{
     border: 3px solid #000;
     background-color:indigo;
+    width: 80%;
+    margin: 0 auto;
 }
 .container_grid-explicit{
     display: grid;
+    width: 100%;
     grid-template-columns: 15% repeat(2, 20%) 1fr 150px;
     grid-template-rows: 10% auto 50%;
     column-gap: 15px;
@@ -117,7 +127,7 @@ p{
 }
 
 
-/*? GRID LINES */
+/*?                                                             GRID LINES */
 /* 
     ubicacion de acuerdo a las lineas grid, sea filas o columnas
 
@@ -134,7 +144,7 @@ p{
     grid-column: start / end;
      */
 
-/*!               primer ejemplo usando grid-lines, desplazando una celda de lugar */
+/*! primer ejemplo usando grid-lines, desplazando una celda de lugar */
 .container_grid-lines{
     display: grid;
     grid-template-columns: repeat(5, 20%);
@@ -155,19 +165,55 @@ p{
 
 
 
-/* !                        segundo ejemplo usando grid-lines, ampliando celdas */
+/* ! segundo ejemplo usando grid-lines, ampliando celdas */
+/* 
+    - grid-area: row-start / column-start / row-end / column-end
+
+    - span: sirve para indicar que se van a agrupar varias filas y/o columnas.
+*/
 
 .container_grid-lines--second{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 33%);
+    /* grid 4c x 4r */
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 1fr);
 }
 
 
 
 .check_g-lines--size:checked + .container_grid-lines--second :nth-child(5){
-    grid-row: 1 / 3;
-    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    grid-column: 2 / 4;
+
+    grid-area: 2 / 2 / 3 / 4;
 }
+
+.check_g-lines--size:checked + .container_grid-lines--second :nth-child(2){
+    grid-column: span 2;
+}
+
+/* ! tercer ejemplo usando grid-lines, posicionar con nombres a las grid-lines */
+/* 
+    - grid-row/column: [nombre de lines] tamaño de celda [nombre de lines] tamaño de celda [nombre de lines]...
+                        grid-column/ row: nombre de linea / nombre de linea
+
+    NOTA: "grid-area" no funciona con los nombres de lineas                    
+*/
+
+.container_grid-lines--three{
+    display: grid;
+    /* grid 4c x 5r */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: [linea-c1] 1fr [linea-c2] 1fr [linea-c3] 1fr [linea-c4] 1fr [linea-c5];
+    grid-template-rows: [linea-r1] 1fr [linea-r2] 1fr [linea-r3] 1fr [linea-r4] 1fr [linea-r5] 1fr [linea-r6];
+}
+
+.check_g-lines--move:checked ~ .container_grid-lines--three :nth-child(9){
+    grid-column: linea-c1 / linea-c5;
+    grid-row: linea-r3 / linea-r5;
+}
+
+/*?                                                             GRID AREAS */
 
 
