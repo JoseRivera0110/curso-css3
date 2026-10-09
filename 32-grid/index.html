@@ -11,10 +11,12 @@
 </head>
 <body>
     <h1 class="title">Grid</h1>
-    <p class="content_text"></p>
+    <p class="content_text">Un grid (o cuadrícula) es una estructura de líneas horizontales y verticales que se intersectan para organizar elementos de forma ordenada</p>
     <img src="assets/images/grid.webp" alt="grid" class="img_grid">
     <div class="grid-explicit">
         <h2 class="content_title">Grid explicito</h2>
+        <p class="content_text">Declarar valores fijos a un grid tanto en filas y columnas para formar una cuadricula.</p>
+        <p class="content_text">Por su parte mediante el gap se puede lograr una separacion entre lineas de grid tanto filas como columnas</p>
         <label for="gap">Quitar gap</label>
         <input type="checkbox" name="gap" id="gap" class="checkbox_gap">
         <section class="container_grid container_grid-explicit">
@@ -80,9 +82,12 @@
     </div>
     <div class="grid-lines">
         <h2 class="content_title">Grid lines</h2>
+        <p class="content_text">Las líneas en un grid, son aquellas divisiones o líneas separadoras de cada celda, que existen tanto en horizontal (columnas, eje principal) como en vertical (filas, eje secundario) en nuestra cuadrícula. Cuando hablamos de «linenames» (o nombres de línea) hacemos referencia a las líneas separadoras de nuestra cuadrícula grid a las cuales se les ha dado un nombre.</p>
         <div class="container_grid-lines--firt-example">
             <h3 class="content_title">Desplazar celdas</h3>
-            <p class="content_text">Demostracion de como funciona las grid lines, desplazando la celda 15, antes de la celda 19</p>
+            <p class="content_text">Demostracion de como funciona las grid lines, desplazando la celda 15 en donde se ubica la celda 18</p>
+            <span class="span_grid span_grid-lines--darkblue">Lugar por defecto</span>
+            <span class="span_grid span_grid-lines--darkred">Celda desplazada mediante la grid-line</span>            
             <label for="g-lines">Desplazar</label>
             <input type="checkbox" name="g-lines" id="g-lines" class="check_g-lines">
             <section class="container_grid container_grid-lines">
@@ -147,7 +152,10 @@
         </div>
         <div class="container_grid-lines--second-example">
             <h3 class="content_title">Ampliar celdas (filas/columnas)</h3>
-            <p class="content_text">Aumentar tamaño de la celda 5, usando las lineas de grid en filas y columnas</p>
+            <p class="content_text">Aumentar tamaño de la celda 5, usando las lineas de grid en filas y columnas, y el tamaño de la celda 2 usando span.</p>
+            <span class="span_grid span_grid-lines--rc">Mediante filas y columnas</span>
+            <span class="span_grid span_grid-lines--span">Mediante span</span>
+
             <label for="g-lines--size">Aumentar tamaño</label>
             <input type="checkbox" name="g-lines--size" id="g-lines--size" class="check_g-lines--size">
             <section class="container_grid container_grid-lines--second">
@@ -189,7 +197,7 @@
         </div>
         <div class="container_grid-lines--three-example">
             <h3 class="content_title">Posicionar con nombres a las lineas de grid</h3>
-            <p class="content_text">En el ejemplo se posiciona a la celda 1 que ocupe toda la primera fila y </p>
+            <p class="content_text">En el ejemplo se posiciona a la celda 1 que ocupe las primeras 3 lineas de filas y las 5 lineas de columnas</p>
             <label for="g-lines--move">Aumentar tamaño</label>
             <input type="checkbox" name="g-lines--move" id="g-lines--move" class="check_g-lines--move">
             <section class="container_grid container_grid-lines--three">
@@ -240,9 +248,90 @@
     </div>
     <div class="grid-implicit">
         <h2 class="content_title">Grid implicita</h2>
-        <p class="content_text">Es la tecnica que toman los elementos, posterior a una grid explicita, normalmente se adaptan al contenido que tengan</p>
+        <p class="content_text">Es la tecnica que toman los elementos, posterior a una grid explicita, normalmente se adaptan al contenido que tengan.</p>
+        <p class="content_text">Sin pulsar el check, se forma una grid 3x3 con valores declarados por lo tanto es explicita, asi mismo la fila sobrante por el contenido, pasa a ser implicita y por ende toma el tamaño del contenido. Por el contrario al pulsar el check, se forma una grid 4x4 con valores explicitos, por lo que las celdas pueden agruparse con normalidad en el grid y no existen valores implicitos.</p>
+        <input type="checkbox" name="grid-implicit" id="grid-implicit" class="check_grid-implicit">
         <section class="container_grid container_grid-implicit">
-            
+            <article class="article_grid">
+                <p>Grid Item 1</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 2</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 3</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 4</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 5</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 6</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 7</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 8</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 9</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 10</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 11</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 12</p>
+            </article>
+        </section>
+    </div>
+    <div class="grid-inline-grid">
+        <h2 class="content_title">Inline-grid</h2>
+        <p class="content_text">Grid con comportamiento de elemento de linea.</p>
+        <section class="container_grid container_grid-inline-grid">
+            <article class="article_grid">
+                <p>Grid Item 1</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 2</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 5</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 6</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 9</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 10</p>
+            </article>           
+        </section>
+        <section class="container_grid container_grid-inline-grid">
+            <article class="article_grid">
+                <p>Grid Item 3</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 4</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 7</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 8</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 11</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid Item 12</p>
+            </article>           
         </section>
     </div>
 </body>

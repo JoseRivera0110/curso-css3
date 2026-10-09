@@ -77,17 +77,33 @@ p{
     border-radius: 10px;
 }
 /* todo                                                     GRID */
+/* 
+    Es un sistema de maquetación bidimensional en CSS Grid Layout que permite distribuir filas y columnas en una página web.
 
+    Se compone de la siguiente forma:
+
+        Contenedor: El elemento padre contenedor que definirá la cuadrícula o rejilla.
+        Ítem: Cada uno de los hijos que contiene la cuadrícula (elemento contenedor).
+        Celda (grid cell): Cada uno de los cuadritos (unidad mínima) de la cuadrícula.
+        Area (grid area): Región o conjunto de celdas de la cuadrícula.
+        Banda (grid track): Banda horizontal o vertical de celdas de la cuadrícula.
+        Línea (grid line): Separador horizontal o vertical de las celdas de la cuadrícula.
+
+     */
 /*?                                                     GRID EXPLICITO */
-                /* Distribucion de filas y columnas
+/*  Distribucion de filas y columnas
 
     - grid-template-columns: cantidad y tamaño de las columnas
     - grid-template-row: cantidad y tamaño de las filas
 
-    funcion repeat(): se puede emplear para introducir valores repetidos sea en filas o columnas siempre y cuando sean adyacentes.
+    Tiene un shorthans el cual es el siguiente:
+    - grid-template:	none | grid-template-rows / grid-template-columns	Atajo para definir dimensiones del grid.
 
 
-                    Espaciado entre elementos
+    - funcion repeat(): se puede emplear para introducir valores repetidos sea en filas o columnas siempre y cuando sean adyacentes.
+
+
+    Espaciado entre elementos
 
     - column-gap: Espaciado entre columnas
     - row-gap: Espaciado entre filas 
@@ -102,6 +118,7 @@ p{
     background-color:indigo;
     width: 80%;
     margin: 0 auto;
+    transition: .3s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 .container_grid-explicit{
     display: grid;
@@ -111,7 +128,6 @@ p{
     column-gap: 15px;
     row-gap: 18px;
     gap: 18px 15px;
-    transition: .3s ease;
 }
 .article_grid, .items{
     /* border: 1px solid #000; */
@@ -142,13 +158,12 @@ p{
     shorthand
     grid-row: start / end;
     grid-column: start / end;
-     */
+*/
 
 /*! primer ejemplo usando grid-lines, desplazando una celda de lugar */
 .container_grid-lines{
     display: grid;
     grid-template-columns: repeat(5, 20%);
-    transition: .3s ease;
 }
 
 .container_grid-lines :nth-child(15){
@@ -163,8 +178,26 @@ p{
     background-color: darkred;
 }
 
+.span_grid{
+    display: block;
+    margin-bottom: 5px;
+}
+.span_grid::before{
+    content: ' ';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #fff;
+}
 
-
+.span_grid-lines--darkred::before{
+    background-color: darkred;
+}
+.span_grid-lines--darkblue::before{
+    background-color: darkblue;
+}
 /* ! segundo ejemplo usando grid-lines, ampliando celdas */
 /* 
     - grid-area: row-start / column-start / row-end / column-end
@@ -179,8 +212,20 @@ p{
     grid-template-rows: repeat(4, 1fr);
 }
 
+.span_grid-lines--rc::before{
+    background-color: #000;
+}
+.span_grid-lines--span::before{
+    background-color: crimson;
+}
 
 
+.container_grid-lines--second :nth-child(5){
+    background-color: #000;
+}
+.container_grid-lines--second :nth-child(2){
+    background-color:crimson;
+}
 .check_g-lines--size:checked + .container_grid-lines--second :nth-child(5){
     grid-row: 2 / 3;
     grid-column: 2 / 4;
@@ -209,9 +254,9 @@ p{
     grid-template-rows: [linea-r1] 1fr [linea-r2] 1fr [linea-r3] 1fr [linea-r4] 1fr [linea-r5] 1fr [linea-r6];
 }
 
-.check_g-lines--move:checked ~ .container_grid-lines--three :nth-child(9){
+.check_g-lines--move:checked ~ .container_grid-lines--three :nth-child(1){
     grid-column: linea-c1 / linea-c5;
-    grid-row: linea-r3 / linea-r5;
+    grid-row: linea-r1 / linea-r3;
 }
 
 /*?                                                             GRID AREAS */
@@ -247,6 +292,7 @@ p{
     background-position: left bottom;
     background-origin: border-box;
     background-size: cover;
+    
 }
 .footer{
     grid-area: footer;
@@ -254,3 +300,39 @@ p{
 
 /*?                                                             GRID IMPLICITA */
 
+    /* Los valores que toman los grid-items posterior a una grid explicita con filas y columnas declaradas, con valor auto por defecto, por lo que suelen adaptarse al tamaño de su contenido. */
+
+    .container_grid-implicit{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 35%);
+        margin-bottom: 6rem;
+    }
+    .check_grid-implicit:checked + .container_grid-implicit{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
+        margin-bottom: 0;        
+    }
+    .container_grid-implicit p::before{
+        content: "Explicit ";
+    }
+    .check_grid-implicit:not(:checked) + .container_grid-implicit :nth-child(n + 10) p::before{
+        content: "Implicit ";
+    }
+    .check_grid-implicit:not(:checked) + .container_grid-implicit :nth-child(n + 10){
+        background-color:darkblue;
+    }
+
+/*?                                                             INLINE GRID */
+   
+    /* No es mas que el modelo Grid con comportamiento en linea, por lo que a ocupar el espacio de su contenido. */
+
+    .container_grid-inline-grid{
+        display: inline-grid;
+        width: 40%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .container_grid-inline-grid:first-of-type{
+        margin-left: 9.9%;
+    }
