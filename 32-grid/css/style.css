@@ -113,7 +113,7 @@ p{
     gap: 18px 15px;
     transition: .3s ease;
 }
-.article_grid{
+.article_grid, .items{
     /* border: 1px solid #000; */
     background-color: rebeccapurple;
     text-align: center;
@@ -215,5 +215,42 @@ p{
 }
 
 /*?                                                             GRID AREAS */
+/* 
+    grid-template-areas: mediante esta propiedad se puede posicionar areas definidas de una grid, mediante un nombre personalizado, definido por el usuario. 
 
+    grid-area: su uso en este caso es para definir las areas, indicar el nombre de esa area, para posicionarlo con grid-template-areas.
+
+ */
+
+.container_grid-areas{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 5vw repeat(2, 12.5vw) 5vw;
+    /* de esta forma se posicionaran las areas, de acuerdo a los nombres declarados con grid-areas: */
+    grid-template-areas:
+    "header header"
+    "main imagen"
+    /* el "." indicara un espacio libre */
+    ". imagen"
+    "footer footer";
+}
+.header{
+    grid-area: header;
+}
+.main{
+    grid-area: main;
+}
+.container_img{
+    grid-area: imagen;
+    background-image: url(../assets/images/ft.jpg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-origin: border-box;
+    background-size: cover;
+}
+.footer{
+    grid-area: footer;
+}
+
+/*?                                                             GRID IMPLICITA */
 

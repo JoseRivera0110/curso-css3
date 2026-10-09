@@ -13,7 +13,7 @@
     <h1 class="title">Grid</h1>
     <p class="content_text"></p>
     <img src="assets/images/grid.webp" alt="grid" class="img_grid">
-    <div class="grid_explicit">
+    <div class="grid-explicit">
         <h2 class="content_title">Grid explicito</h2>
         <label for="gap">Quitar gap</label>
         <input type="checkbox" name="gap" id="gap" class="checkbox_gap">
@@ -232,8 +232,18 @@
     <div class="grid-areas">
        <h2 class="content_title">Grid areas</h2>
        <section class="container_grid container_grid-areas">
-        
+            <header class="items header">Header</header>
+            <main class="items main">Main</main>
+            <div class="items container_img">Imagen</div>
+            <footer class="items footer">footer</footer>
        </section>   
+    </div>
+    <div class="grid-implicit">
+        <h2 class="content_title">Grid implicita</h2>
+        <p class="content_text">Es la tecnica que toman los elementos, posterior a una grid explicita, normalmente se adaptan al contenido que tengan</p>
+        <section class="container_grid container_grid-implicit">
+            
+        </section>
     </div>
 </body>
 </html>
