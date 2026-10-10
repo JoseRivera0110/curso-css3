@@ -86,8 +86,8 @@
         <div class="container_grid-lines--firt-example">
             <h3 class="content_title">Desplazar celdas</h3>
             <p class="content_text">Demostracion de como funciona las grid lines, desplazando la celda 15 en donde se ubica la celda 18</p>
-            <span class="span_grid span_grid-lines--darkblue">Lugar por defecto</span>
-            <span class="span_grid span_grid-lines--darkred">Celda desplazada mediante la grid-line</span>            
+            <span class="span_grid span_grid--darkblue">Lugar por defecto</span>
+            <span class="span_grid span_grid--darkred">Celda desplazada mediante la grid-line</span>            
             <label for="g-lines">Desplazar</label>
             <input type="checkbox" name="g-lines" id="g-lines" class="check_g-lines">
             <section class="container_grid container_grid-lines">
@@ -153,8 +153,8 @@
         <div class="container_grid-lines--second-example">
             <h3 class="content_title">Ampliar celdas (filas/columnas)</h3>
             <p class="content_text">Aumentar tamaño de la celda 5, usando las lineas de grid en filas y columnas, y el tamaño de la celda 2 usando span.</p>
-            <span class="span_grid span_grid-lines--rc">Mediante filas y columnas</span>
-            <span class="span_grid span_grid-lines--span">Mediante span</span>
+            <span class="span_grid span_grid--black">Mediante lineas en filas y columnas</span>
+            <span class="span_grid span_grid--crimson">Mediante span</span>
 
             <label for="g-lines--size">Aumentar tamaño</label>
             <input type="checkbox" name="g-lines--size" id="g-lines--size" class="check_g-lines--size">
@@ -249,7 +249,7 @@
     <div class="grid-implicit">
         <h2 class="content_title">Grid implicita</h2>
         <p class="content_text">Es la tecnica que toman los elementos, posterior a una grid explicita, normalmente se adaptan al contenido que tengan.</p>
-        <p class="content_text">Sin pulsar el check, se forma una grid 3x3 con valores declarados por lo tanto es explicita, asi mismo la fila sobrante por el contenido, pasa a ser implicita y por ende toma el tamaño del contenido. Por el contrario al pulsar el check, se forma una grid 4x4 con valores explicitos, por lo que las celdas pueden agruparse con normalidad en el grid y no existen valores implicitos.</p>
+        <p class="content_text">Sin pulsar el check, se forma una grid 3x3 con valores declarados por lo tanto es explicita, asi mismo la fila sobrante por el contenido, pasa a ser implicita y por ende toma el tamaño del contenido. Por el contrario al pulsar el check, se forma una grid 3x4 donde la ultima fila es declarada, por lo que las celdas pueden agruparse con normalidad en el grid y no existen valores implicitos.</p>
         <input type="checkbox" name="grid-implicit" id="grid-implicit" class="check_grid-implicit">
         <section class="container_grid container_grid-implicit">
             <article class="article_grid">
@@ -334,5 +334,93 @@
             </article>           
         </section>
     </div>
+    <div class="grid-flow">
+        <h2 class="content_title">Flujo de la grid (grid-flow)</h2>
+        <p class="content_text">Direccion de la grid, por defecto filas (row).</p>
+        <div class="container_grid-auto-flow">
+            <h3 class="content_title">Cambiar direccion de la grid</h3>
+            <p class="content_text">Demostracion de como se cambia la direccion de la grid</p>
+            <span class="span_grid span_grid--black">Primera linea de Grid items como punto de referencia</span>
+            <input type="checkbox" name="grid-flow" id="grid-flow" class="check_grid-flow">
+            <label for="grid-flow"></label>
+            <section class="container_grid container_grid-flow">
+                <article class="article_grid">
+                    <p>Grid Item 1</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 2</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 3</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 4</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 5</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 6</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 7</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 8</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 9</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 10</p>
+                </article>
+            </section>
+        </div>
+        <div class="container_grid-auto-rc">
+            <h3 class="content_title">Grid auto en row y column</h3>
+            <p class="content_text">A continuacion en una cuadricula 3x3, se demuestra como se limita el tamaño de la celda implicita, de acuerdo al flujo de la grid.</p>
+            <input type="checkbox" name="grid-flow" id="rc_grid-flow" class="check_grid-flow">
+            <label for="rc_grid-flow"></label>
+            <input type="checkbox" name="grid-flow-rc" id="grid-flow-rc" class="check_grid-flow-rc">
+            <label for="grid-flow-rc">Tamaño fijo a celda implicita</label>
+            <section class="container_grid container_grid-flow">
+                <article class="article_grid">
+                    <p>Grid Item 1</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 2</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 3</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 4</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 5</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 6</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 7</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 8</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 9</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 10</p>
+                </article>
+            </section>
+        </div>
+        <div class="container_grid-flow-dense">
+            <h3 class="container_title">Flujo denso de la grid (Grid flow dense)</h3>
+            
+        </div>
+    </div>
+
 </body>
 </html>

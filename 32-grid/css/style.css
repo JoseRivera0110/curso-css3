@@ -192,10 +192,10 @@ p{
     border: 1px solid #fff;
 }
 
-.span_grid-lines--darkred::before{
+.span_grid--darkred::before{
     background-color: darkred;
 }
-.span_grid-lines--darkblue::before{
+.span_grid--darkblue::before{
     background-color: darkblue;
 }
 /* ! segundo ejemplo usando grid-lines, ampliando celdas */
@@ -212,10 +212,10 @@ p{
     grid-template-rows: repeat(4, 1fr);
 }
 
-.span_grid-lines--rc::before{
+.span_grid--black::before{
     background-color: #000;
 }
-.span_grid-lines--span::before{
+.span_grid--crimson::before{
     background-color: crimson;
 }
 
@@ -265,6 +265,7 @@ p{
 
     grid-area: su uso en este caso es para definir las areas, indicar el nombre de esa area, para posicionarlo con grid-template-areas.
 
+        el "." indicara un espacio libre
  */
 
 .container_grid-areas{
@@ -275,7 +276,6 @@ p{
     grid-template-areas:
     "header header"
     "main imagen"
-    /* el "." indicara un espacio libre */
     ". imagen"
     "footer footer";
 }
@@ -309,8 +309,8 @@ p{
         margin-bottom: 6rem;
     }
     .check_grid-implicit:checked + .container_grid-implicit{
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, auto);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         margin-bottom: 0;        
     }
     .container_grid-implicit p::before{
@@ -336,3 +336,58 @@ p{
     .container_grid-inline-grid:first-of-type{
         margin-left: 9.9%;
     }
+
+/*?                                                             FLUJO DE LA GRID (GRID FLOW)*/
+/* 
+    Direccion de la grid, por defecto en filas, pero puede cambiarse a columnas con la siguiente propiedad:
+
+    - grid-auto-flow: row (por defecto) | column
+
+    los grid items implicitos sea en filas o columnas, por defecto tendran el valor "auto" lo que significa que van a tomar el tamaño correspondiente a su contenido, pero puede modificarse a valores especificos, mediante la siguiente propiedad:
+
+    - grid-auto-rows: auto (por defecto) | size
+    - grid-auto-columns: auto (por defecto) | size
+ */
+
+    .container_grid-flow{
+        display: grid;
+        width: 800px;
+        height: 400px;
+        /* g 3x3 */
+        grid-template: repeat(3, 80px) / repeat(3, 180px);
+    }
+
+    .container_grid-auto-flow .article_grid:nth-of-type(-n + 3){
+        background-color: #000;
+    }   
+    .check_grid-flow:checked ~ .container_grid-flow{
+        grid-auto-flow: column;
+    }
+
+    .check_grid-flow + label::after{
+        content: 'Row';
+    }
+    .check_grid-flow:checked + label::after{
+        content: 'Column';
+    }
+
+    .check_grid-flow-rc:checked ~ .container_grid-flow{
+        grid-auto-rows: 80px;
+    }
+    .check_grid-flow:checked ~ .check_grid-flow-rc:checked ~ .container_grid-flow{
+        grid-auto-columns: 180px;
+    }
+
+/*?                                                            FLUJO DENSO DE LA GRID (GRID FLOW DENSE)*/
+/* 
+    Direccion de la grid, por defecto en filas, pero puede cambiarse a columnas con la siguiente propiedad:
+
+    - grid-auto-flow: row (por defecto) | column
+
+    los grid items implicitos sea en filas o columnas, por defecto tendran el valor "auto" lo que significa que van a tomar el tamaño correspondiente a su contenido, pero puede modificarse a valores especificos, mediante la siguiente propiedad:
+
+    - grid-auto-rows: auto (por defecto) | size
+    - grid-auto-columns: auto (por defecto) | size
+ */
+
+
