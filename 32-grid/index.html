@@ -417,10 +417,156 @@
             </section>
         </div>
         <div class="container_grid-flow-dense">
-            <h3 class="container_title">Flujo denso de la grid (Grid flow dense)</h3>
-            
+            <h3 class="content_title">Flujo denso de la grid (Grid flow dense)</h3>
+            <p class="content_text">El flujo denso, se usa principalmente para aprovechar espacios sobrantes en una grid.</p>
+            <input type="checkbox" name="grid-flow" id="d_grid-flow" class="check_grid-flow">
+            <label for="d_grid-flow"></label>
+            <input type="checkbox" name="grid-dense" id="grid-dense" class="check_grid-dense">
+            <label for="grid-dense">Aplicar dense</label>             
+            <section class="container_grid container_grid-dense">
+                <article class="article_grid">
+                    <p>Grid Item 1</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 2</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 3</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 4</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 5</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 6</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 7</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 8</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 9</p>
+                </article>  
+                <article class="article_grid">
+                    <p>Grid Item 10</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 11</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid Item 12</p>
+                </article>              
+            </section>
         </div>
     </div>
+    <div class="grid-layer">
+        <h2 class="content_title">Grid-layers (Superposicion)</h2>
+        <p class="content_text">Superposicion de los grid items</p>
+        <input type="checkbox" name="grid-layer" id="grid-layer" class="check_grid-layer">
+        <label for="grid-layer">Superposicionar</label>
+        <section class="container_grid container_grid-layer">
+            <article class="article_grid">
+                <p>Grid item 1</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 2</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 3</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 4</p>
+            </article>
+        </section>
+    </div>
+    <div class="grid-order">
+        <h2 class="content_title">Grid order</h2>
+        <p class="content_text">Funciona para cambiar el orden de los grid items, siempre y cuando esten no esten con valores fijos y esten en el flujo natural de la grid</p>
+        <input type="checkbox" name="grid-order" id="grid-order" class="check_grid-order">
+        <label for="grid-order">Cambiar order</label>        
+        <section class="container_grid container_grid-order">
+            <article class="article_grid">
+                <p>Grid item 1</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 2</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 3</p>
+            </article>
+        </section>
+    </div>
+    <div class="grid-align">
+        <h2 class="content_title">Alineacion de grid</h2>
+        <p class="content_text"></p>
+        <div class="grid-align-items">
+            <h3 class="content_title">Alineamiento de grid items</h3>
+               <span class="span_practice">justify-items</span>
+                <input type="radio" name="justify-items" id="ji-stretch" class="radio_ji-stretch">
+                <label for="ji-stretch" class="btn-label">stretch</label>              
+                <input type="radio" name="justify-items" id="ji-start" class="radio_ji-start">
+                <label for="ji-start" class="btn-label">start</label>
+                <input type="radio" name="justify-items" id="ji-end" class="radio_ji-end">
+                <label for="ji-end" class="btn-label">end</label>
+                <input type="radio" name="justify-items" id="ji-center" class="radio_ji-center">
+                <label for="ji-center" class="btn-label">center</label>
+ 
+                <br>
+                <span class="span_practice">align-items</span>
+                <input type="radio" name="align-items"  id="a-stretch" class="radio_a-stretch">
+                <label for="a-stretch" class="btn-label">stretch</label>
+                <input type="radio" name="align-items" id="a-start" class="radio_a-start">
+                <label for="a-start" class="btn-label">start</label>
+                <input type="radio" name="align-items" id="a-end" class="radio_a-end">
+                <label for="a-end" class="btn-label">end</label>
+                <input type="radio" name="align-items" id="a-center" class="radio_a-center">
+                <label for="a-center" class="btn-label">center</label>
+                <br>
+                <label for="self">Desactivar justify-self/align-self en grid-item 3</label>
+                <input type="checkbox" name="self" id="self" class="checkbox_self">
+                <br>
+                <span class="span_practice">justify-self</span>
+                <input type="radio" name="justify-self" id="js-stretch" class="radio_js-stretch">
+                <label for="js-stretch" class="btn-label">stretch</label>
+                <input type="radio" name="justify-self" id="js-start" class="radio_js-start">
+                <label for="js-start" class="btn-label">start</label>
+                <input type="radio" name="justify-self" id="js-end" class="radio_js-end">
+                <label for="js-end" class="btn-label">end</label>
+                <input type="radio" name="justify-self" id="js-center" class="radio_js-center">
+                <label for="js-center" class="btn-label">center</label>
+                <br>
+                <span class="span_practice">align-self</span>
+                <input type="radio" name="align-self" id="as-stretch" class="radio_as-stretch">
+                <label for="as-stretch" class="btn-label">stretch</label>
+                <input type="radio" name="align-self" id="as-start" class="radio_as-start">
+                <label for="as-start" class="btn-label">start</label>
+                <input type="radio" name="align-self" id="as-end" class="radio_as-end">
+                <label for="as-end" class="btn-label">end</label>
+                <input type="radio" name="align-self" id="as-center" class="radio_as-center">
+                <label for="as-center" class="btn-label">center</label>
 
+            <section class="container_grid container_grid-align-items">
+                <article class="article_grid">
+                    <p>Grid item 1</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 2</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 3</p>
+                </article>                
+            </section>
+        </div>
+        <div class="grid-align-tracks">
+            <h3 class="content_title">Alineamiento de grid tracks</h3>
+            <section class="container_grid container_grid-align-tracks">
+                
+            </section>
+        </div>
+    </div>
 </body>
 </html>
