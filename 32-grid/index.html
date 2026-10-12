@@ -563,10 +563,155 @@
         </div>
         <div class="grid-align-tracks">
             <h3 class="content_title">Alineamiento de grid tracks</h3>
+               <span class="span_practice">justify-content</span>           
+                <input type="radio" name="justify-content" id="jc-start" class="radio_jc-start" checked>
+                <label for="jc-start" class="btn-label">start</label>
+                <input type="radio" name="justify-content" id="jc-end" class="radio_jc-end">
+                <label for="jc-end" class="btn-label">end</label>
+                <input type="radio" name="justify-content" id="jc-center" class="radio_jc-center">
+                <label for="jc-center" class="btn-label">center</label>
+                <input type="radio" name="justify-content" id="jc-between" class="radio_jc-between">
+                <label for="jc-between" class="btn-label">space-between</label>
+                <input type="radio" name="justify-content" id="jc-around" class="radio_jc-around">
+                <label for="jc-around" class="btn-label">space-around</label>
+                <input type="radio" name="justify-content" id="jc-evenly" class="radio_jc-evenly">
+                <label for="jc-evenly" class="btn-label">space-evenly</label>         
+                <br>
+                <span class="span_practice">align-content</span>
+                <input type="radio" name="align-content" id="ac-start" class="radio_ac-start" checked>
+                <label for="ac-start" class="btn-label">start</label>
+                <input type="radio" name="align-content" id="ac-end" class="radio_ac-end">
+                <label for="ac-end" class="btn-label">end</label>
+                <input type="radio" name="align-content" id="ac-center" class="radio_ac-center">
+                <label for="ac-center" class="btn-label">center</label>
+                <input type="radio" name="align-content" id="ac-between" class="radio_ac-between">
+                <label for="ac-between" class="btn-label">space-between</label>
+                <input type="radio" name="align-content" id="ac-around" class="radio_ac-around">
+                <label for="ac-around" class="btn-label">space-around</label>
+                <input type="radio" name="align-content" id="ac-evenly" class="radio_ac-evenly">
+                <label for="ac-evenly" class="btn-label">space-evenly</label>  
+
             <section class="container_grid container_grid-align-tracks">
-                
+                <article class="article_grid">
+                    <p>Grid item 1</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 2</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 3</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 4</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 5</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 6</p>
+                </article>                                    
             </section>
         </div>
+    </div>
+    <div class="grid-min-max">
+        <h2 class="content_title">Grid min/max</h2>
+        <p class="content_text">Tamaño minimo y maximo a lo que puede llegar los grid items de un tracks</p>
+        <label for="size-container">Minimo del contenido del contenedor</label>
+        <input type="checkbox" name="size-container" id="size-container" class="check_size-container">
+        <section class="container_grid container_grid-min-max">
+                <article class="article_grid">
+                    <p>Grid item 1</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 2</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 3</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 4</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 5</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 6</p>
+                </article>              
+        </section>
+    </div>
+    <div class="grid-repeat">
+        <h2 class="content_title">Grid con patrones repetitivos</h2>
+        <p class="content_text">Se pueden crear patrones repetitivos usando la funcion repeat, agregando valores especificos dentro de ella.</p>
+        <label for="repeat-column">Repetir patron de dos columnas</label>
+        <input type="checkbox" name="repeat" id="repeat-column" class="check_repeat-column">
+        <section class="container_grid container_grid-repeat">
+           <article class="article_grid">
+            <p>Grid item 1</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 2</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 3</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 4</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 5</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 6</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 7</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 8</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 9</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 10</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 11</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 12</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 13</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 14</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 15</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 16</p>
+           </article>
+
+           <article class="article_grid">
+            <p>Grid item 17</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 18</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 19</p>
+           </article>
+           <article class="article_grid">
+            <p>Grid item 20</p>
+           </article>
+
+        </section>
+    </div>
+    <div class="grid-dynamics">
+        
     </div>
 </body>
 </html>

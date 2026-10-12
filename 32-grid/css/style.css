@@ -580,7 +580,7 @@ body{
 
 /*todo   GRID ALIGN TRACKS */
 /* 
-    Cambiar alineacion de los grid-tracks sea fila o columna de acuerdo a su espacio reservado, sea el eje principal o el eje secudario:
+    Cambiar alineacion de los grid-tracks sea fila o columna de acuerdo a su espacio reservado, en referencia a su eje principal o el eje secudario:
 
     Eje principal
         -justify-content: start | end | center | space-between | space-around | space-evenly
@@ -590,5 +590,114 @@ body{
 
  */
 
+    .container_grid-align-tracks{
+        display: grid;
+        width: 70vw;
+        height: 55vh;
+        grid-template-columns: repeat(3, 15%);
+        grid-template-rows: repeat(2, 20%);
+    }
 
-    
+    .radio_jc-start:checked ~ .container_grid-align-tracks{
+        justify-content: start;
+    }
+    .radio_ac-start:checked ~ .container_grid-align-tracks{
+        align-content: start;
+    }
+    .radio_jc-end:checked ~ .container_grid-align-tracks{
+        justify-content: end;
+    }
+    .radio_ac-end:checked ~ .container_grid-align-tracks{
+        align-content: end;
+    }
+    .radio_jc-center:checked ~ .container_grid-align-tracks{
+        justify-content: center;
+    }
+    .radio_ac-center:checked ~ .container_grid-align-tracks{
+        align-content: center;
+    }
+    .radio_jc-between:checked ~ .container_grid-align-tracks{
+        justify-content: space-between;
+    }
+    .radio_ac-between:checked ~ .container_grid-align-tracks{
+        align-content: space-between;
+    }
+    .radio_jc-around:checked ~ .container_grid-align-tracks{
+        justify-content: space-around;
+    }
+    .radio_ac-around:checked ~ .container_grid-align-tracks{
+        align-content: space-around;
+    }
+    .radio_jc-evenly:checked ~ .container_grid-align-tracks{
+        justify-content: space-evenly;
+    }
+    .radio_ac-evenly:checked ~ .container_grid-align-tracks{
+        align-content: space-evenly;
+    }
+
+/*?                                                                  GRID MIN MAX*/
+/* 
+    Es una funcion para definir el tamaño de una tracks de grid, como su nombre indica, el tamaño minimo (min) y el tamaño maximo (max), en la cual se puede utilizar cualquier tipo de medida existente.
+
+    vmin: valor minimo | vmax: valor maximo
+
+        grid-template-column/rows: minmax (vmin vmax)
+
+    Un valor de medida que suele emplearse suele ser el del minimo y maximo de contenido, que como su nombre indica se adapta al contenido sea lo minimo o maximo que puede llegar a ser. 
+
+    min-content | max-content
+
+        grid-template-column/rows: minmax (min-content max-content)
+
+    De igual forma pueden combinarse cada uno con otros tipo de valores con medidas sean absolutas, relativas, fracciones y demas.
+ */
+
+    .container_grid-min-max{
+        display: grid;
+        height: 50vh;
+        grid-template-columns: repeat(3, minmax(min-content, max-content));
+        grid-template-rows: repeat(2, minmax(min-content, 100px));
+        justify-content: center;
+        align-content: center;
+    }
+
+    .check_size-container:checked + .container_grid-min-max{
+        width: 10vw;
+    }
+
+
+/*?                                                              GRID CON PATRONES REPETITIVOS*/
+/* 
+    Con la funcion repeat, ya vista anteriormente se puede lograr repetir un valor en especifico en las grid tracks, ahora bien esto no solo funciona para crear valores iguales de las tracks, sino tambien crear un patron de valores especificos entre las tracks de una grid, como se ve de la siguiente manera: 
+
+        grid-template-column: repeat(1, 10% 20% 30% 40%)
+
+    Como se ve en el ejemplo, en base a esa columna declarada explicitamente, se crea un patron de acuerdo a la cantidad de grid-items que se encuentre, que va desde la primera columna ocupe el 10%, la segun el 20% y asi sucesivamente. Y al seguir agregando elementos en la grid, estos se acomodaran a este patron. De igual forma sucede con las filas.
+
+    NOTA: La funcion repeat no actua en grid-auto-rows/columns
+ */
+
+    .container_grid-repeat{
+        display: grid;
+        /* height: 80vh; */
+        grid-template-columns: repeat(1, 5% 10% 15% 20%);
+        grid-template-rows: repeat(1, 10vh 15vh 20vh 25vh);
+        /* grid-template-columns: repeat(1, 5% 10% 15% 20%); */
+        grid-auto-rows: 13vh;
+    }
+
+    .check_repeat-column:checked + .container_grid-repeat{
+        grid-template-columns: repeat(2, 5% 10% 15% 20%);
+    }
+
+
+/*?                                                                      GRID DINAMICAS*/
+/* 
+        - auto-fill: genera el espacio reservado para grid tracks dinamicamente, ocupando todo el contenedor.
+        - auto-fit: Ajusta las grid tracks existentes, para que ocupen todo su espacio en el contenedor dinamicamente
+ */
+
+
+
+
+
