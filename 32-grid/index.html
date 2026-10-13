@@ -17,8 +17,8 @@
         <h2 class="content_title">Grid explicito</h2>
         <p class="content_text">Declarar valores fijos a un grid tanto en filas y columnas para formar una cuadricula.</p>
         <p class="content_text">Por su parte mediante el gap se puede lograr una separacion entre lineas de grid tanto filas como columnas</p>
-        <label for="gap">Quitar gap</label>
-        <input type="checkbox" name="gap" id="gap" class="checkbox_gap">
+        <input type="checkbox" name="gap" id="gap" class="checkbox_gap">       
+        <label for="gap">Gap</label>
         <section class="container_grid container_grid-explicit">
             <article class="article_grid">
                 <p>Grid item 1</p>
@@ -88,8 +88,8 @@
             <p class="content_text">Demostracion de como funciona las grid lines, desplazando la celda 15 en donde se ubica la celda 18</p>
             <span class="span_grid span_grid--darkblue">Lugar por defecto</span>
             <span class="span_grid span_grid--darkred">Celda desplazada mediante la grid-line</span>            
-            <label for="g-lines">Desplazar</label>
             <input type="checkbox" name="g-lines" id="g-lines" class="check_g-lines">
+            <label for="g-lines"></label>
             <section class="container_grid container_grid-lines">
                 <article class="article_grid">
                     <p>Grid item 1</p>
@@ -156,8 +156,9 @@
             <span class="span_grid span_grid--black">Mediante lineas en filas y columnas</span>
             <span class="span_grid span_grid--crimson">Mediante span</span>
 
-            <label for="g-lines--size">Aumentar tamaño</label>
+
             <input type="checkbox" name="g-lines--size" id="g-lines--size" class="check_g-lines--size">
+            <label for="g-lines--size"></label>
             <section class="container_grid container_grid-lines--second">
                 <article class="article_grid">
                     <p>Grid item 1</p>
@@ -198,8 +199,8 @@
         <div class="container_grid-lines--three-example">
             <h3 class="content_title">Posicionar con nombres a las lineas de grid</h3>
             <p class="content_text">En el ejemplo se posiciona a la celda 1 que ocupe las primeras 3 lineas de filas y las 5 lineas de columnas</p>
-            <label for="g-lines--move">Aumentar tamaño</label>
             <input type="checkbox" name="g-lines--move" id="g-lines--move" class="check_g-lines--move">
+            <label for="g-lines--move"></label>
             <section class="container_grid container_grid-lines--three">
                 <article class="article_grid">
                     <p>Grid item 1</p>
@@ -239,6 +240,7 @@
     </div>
     <div class="grid-areas">
        <h2 class="content_title">Grid areas</h2>
+       <p class="content_text">Es una manera de ocupar lineas de una grid, mediante la declaracion del nombre de estas, definidas como areas de una grid. Para simplificar y facilitar el posicionamiento visto anteriormente con las grid lines.</p>
        <section class="container_grid container_grid-areas">
             <header class="items header">Header</header>
             <main class="items main">Main</main>
@@ -251,6 +253,7 @@
         <p class="content_text">Es la tecnica que toman los elementos, posterior a una grid explicita, normalmente se adaptan al contenido que tengan.</p>
         <p class="content_text">Sin pulsar el check, se forma una grid 3x3 con valores declarados por lo tanto es explicita, asi mismo la fila sobrante por el contenido, pasa a ser implicita y por ende toma el tamaño del contenido. Por el contrario al pulsar el check, se forma una grid 3x4 donde la ultima fila es declarada, por lo que las celdas pueden agruparse con normalidad en el grid y no existen valores implicitos.</p>
         <input type="checkbox" name="grid-implicit" id="grid-implicit" class="check_grid-implicit">
+        <label for="grid-implicit"></label>
         <section class="container_grid container_grid-implicit">
             <article class="article_grid">
                 <p>Grid Item 1</p>
@@ -505,6 +508,7 @@
         <p class="content_text"></p>
         <div class="grid-align-items">
             <h3 class="content_title">Alineamiento de grid items</h3>
+                <h4>Justify-items / align-items</h4>
                <span class="span_practice">justify-items</span>
                 <input type="radio" name="justify-items" id="ji-stretch" class="radio_ji-stretch">
                 <label for="ji-stretch" class="btn-label">stretch</label>              
@@ -525,9 +529,10 @@
                 <label for="a-end" class="btn-label">end</label>
                 <input type="radio" name="align-items" id="a-center" class="radio_a-center">
                 <label for="a-center" class="btn-label">center</label>
-                <br>
-                <label for="self">Desactivar justify-self/align-self en grid-item 3</label>
+                <h4>Align-self</h4>
                 <input type="checkbox" name="self" id="self" class="checkbox_self">
+                <label for="self">Desactivar justify-self/align-self en grid-item 3</label>            
+                <br>
                 <br>
                 <span class="span_practice">justify-self</span>
                 <input type="radio" name="justify-self" id="js-stretch" class="radio_js-stretch">
@@ -616,8 +621,8 @@
     <div class="grid-min-max">
         <h2 class="content_title">Grid min/max</h2>
         <p class="content_text">Tamaño minimo y maximo a lo que puede llegar los grid items de un tracks</p>
-        <label for="size-container">Minimo del contenido del contenedor</label>
         <input type="checkbox" name="size-container" id="size-container" class="check_size-container">
+        <label for="size-container">Minimo del contenido del contenedor</label>
         <section class="container_grid container_grid-min-max">
                 <article class="article_grid">
                     <p>Grid item 1</p>
@@ -642,9 +647,9 @@
     </div>
     <div class="grid-repeat">
         <h2 class="content_title">Grid con patrones repetitivos</h2>
-        <p class="content_text">Se pueden crear patrones repetitivos usando la funcion repeat, agregando valores especificos dentro de ella.</p>
-        <label for="repeat-column">Repetir patron de dos columnas</label>
+        <p class="content_text">Se pueden crear patrones repetitivos usando la funcion repeat, agregando valores especificos dentro de ella.</p>     
         <input type="checkbox" name="repeat" id="repeat-column" class="check_repeat-column">
+        <label for="repeat-column">Repetir patron de dos columnas</label>
         <section class="container_grid container_grid-repeat">
            <article class="article_grid">
             <p>Grid item 1</p>
@@ -711,7 +716,194 @@
         </section>
     </div>
     <div class="grid-dynamics">
-        
+        <h2 class="content_title">Grid dinamicas</h2>
+        <p class="content_text">Generar y ajustar grid tracks de forma dinamica</p>
+        <div class="grid-dynamics-afill">
+            <h3 class="content_title">Uso de auto-fill</h3>
+            <p class="content_text">Ajusta y genera las tracks dinamicamente en el contenedor.</p>
+            <input type="checkbox" name="min-content" id="min-content" class="check_min-content">
+            <label for="min-content">Minimo del contenido del contenedor</label>        
+            <section class="container_grid container_grid-dynamics">
+                <article class="article_grid">
+                    <p>Grid item 1</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 2</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 3</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 4</p>
+            </section>        
+        </div>
+        <div class="grid-dynamics-afit">
+            <h3 class="content_title">Uso de auto-fit</h3>
+            <p class="content_text">Ajusta las tracks existentes de forma dinamica al contenedor</p>
+            <input type="checkbox" name="min-content" id="min-content_2" class="check_min-content_2">
+            <label for="min-content_2">Minimo del contenido del contenedor</label>         
+            <section class="container_grid container_grid-dynamics">
+                <article class="article_grid">
+                    <p>Grid item 1</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 2</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 3</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 4</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 5</p>
+                </article>
+                <article class="article_grid">
+                    <p>Grid item 6</p>
+                </article>
+            </section>        
+        </div> 
+    </div>
+    <div class="grid-responsive">
+        <h2 class="content_title">Grid responsiva</h2>
+        <p class="content_text">A continuacion una grid responsiva usando auto-fill y la funcion minmax.</p>
+        <input type="checkbox" name="min-content" id="min-content-responsive" class="check_min-content">
+        <label for="min-content-responsive">Minimo del contenido del contenedor</label>
+        <section class="container_grid container_grid-responsive">
+            <article class="article_grid">
+                <p>Grid item 1</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 2</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 3</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 4</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 5</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 6</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 7</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 8</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 9</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 10</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 11</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 12</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 13</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 14</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 15</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 16</p>
+            </article>
+        </section>
+    </div>
+    <div class="grid-nested">
+        <h2 class="content_title">Grid anidados</h2>
+        <p class="content_text">Crear grid independientes dentro de un grid-item. En este caso el grid item 1, posee dentro otra grid, con elementos grids denominados subitems</p>
+        <span class="span_grid span_grid--fuchsia">Borde de cada Grid Item</span>  
+        <section class="container_grid container_grid-nested">
+            <article class="article_grid container_grid-nested">
+                <div class="sub-item">
+                    <p>Grid Subitem anidado 1</p>
+                </div>
+                <div class="sub-item">
+                    <p>Grid Subitem anidado 2</p>
+                </div>
+                <div class="sub-item">
+                    <p>Grid Subitem anidado 3</p>
+                </div>
+                <div class="sub-item">
+                    <p>Grid Subitem anidado 4</p>
+                </div>
+                <div class="sub-item">
+                    <p>Grid Subitem anidado 5</p>
+                </div>
+                <div class="sub-item">
+                    <p>Grid Subitem anidado 6</p>
+                </div>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 2</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 3</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 4</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 5</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 6</p>
+            </article>
+        </section>
+    </div>
+    <div class="grid-subgrid">
+        <h2 class="content_title">Subgrid</h2>
+        <p class="content_text">A diferencia de las grid anidadas, cumpliendo unos requerimientos, se puede lograr que una grid secundaria, este en el mismo flujo que la grid primaria, sin necesidad de tener valores independientes, como se ve acontinuacion.</p>
+        <p class="content_text">Notese como en esta grid, el grid item 1 contiene una grid en su interior, pero esta se mantiene en el mismo flujo que la grid principal, con las mismas dimensiones.</p>
+        <span class="span_grid span_grid--fuchsia">Borde de cada Grid Item</span>  
+        <section class="container_grid container_grid-subgrid">
+            <article class="article_grid">
+                <div class="sub-item">
+                    <p>Grid Subitem 1</p>
+                </div>
+                <div class="sub-item">
+                    <p>Grid Subitem 2</p>
+                </div>
+                <div class="sub-item">
+                    <p>Grid Subitem 3</p>
+                </div>
+                <div class="sub-item">
+                    <p>Grid Subitem 4</p>
+                </div>
+                <div class="sub-item">
+                    <p>Grid Subitem 5</p>
+                </div>
+                <div class="sub-item">
+                    <p>Grid Subitem 6</p>
+                </div>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 2</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 3</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 4</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 5</p>
+            </article>
+            <article class="article_grid">
+                <p>Grid item 6</p>
+            </article>
+        </section>
     </div>
 </body>
 </html>

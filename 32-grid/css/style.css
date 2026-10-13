@@ -36,18 +36,29 @@ body{
     /* width: 100%; */
     max-width: max-content;
     font-weight: 900;
-    text-shadow: 0 0 7px #fff;
+    color: lightblue;
+    /* text-shadow: 0 0 7px #fff; */
     text-transform: uppercase;
     transition: all .3s ease;
 }
 .content_title:hover{
     text-decoration: underline;
-    text-decoration-color: #fff;
+    text-decoration-color: lightblue;
     text-shadow: 0 0 15px #fff;
 }
-
+h3.content_title{
+    color: #fff;
+}
+h3.content_title:hover{
+    text-decoration: none;
+    text-shadow: 0 0 15px #fff;
+}
+h4{
+    text-transform: uppercase;
+    text-indent: 3%;
+}
 .content_text{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-indent: 30px;
 }
 
@@ -97,7 +108,7 @@ body{
     - grid-template-row: cantidad y tamaño de las filas
 
     Tiene un shorthans el cual es el siguiente:
-    - grid-template:	none | grid-template-rows / grid-template-columns	Atajo para definir dimensiones del grid.
+    - grid-template: valor de grid-template-rows | valor de grid-template-columns;
 
 
     - funcion repeat(): se puede emplear para introducir valores repetidos sea en filas o columnas siempre y cuando sean adyacentes.
@@ -138,7 +149,7 @@ body{
     transition: .3s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
-.checkbox_gap:checked + .container_grid-explicit{
+.checkbox_gap:checked ~ .container_grid-explicit{
     gap: 0;
 }
 
@@ -169,7 +180,7 @@ body{
 .container_grid-lines :nth-child(15){
     background-color: darkblue;
 }
-.check_g-lines:checked + .container_grid-lines :nth-child(15){
+.check_g-lines:checked ~ .container_grid-lines :nth-child(15){
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 3;
@@ -197,6 +208,13 @@ body{
 }
 .span_grid--darkblue::before{
     background-color: darkblue;
+}
+
+.check_g-lines + label::before{
+    content: 'Desplazar celda 15';
+}
+.check_g-lines:checked + label::before{
+    content: 'Regresar celda 15 a su posicion';
 }
 /* ! segundo ejemplo usando grid-lines, ampliando celdas */
 /* 
@@ -226,17 +244,23 @@ body{
 .container_grid-lines--second :nth-child(2){
     background-color:crimson;
 }
-.check_g-lines--size:checked + .container_grid-lines--second :nth-child(5){
+.check_g-lines--size:checked ~ .container_grid-lines--second :nth-child(5){
     grid-row: 2 / 3;
     grid-column: 2 / 4;
 
     grid-area: 2 / 2 / 3 / 4;
 }
 
-.check_g-lines--size:checked + .container_grid-lines--second :nth-child(2){
+.check_g-lines--size:checked ~ .container_grid-lines--second :nth-child(2){
     grid-column: span 2;
 }
 
+.check_g-lines--size + label::before{
+    content: 'Aumentar tamaño';
+}
+.check_g-lines--size:checked + label::before{
+    content: 'Por defecto';
+}
 /* ! tercer ejemplo usando grid-lines, posicionar con nombres a las grid-lines */
 /* 
     - grid-row/column: [nombre de lines] tamaño de celda [nombre de lines] tamaño de celda [nombre de lines]...
@@ -259,6 +283,12 @@ body{
     grid-row: linea-r1 / linea-r3;
 }
 
+.check_g-lines--move + label::before{
+    content: 'Aumentar tamaño';
+}
+.check_g-lines--move:checked + label::before{
+    content: 'Por defecto';
+}
 /*?                                                             GRID AREAS */
 /* 
     grid-template-areas: mediante esta propiedad se puede posicionar areas definidas de una grid, mediante un nombre personalizado, definido por el usuario. 
@@ -308,7 +338,15 @@ body{
         grid-template-rows: repeat(3, 35%);
         margin-bottom: 6rem;
     }
-    .check_grid-implicit:checked + .container_grid-implicit{
+
+    .check_grid-implicit + label::before{
+        content: 'Grid (3 columnas x 3 filas)';
+    }
+    .check_grid-implicit:checked + label::before{
+        content: 'Grid (3 columnas x 4 filas)';
+    }
+
+    .check_grid-implicit:checked ~ .container_grid-implicit{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
         margin-bottom: 0;        
@@ -316,12 +354,14 @@ body{
     .container_grid-implicit p::before{
         content: "Explicit ";
     }
-    .check_grid-implicit:not(:checked) + .container_grid-implicit :nth-child(n + 10) p::before{
+    .check_grid-implicit:not(:checked) ~ .container_grid-implicit :nth-child(n + 10) p::before{
         content: "Implicit ";
     }
-    .check_grid-implicit:not(:checked) + .container_grid-implicit :nth-child(n + 10){
+    .check_grid-implicit:not(:checked) ~ .container_grid-implicit :nth-child(n + 10){
         background-color:darkblue;
     }
+
+
 
 /*?                                                             INLINE GRID */
    
@@ -534,15 +574,15 @@ body{
 
 
 
-    .checkbox_self:checked ~ input{
+    /* .checkbox_self:checked ~ input{
         display: none;
     }
-    .checkbox_self:checked ~ label{
+    .checkbox_self:checked ~ label:not(.checkbox_self + label){
         display: none;
     }
     .checkbox_self:checked ~ span{
         display: none;
-    }
+    } */
 
 
     /* alineacion a un solo grid-items, en este caso el tercer article */
@@ -647,7 +687,7 @@ body{
 
     min-content | max-content
 
-        grid-template-column/rows: minmax (min-content max-content)
+        grid-template-column/rows: minmax(min-content max-content)
 
     De igual forma pueden combinarse cada uno con otros tipo de valores con medidas sean absolutas, relativas, fracciones y demas.
  */
@@ -661,7 +701,7 @@ body{
         align-content: center;
     }
 
-    .check_size-container:checked + .container_grid-min-max{
+    .check_size-container:checked ~ .container_grid-min-max{
         width: 10vw;
     }
 
@@ -680,24 +720,120 @@ body{
     .container_grid-repeat{
         display: grid;
         /* height: 80vh; */
-        grid-template-columns: repeat(1, 5% 10% 15% 20%);
+        grid-template-columns: repeat(1, 7% 10% 14% 18%);
         grid-template-rows: repeat(1, 10vh 15vh 20vh 25vh);
         /* grid-template-columns: repeat(1, 5% 10% 15% 20%); */
         grid-auto-rows: 13vh;
     }
 
-    .check_repeat-column:checked + .container_grid-repeat{
-        grid-template-columns: repeat(2, 5% 10% 15% 20%);
+    .check_repeat-column:checked ~ .container_grid-repeat{
+        grid-template-columns: repeat(2, 7% 10% 14% 18%);
     }
 
 
 /*?                                                                      GRID DINAMICAS*/
 /* 
+    Forma de organizar tracks en una grid, con funciones dinamicas.
+
         - auto-fill: genera el espacio reservado para grid tracks dinamicamente, ocupando todo el contenedor.
         - auto-fit: Ajusta las grid tracks existentes, para que ocupen todo su espacio en el contenedor dinamicamente
+
+            grid-template-column/rows: repeat(auto-fill, xvalor xvalor)
+            grid-template-column/rows: repeat(auto-fit, xvalor xvalor)
+        
+        NOTA: Si se usa estas funciones y a su vez la funcion "minmax", no es posible hacer uso de las constantes min-content y max-content a la vez, solo una de estas seguida de otro tipo de medida, sea absoluta, relativa, fraccion y demás.
+
+            grid-template-column/rows: repeat(auto-fill, minmax(min-content, xvalor))
+            grid-template-column/rows: repeat(auto-fill, minmax(xvalor, max-content)
  */
 
+    .container_grid-dynamics{
+        display: grid;
+        /* grid-auto-flow: column; */
+        /* width: min-content; */
+        height: 63vh;
+        grid-template-columns: repeat(auto-fill, minmax(40px, 100px));
+        grid-template-rows: repeat(auto-fill, minmax(min-content, 100px));
+        grid-auto-rows: 100px;
+        transition: 4s ease;
+    }
 
+    .check_min-content:checked ~ .container_grid-dynamics{
+        width: 4%;
+    }
 
+    .check_min-content_2:checked ~ .container_grid-dynamics{
+        height: 9vh;
+    }
+
+    .grid-dynamics-afit .container_grid-dynamics{
+        width: 50%;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 100px));
+        grid-template-rows: repeat(auto-fit, minmax(50px, 100px));         
+    }
+
+/*?                                                                GRID RESPONSIVE SIN MEDIA QUERIES*/
+/* 
+    Usando los principios del tema anterior de grid dinamicas, se pueden lograr formas de realizar grid responsivas sin necesidad de media queries u otro framework
+ */
+
+    .container_grid-responsive{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min-content, 200px));
+        transition: 3s linear;
+    }
+
+    .check_min-content:checked ~ .container_grid-responsive{
+        width: 5%;
+    }
+
+/*?                                                                         GRID ANIDADAS*/
+/* 
+    Existe la posibilidad de crear una grid, dentro de otros elementos grid de igual forma, formando asi grid anidadas, cabe destacar que estas grid son independientes a la Grid principal, por lo que se le puede declarar valores diferentes a esta.
+ */
+
+    .container_grid-nested{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .sub-item{
+        background-color: darkorchid;
+        border: 2px solid pink;
+    }
+
+    .span_grid--fuchsia::before{
+        background-color: rgb(199, 0, 109);
+    }
+
+/*?                                                                             SUBGRID*/
+/* 
+    Ahora bien, dentro de las Grid, existe otro concepto conocido como Subgrid, en donde a diferencia de el tema anterior, da la posibilidad de tener grid dentro de otra grid, pero sin ser 
+
+    Para que la caracteristica de subgrid funcione es necesario hacer lo siguiente:
+
+    1) Definir explicitamente el tamaño que ocupara el elemento que aplicara subgrid dentro del contenedor padre. 
+    2) Aplicar display grid al elemento que aplicara subgrid. 
+    3) Aplicar el valor de subgrid a las columnas, a las filas o ambas dependiendo de lo que se requiera
+ */
+
+    .container_grid-subgrid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding: 1rem;     
+    }
+    .container_grid-subgrid .article_grid:nth-of-type(n), .container_grid-nested .article_grid:nth-of-type(n){
+        outline: 5px solid rgb(199, 0, 109);
+        outline-offset: -3px;
+    } 
+    .container_grid-subgrid .article_grid:first-of-type{
+        display: grid;
+        grid-column: span 3;
+        grid-row: 1 / 3;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
+    }
 
 
