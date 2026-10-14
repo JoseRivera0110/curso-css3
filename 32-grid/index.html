@@ -240,7 +240,7 @@
     </div>
     <div class="grid-areas">
        <h2 class="content_title">Grid areas</h2>
-       <p class="content_text">Es una manera de ocupar lineas de una grid, mediante la declaracion del nombre de estas, definidas como areas de una grid. Para simplificar y facilitar el posicionamiento visto anteriormente con las grid lines.</p>
+       <p class="content_text">Permiten diseñar y organizar la estructura de una página web usando nombres visuales en lugar de números de filas y columnas.</p>
        <section class="container_grid container_grid-areas">
             <header class="items header">Header</header>
             <main class="items main">Main</main>
@@ -505,12 +505,13 @@
     </div>
     <div class="grid-align">
         <h2 class="content_title">Alineacion de grid</h2>
-        <p class="content_text"></p>
+        <p class="content_text">Es el alineamiento de los elementos dentro de una grid, sea las tracks o los grid items.</p>
         <div class="grid-align-items">
             <h3 class="content_title">Alineamiento de grid items</h3>
+            <p class="content_text">Con las propiedad justify-items se podra alinear los grid items en su eje principal, mientras que con la propiedad align-items en el eje secundario respectivamente. Por ultimo, align-self servira para alinear solo un grid item en especifico, como si se comportara de manera independiente.</p>
                 <h4>Justify-items / align-items</h4>
                <span class="span_practice">justify-items</span>
-                <input type="radio" name="justify-items" id="ji-stretch" class="radio_ji-stretch">
+                <input type="radio" name="justify-items" id="ji-stretch" class="radio_ji-stretch" checked>
                 <label for="ji-stretch" class="btn-label">stretch</label>              
                 <input type="radio" name="justify-items" id="ji-start" class="radio_ji-start">
                 <label for="ji-start" class="btn-label">start</label>
@@ -521,7 +522,7 @@
  
                 <br>
                 <span class="span_practice">align-items</span>
-                <input type="radio" name="align-items"  id="a-stretch" class="radio_a-stretch">
+                <input type="radio" name="align-items"  id="a-stretch" class="radio_a-stretch" checked>
                 <label for="a-stretch" class="btn-label">stretch</label>
                 <input type="radio" name="align-items" id="a-start" class="radio_a-start">
                 <label for="a-start" class="btn-label">start</label>
@@ -529,13 +530,13 @@
                 <label for="a-end" class="btn-label">end</label>
                 <input type="radio" name="align-items" id="a-center" class="radio_a-center">
                 <label for="a-center" class="btn-label">center</label>
-                <h4>Align-self</h4>
+                <h4>Align-self (referenciado en grid item 3)</h4>
                 <input type="checkbox" name="self" id="self" class="checkbox_self">
-                <label for="self">Desactivar justify-self/align-self en grid-item 3</label>            
+                <label for="self">justify-self/align-self en grid-item 3</label>            
                 <br>
                 <br>
                 <span class="span_practice">justify-self</span>
-                <input type="radio" name="justify-self" id="js-stretch" class="radio_js-stretch">
+                <input type="radio" name="justify-self" id="js-stretch" class="radio_js-stretch" checked>
                 <label for="js-stretch" class="btn-label">stretch</label>
                 <input type="radio" name="justify-self" id="js-start" class="radio_js-start">
                 <label for="js-start" class="btn-label">start</label>
@@ -545,7 +546,7 @@
                 <label for="js-center" class="btn-label">center</label>
                 <br>
                 <span class="span_practice">align-self</span>
-                <input type="radio" name="align-self" id="as-stretch" class="radio_as-stretch">
+                <input type="radio" name="align-self" id="as-stretch" class="radio_as-stretch" checked>
                 <label for="as-stretch" class="btn-label">stretch</label>
                 <input type="radio" name="align-self" id="as-start" class="radio_as-start">
                 <label for="as-start" class="btn-label">start</label>
@@ -568,6 +569,7 @@
         </div>
         <div class="grid-align-tracks">
             <h3 class="content_title">Alineamiento de grid tracks</h3>
+            <p class="content_text">De manera similar a las vistas en Flexbox, justify-content servira para mover los elementos en el eje principal (normalmente eje X), en este caso las tracks sean filas o columnas, por el contrario align-content hara lo mismo pero en el eje contrario (normalmente Y).</p>
                <span class="span_practice">justify-content</span>           
                 <input type="radio" name="justify-content" id="jc-start" class="radio_jc-start" checked>
                 <label for="jc-start" class="btn-label">start</label>

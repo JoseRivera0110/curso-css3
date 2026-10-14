@@ -527,16 +527,16 @@ h4{
     Cambiar alineacion de los grid-items de acuerdo a su espacio reservado, sea el eje principal o el eje secudario:
 
     Eje principal
-        -justify-items: stretch | start | end | center
+        -justify-items: stretch (por defecto)|  start | end | center
     Eje secundario
-       -align-items:   stretch | start | end | center
+       -align-items:   stretch (por defecto) | start | end | center
 
     Para cambiar la alineacion de un grid-item de forma individial, sera necesario usar las siguientes propiedades, de acuerdo al eje: 
 
     Eje principal
-        -justify-self: stretch | start | end | center
+        -justify-self: stretch (por defecto) | start | end | center
     Eje secundario
-        -align-self:   stretch | start | end | center
+        -align-self:   stretch (por defecto) | start | end | center
  */
 
     .container_grid-align-items{
@@ -617,16 +617,21 @@ h4{
         align-self: auto;
     }
 
-
+    .checkbox_self:checked + label::before{
+        content: 'Activar ';
+    }
+    .checkbox_self + label::before{
+        content: 'Desactivar ';
+    }
 /*todo   GRID ALIGN TRACKS */
 /* 
     Cambiar alineacion de los grid-tracks sea fila o columna de acuerdo a su espacio reservado, en referencia a su eje principal o el eje secudario:
 
     Eje principal
-        -justify-content: start | end | center | space-between | space-around | space-evenly
+        -justify-content: start (por defecto) | end | center | space-between | space-around | space-evenly
 
     Eje secundario
-        -align-content:   start | end | center | space-between | space-around | space-evenly
+        -align-content:   start (por defecto) | end | center | space-between | space-around | space-evenly
 
  */
 
