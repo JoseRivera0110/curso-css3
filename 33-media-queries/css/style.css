@@ -4,7 +4,7 @@
 body{
     background-color: #303030;
     color: #fff;
-    margin: 1rem 4rem;
+    /* margin: 1rem 4rem; */
     font-family: "Yantramanav", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -18,7 +18,7 @@ body{
     font-weight: 500;
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    text-shadow: 0 0 7px yellow;
+    text-shadow: 0 0 7px blue;
     transition: all .3s ease;
 }
 ::selection{
@@ -28,8 +28,8 @@ body{
 .title:hover{
     
     text-decoration: underline;
-    text-decoration-color: yellow;
-    text-shadow: 0 0 20px yellow;
+    text-decoration-color: blue;
+    text-shadow: 0 0 20px blue;
 }
 
 .content_title{
@@ -78,3 +78,123 @@ Existe un concepto denominado media queries, mediante el cuál podemos hacer exc
 
 */
 
+
+/* todo     Media Queries (range syntax) */
+/* 
+    Aunque existen otras formas, hoy en día la forma preferida de escribir Media Queries es utilizando la modalidad de rangos de condiciones (Media Query Range Syntax), mucho más versátiles que las sintaxis anteriores, y mucho menos tediosas.
+
+    Para ello, vamos a escribir las condiciones utilizando operadores de comparación como <, <=, > o >=:
+ */
+
+
+
+
+/* html{
+    height: 100vh;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+} */
+    .grid-responsive{
+        display: grid;
+        height: 70vh;
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 33.33%));
+        grid-template-rows: repeat(3, 1fr);
+        /* grid-auto-rows: 10vh; */
+        background-color: steelblue;
+        /* border: 2px solid lightblue; */
+    }
+
+    .grid-responsive *{
+        border: 1px solid rgb(183, 237, 255);
+    }
+
+    .grid-responsive :first-child{
+        grid-row: span 2;
+        background-color: crimson;
+    }
+    .grid-responsive :nth-child(2){
+        grid-area: 2 / 3 / 4 / 4;
+        background-color: darkgoldenrod;
+    }
+    .grid-responsive :nth-child(5){
+        grid-area: 3 / 1 / 4 / 2;
+        background-color: darkgreen;
+    }
+    .grid-responsive :nth-child(3){
+        grid-row: span 3;
+        background-color: darkmagenta;
+    }
+
+
+    @media (width <= 400px){
+        
+        .grid-responsive{
+            grid-template-rows: repeat(5, 1fr);
+        }
+        .grid-responsive :first-child{
+            grid-area: 1 / 1 / 2 / 4;
+        }
+        .grid-responsive :nth-child(2){
+            grid-area: 2 / 1 / 3 / 4;
+        }
+        .grid-responsive :nth-child(3){
+           grid-area: 3 / 1 / 4 / 4;
+        }  
+        .grid-responsive :nth-child(4){
+           grid-area: 4 / 1 / 5 / 4;
+        }  
+        .grid-responsive :last-child{
+            grid-area: 5 / 1 / 6 / 4;
+        }
+    }
+
+    /* @media (width > 400px) and (width <= 768px){
+        
+        .grid-responsive{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        .grid-responsive :first-child{
+            grid-area: 1 / 1 / 2 / 3;
+        }
+        .grid-responsive :nth-child(2){
+            grid-area: 2 / 1 / 3 / 2;
+        }
+        .grid-responsive :nth-child(3){
+            grid-area: 2 / 2 / 3 / 3;
+        }  
+        .grid-responsive :nth-child(4){
+            grid-area: 3 / 1 / 4 / 2;
+        }  
+        .grid-responsive :last-child{
+            grid-area: 3 / 2 / 4 / 3;
+        }
+    }    
+     */
+
+    @media (400px <= width <= 768px){
+        
+        .grid-responsive{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        .grid-responsive :first-child{
+            grid-area: 1 / 1 / 2 / 3;
+        }
+        .grid-responsive :nth-child(2){
+            grid-area: 2 / 1 / 3 / 2;
+        }
+        .grid-responsive :nth-child(3){
+            grid-area: 2 / 2 / 3 / 3;
+        }  
+        .grid-responsive :nth-child(4){
+            grid-area: 3 / 1 / 4 / 2;
+        }  
+        .grid-responsive :last-child{
+            grid-area: 3 / 2 / 4 / 3;
+        }
+    }    
+    
