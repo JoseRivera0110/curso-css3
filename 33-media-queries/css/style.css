@@ -198,3 +198,16 @@ body{
         }
     }    
     
+    
+/*todo Tipos de medios */
+
+    /* En algunas ocasiones, queremos indicar que las reglas @media sólo se pongan en funcionamiento en determinados tipos de dispositivos. Son los llamados tipos de medios, que pueden utilizarse en las condiciones de los media queries. Existen los siguientes:
+
+    Tipo de medio	                        Significado
+    all	            Todos los dispositivos o medios. El que se utiliza por defecto.
+    screen	        Monitores o pantallas de ordenador.
+    print	        Documentos de medios impresos o pantallas de previsualización de impresión.
+    speech	        Lectores de texto para invidentes (Antes aural, el cuál ya está obsoleto).
+
+ */
+
