@@ -151,7 +151,7 @@ body{
         }
     }
 
-    /* @media (width > 400px) and (width <= 768px){
+    /* @media (width => 400px) and (width <= 768px){
         
         .grid-responsive{
             grid-template-columns: repeat(2, 1fr);
@@ -211,3 +211,6 @@ body{
 
  */
 
+
+
+ 
