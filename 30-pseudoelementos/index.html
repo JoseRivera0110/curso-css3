@@ -7,6 +7,37 @@
     <title>Pseudoelementos</title>
 </head>
 <body>
-    
+    <h1 class="title">Pseudolementos</h1>
+    <p class="text">Los pseudoelementos son una característica de CSS que permite hacer referencias a «comportamientos virtuales no tangibles</p>
+    <h2 class="title">::before y ::after</h2>
+    <p class="text">Junto con la propiedad "content", permiten crear contenido sin necesidad de HTML</p>
+    <div class="container container_center">
+        <div class="container_pseudoelement">Texto de HTML</div>
+    </div>
+    <h2 class="title">::first-letter y ::first-line</h2>
+    <p class="text">Como su nombre indica, permiten dar estilos a la primera letra (first letter) y a la primera linea de texto (first line).</p>
+    <div class="container">
+        <p class="container_text">El color rojo indica la first-letter o primera palabra, mientras que el color verde designa el first-line o primera linea. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam reiciendis doloremque labore. Eligendi consequatur assumenda illum magni libero distinctio, dignissimos expedita velit incidunt quidem aliquam natus accusantium? Rerum, voluptatem eos?</p>
+    </div>
+    <h2 class="title">::marker</h2>
+    <p class="text">Permiten crear diseño a listas, cambiar los signos que tengan.</p>
+    <div class="container container_center">
+        <h3 class="title_list">Lista con diseño</h3>
+        <ul class="list">
+            <li class="list_item">Item 1</li>
+            <li class="list_item">Item 2</li>
+            <li class="list_item">Item 3</li>
+            <li class="list_item">Item 4</li>
+            <li class="list_item">Item 5</li>
+        </ul>
+    </div>
+    <h2 class="title">::placeholder</h2>
+    <div class="container container_center">
+        <input type="text" class="input" placeholder="Texto de placeholder">
+    </div>
+    <h2 class="title">::selection</h2>
+    <div class="container">
+        <p class="text-selection">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti perspiciatis, quidem sequi maiores reiciendis voluptatem est laboriosam? Dolorum libero, voluptatem tempora odit quia ipsam, illo alias totam optio nostrum adipisci.</p>
+    </div>
 </body>
 </html>
