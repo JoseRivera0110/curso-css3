@@ -1,3 +1,11 @@
+:root{
+    --Fontfamily: "Yantramanav", sans-serif;
+    --Fontweight: 400;
+    --PrimarytitleColor: blue;
+    --SecondtitleColor: lightblue;
+
+}
+
 *{
     box-sizing: border-box;
 }
@@ -5,8 +13,8 @@ body{
     background-color: #303030;
     color: #fff;
     /* margin: 1rem 4rem; */
-    font-family: "Yantramanav", sans-serif;
-    font-weight: 400;
+    font-family: var(--Fontfamily);
+    font-weight: var(--Fontweight);
     font-style: normal;
 }
 
@@ -18,7 +26,7 @@ body{
     font-weight: 500;
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    text-shadow: 0 0 7px blue;
+    text-shadow: 0 0 7px var(--PrimarytitleColor);
     transition: all .3s ease;
 }
 ::selection{
@@ -28,22 +36,22 @@ body{
 .title:hover{
     
     text-decoration: underline;
-    text-decoration-color: blue;
-    text-shadow: 0 0 20px blue;
+    text-decoration-color: var(--PrimarytitleColor);
+    text-shadow: 0 0 20px var(--PrimarytitleColor);
 }
 
 .content_title{
     /* width: 100%; */
     max-width: max-content;
     font-weight: 900;
-    color: lightblue;
+    color: var(--SecondtitleColor);
     /* text-shadow: 0 0 7px #fff; */
     text-transform: uppercase;
     transition: all .3s ease;
 }
 .content_title:hover{
     text-decoration: underline;
-    text-decoration-color: lightblue;
+    text-decoration-color: var(--SecondtitleColor);
     text-shadow: 0 0 15px #fff;
 }
 h3.content_title{
@@ -87,6 +95,47 @@ h4{
         text-align: center;
         align-content: center;
     }
+/* 
+todo  AMBITOS DEL DOM Y FALLBACK
+ */
+/* 
+    Con los ambitos del DOM se puede observar como al declarar una variable, a medida de que se cree codigo y se cambie el valor de la variable, esta adaptara esos nuevos valores.
 
+    Ahora el fallback no es mas que usar un valor para una variable de reserva, por si el primer valor no fue declarado
+ */
 
+    .container-new{
+        --ContainernewColor: darkgray;
+        display: flex;
+        flex-flow: column wrap;
+        width: 70%;
+        padding: 10px;
+        gap: 10px;
+        margin: 0 auto;
+        background-color: var(--ContainernewColor);
+    }
 
+    .box-1{
+        --Box-1Textcolor: #fff;
+/*         
+        En este punto se observa el ambito del DOM y el Fallback, al declarar la variable "--Box-1Color", se da la posibilidad de darle valores mas adelante, indiferentemente si es un valor por cada hijo. 
+
+        Mientras que el fallback es un valor de resguardo (segundo valor que se ve)
+ */
+        background-color: var(--Box-1Color, rgb(78, 78, 78));
+        color: var(--Box-1Textcolor);
+        flex: 1 1 100px;
+        text-align: center;
+        align-content: center;
+    }
+
+    .box-1:first-child{
+        --Box-1Color: Yellow;
+        --Box-1Textcolor: #000;
+    }
+    .box-1:nth-child(2){
+        --Box-1Color: crimson;
+    }
+    .box-1:last-child{
+        --Box-1Color: darkblue;
+    }    
