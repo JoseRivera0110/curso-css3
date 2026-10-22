@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #303030;
+    color: #fff;
+    /* margin: 1rem 4rem; */
+    font-family: "Yantramanav", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title{
+    max-width: max-content;
+    margin-right: auto;
+    margin-left: auto;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 7px blue;
+    transition: all .3s ease;
+}
+::selection{
+    background-color:gray;
+    color:#000
+}
+.title:hover{
+    
+    text-decoration: underline;
+    text-decoration-color: blue;
+    text-shadow: 0 0 20px blue;
+}
+
+.content_title{
+    /* width: 100%; */
+    max-width: max-content;
+    font-weight: 900;
+    color: lightblue;
+    /* text-shadow: 0 0 7px #fff; */
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+.content_title:hover{
+    text-decoration: underline;
+    text-decoration-color: lightblue;
+    text-shadow: 0 0 15px #fff;
+}
+h3.content_title{
+    color: #fff;
+}
+h3.content_title:hover{
+    text-decoration: none;
+    text-shadow: 0 0 15px #fff;
+}
+h4{
+    text-transform: uppercase;
+    text-indent: 3%;
+}
+.content_text{
+    font-size: 1.1rem;
+    text-indent: 30px;
+}
+
+/* ?                                        CUSTOM PROPERTIES */
+/* 
+    Funcionan como variables en css, para almacenar valores de alguna o algunas propiedades, las cuales pueden ser remplazadas posteriormente.
+
+    Como se ve acontinuacion, es posible declarar las varibles dentro de las mismas clases. Aunque lo usual es declararlas mediante la pseudoclase :root, al inicio del documento, que es igual a decir html, pero con mas especificidad.
+ */
+
+    .container{
+        --BorderDesign: 2px solid rgb(255, 85, 85);
+        --ContainerColor: rgb(255, 85, 85);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 20vh);
+        background-color: var(--ContainerColor);
+        border: var(--BorderDesign);
+
+    }
+
+    .box{
+        --ColorBox: darkred;
+        background-color: var(--ColorBox);
+        border: var(--BorderDesign);
+        text-align: center;
+        align-content: center;
+    }
+
+
+
